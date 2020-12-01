@@ -1,35 +1,35 @@
 CREATE TABLE `categoria` (
-	`id_categoria` INT NOT NULL AUTO_INCREMENT,
+	`id_categoria` int NOT NULL,
 	`tipo` varchar(255) NOT NULL,
 	`tamanho` varchar(255) NOT NULL,
 	PRIMARY KEY (`id_categoria`)
 );
 
 CREATE TABLE `produto` (
-	`id_produto` INT NOT NULL AUTO_INCREMENT,
-	`estoque` INT NOT NULL,
+	`id_produto` int NOT NULL,
+	`estoque` int NOT NULL,
 	`nome` varchar(255) NOT NULL,
 	`preco` FLOAT(5.2) NOT NULL,
 	`descricao` varchar(255) NOT NULL,
-	`id_categoria` INT NOT NULL,
+	`id_categoria` int NOT NULL,
 	PRIMARY KEY (`id_produto`)
 );
 
 CREATE TABLE `cliente` (
-	`id_cliente` INT NOT NULL AUTO_INCREMENT,
+	`id_cliente` int NOT NULL,
 	`nome` varchar(255) NOT NULL,
-	`cpf` INT(11) NOT NULL,
+	`cpf` int(11) NOT NULL,
 	`email` varchar(255) NOT NULL,
 	`senha` varchar(255) NOT NULL,
 	PRIMARY KEY (`id_cliente`)
 );
 
 CREATE TABLE `carrinho` (
-	`id_carrinho` INT NOT NULL AUTO_INCREMENT,
+	`id_carrinho` int NOT NULL,
 	`valor_total` FLOAT(5.2) NOT NULL,
-	`quantidade` INT NOT NULL,
-	`id_cliente` INT NOT NULL,
-	`id_produto` INT NOT NULL,
+	`quantidade` int NOT NULL,
+	`id_cliente` int NOT NULL,
+	`id_produto` int NOT NULL,
 	PRIMARY KEY (`id_carrinho`)
 );
 
