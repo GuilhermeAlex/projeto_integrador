@@ -17,7 +17,7 @@ import com.projeto.ecommerce.Repository.RepositoryCategoria;
 import com.projeto.ecommerce.model.CategoriaModel;
 
 @RestController
-@RequestMapping ("/")
+@RequestMapping
 public class ControllerCategoria {
 
 	@Autowired
@@ -41,6 +41,12 @@ public class ControllerCategoria {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
+
+	@GetMapping("/getByTipo/{tipo}")
+	public ResponseEntity<List<CategoriaModel>> getByTipo ( @PathVariable String tipo){
+		return ResponseEntity.ok(repository.findAllByTipoContainingIgnoreCase(tipo));
+	}
+	
 	@PutMapping  ("/put/{id}")
 	public CategoriaModel atualizar (@PathVariable Long id, @RequestBody CategoriaModel objetinho) {
 		objetinho.setId_categoria(id);
@@ -52,15 +58,10 @@ public class ControllerCategoria {
 	public String remover (@PathVariable Long id) {
 		try {
 			repository.deleteById(id);
-		return "sucesso";
+		return "Deletado com sucesso !";
 		} catch (Exception e) {
 			return "Erro: " + e.getLocalizedMessage();			
 		}
 	}
 	
-	//@GetMapping("/tipo/{tipo}")
-	//public ResponseEntity<List<CategoriaModel>> getByTipo ( @PathVariable String tipo){
-		//return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(tipo));
-	//}
-		
 }
