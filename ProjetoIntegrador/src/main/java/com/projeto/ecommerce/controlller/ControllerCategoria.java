@@ -13,29 +13,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projeto.ecommerce.Repository.RepositoryCategoria;
-import com.projeto.ecommerce.model.CategoriaModel;
+import com.projeto.ecommerce.model.Categoria;
+import com.projeto.ecommerce.repository.RepositoryCategoria;
 
 @RestController
-@RequestMapping
+@RequestMapping ("/categoria")
 public class ControllerCategoria {
 
 	@Autowired
 	private RepositoryCategoria repository;
 	
-	@PostMapping("/post")
-	public CategoriaModel criar(@RequestBody CategoriaModel objetinho) {
+	@PostMapping
+	public Categoria criar(@RequestBody Categoria objetinho) {
 		repository.save(objetinho);
 		return objetinho;
 	}
 	
-	@GetMapping ("/getAll")
-	public ResponseEntity <List <CategoriaModel>> GetAll() {
+	@GetMapping 
+	public ResponseEntity <List <Categoria>> GetAll() {
 		return ResponseEntity.ok (repository.findAll());
 	}
 	
 	@GetMapping ("/getById/{id}")
-	public ResponseEntity <CategoriaModel> GetById (@PathVariable Long id){	
+	public ResponseEntity <Categoria> GetById (@PathVariable Long id){	
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
@@ -43,12 +43,12 @@ public class ControllerCategoria {
 	
 
 	@GetMapping("/getByTipo/{tipo}")
-	public ResponseEntity<List<CategoriaModel>> getByTipo ( @PathVariable String tipo){
+	public ResponseEntity<List<Categoria>> getByTipo ( @PathVariable String tipo){
 		return ResponseEntity.ok(repository.findAllByTipoContainingIgnoreCase(tipo));
 	}
 	
 	@PutMapping  ("/put/{id}")
-	public CategoriaModel atualizar (@PathVariable Long id, @RequestBody CategoriaModel objetinho) {
+	public Categoria atualizar (@PathVariable Long id, @RequestBody Categoria objetinho) {
 		objetinho.setId_categoria(id);
 		repository.save(objetinho);
 		return objetinho;
