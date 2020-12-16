@@ -31,6 +31,17 @@ public class Produto {
 		@Column 
 		private String descricao;
 		
+		@Column
+		private String tamanho;
+		
+		public String getTamanho() {
+			return tamanho;
+		}
+
+		public void setTamanho(String tamanho) {
+			this.tamanho = tamanho;
+		}
+
 		@ManyToOne 
 		@JsonIgnoreProperties ("produto")
 		private Categoria categoria;

@@ -26,7 +26,7 @@ public class Categoria {
 		private String tipo;
 
 		@Column
-		private String tamanho;
+		private String material;
 
 		@OneToMany (mappedBy = "categoria",cascade = CascadeType.ALL)
 		@JsonIgnoreProperties ("categoria")
@@ -49,11 +49,11 @@ public class Categoria {
 		}
 
 		public String getTamanho() {
-			return tamanho;
+			return material;
 		}
 
 		public void setTamanho(String tamanho) {
-			this.tamanho = tamanho;
+			this.material = tamanho;
 		}
 
 		public List<Produto> getProduto() {
