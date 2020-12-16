@@ -1,4 +1,4 @@
-package com.projeto.ecommerce.repository;
+package com.projeto.ecommerce.Repository;
 
 import java.util.List;
 

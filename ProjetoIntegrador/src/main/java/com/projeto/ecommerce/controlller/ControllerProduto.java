@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projeto.ecommerce.model.Produto;
-import com.projeto.ecommerce.repository.RepositoryProduto;
+import com.projeto.ecommerce.Repository.RepositoryProduto;
 
 	@RestController
 	@RequestMapping ("/produto")
