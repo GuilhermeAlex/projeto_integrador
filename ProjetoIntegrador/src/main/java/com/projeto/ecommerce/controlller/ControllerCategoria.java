@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projeto.ecommerce.model.Categoria;
-import com.projeto.ecommerce.Repository.RepositoryCategoria;
+import com.projeto.ecommerce.repository.RepositoryCategoria;
 
 @RestController
 @RequestMapping ("/categoria")

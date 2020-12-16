@@ -2,11 +2,15 @@ package com.projeto.ecommerce.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_cliente")
@@ -29,6 +33,11 @@ public class Cliente {
 	
 	@Column
 	private String senha;
+	
+	//(mappedBy = "cliente", fetch= FetchType.LAZY)
+	//@JsonIgnoreProperties ("cliente")
+	@OneToOne
+	private Carrinho carrinho;
 
 	public long getId_cliente() {
 		return id_cliente;
@@ -69,5 +78,15 @@ public class Cliente {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public Carrinho getCarrinho() {
+		return carrinho;
+	}
+
+	public void setCarrinho(Carrinho carrinho) {
+		this.carrinho = carrinho;
+	}
 	
+	
+
 }

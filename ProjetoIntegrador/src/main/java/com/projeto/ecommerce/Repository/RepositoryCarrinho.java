@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.projeto.ecommerce.model.Cliente;
+import com.projeto.ecommerce.model.Carrinho;
 
 @Repository
-public interface RepositoryCliente extends JpaRepository <Cliente, Long> {
+public interface RepositoryCarrinho extends JpaRepository<Carrinho, Long> {
 
-	public List<Cliente> findAllByNomeContainingIgnoreCase(String nome);
+	public List<Carrinho> findAllByQuantidade(int quantidade);
+	
 }
-
