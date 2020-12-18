@@ -14,13 +14,11 @@ import com.projeto.ecommerce.repository.RepositoryCliente;
 public class ClienteService {
 	
 	@Autowired
-	private RepositoryCliente repository;
+	private RepositoryCliente repository;	
 	
-	// Criptografa a senha e salva ela dentro do banco de dados
 	public Cliente CadastrarCliente(Cliente cliente) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		
-		// Recebo a senha da classe Usuario e criptografo dentro de senhaEncoder
+				
 		String senhaEncoder = encoder.encode(cliente.getSenha());
 		cliente.setSenha(senhaEncoder);
 		
@@ -29,16 +27,17 @@ public class ClienteService {
 	
 	public Optional<UserLogin> Logar(Optional<UserLogin> user){
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		Optional<Cliente> cliente = repository.findByEmail(user.get().getUsuario());
+		Optional<Cliente> cliente = repository.findByEmail(user.get().getEmail());
 		
 		if(cliente.isPresent()) {
 			if(encoder.matches(user.get().getSenha(), cliente.get().getSenha())) {
-				String auth = user.get().getUsuario() + ":" + user.get().getSenha();
+
+				String auth = user.get().getEmail() + ":" + user.get().getSenha();
 				byte[]  encoderAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
 				String authHeader = "Basic " + new String(encoderAuth);
 				
 				user.get().setToken(authHeader);
-				user.get().setNome(cliente.get().getNome());
+				user.get().setEmail(cliente.get().getEmail());
 				
 				return user;
 			}

@@ -9,7 +9,7 @@ import com.projeto.ecommerce.model.Cliente;
 @Repository
 public interface RepositoryCliente extends JpaRepository <Cliente, Long> {
 
-	public List<Cliente> findAllByEmailContainingIgnoreCase(String email);
+    public List<Cliente> findAllByEmailContainingIgnoreCase(String email);
 	
 	public Optional<Cliente> findByEmail(String email);
 }

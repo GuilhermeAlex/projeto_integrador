@@ -26,6 +26,8 @@ public class ControllerCliente {
 
 	@Autowired
 	private ClienteService clienteService;
+	
+	@Autowired
 	private RepositoryCliente repository;
 	
 	@PostMapping
