@@ -2,15 +2,11 @@ package com.projeto.ecommerce.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.Size;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_cliente")
@@ -25,7 +21,6 @@ public class Cliente {
 	private String nome;
 	
 	@Column
-	@Size (min = 11, max= 11 )
 	private int cpf;
 	
 	@Column
@@ -34,8 +29,6 @@ public class Cliente {
 	@Column
 	private String senha;
 	
-	//(mappedBy = "cliente", fetch= FetchType.LAZY)
-	//@JsonIgnoreProperties ("cliente")
 	@OneToOne
 	private Carrinho carrinho;
 
