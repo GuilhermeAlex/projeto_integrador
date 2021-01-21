@@ -12,6 +12,8 @@ import { ProductsComponent } from './loja/products/products.component';
 import { FiltersComponent } from './loja/filters/filters.component';
 import { MenuComponent } from './home/menu/menu.component';
 import { DestaquesComponent } from './home/destaques/destaques.component';
+import { CategoriasComponent } from './home/categorias/categorias.component';
+import { NewsletterComponent } from './home/newsletter/newsletter.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { DestaquesComponent } from './home/destaques/destaques.component';
     ProductsComponent,
     FiltersComponent,
     MenuComponent,
-    DestaquesComponent
+    DestaquesComponent,
+    CategoriasComponent,
+    NewsletterComponent
   ],
   imports: [
     BrowserModule,
