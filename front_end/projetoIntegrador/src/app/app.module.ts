@@ -15,6 +15,7 @@ import { DestaquesComponent } from './home/destaques/destaques.component';
 import { CategoriasComponent } from './home/categorias/categorias.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
     DestaquesComponent,
     CategoriasComponent,
     NewsletterComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
