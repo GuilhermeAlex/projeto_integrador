@@ -1,0 +1,33 @@
+.login-container{
+    margin: 6% 10%;
+    width: 30%;
+  
+}
+.login-content{
+    margin: 6% 15%;
+
+}
+.btn-acessar{
+    width: 140px;
+    margin-left: 35%;
+    margin-bottom: 8%;
+
+}
+.conta-content{
+    border-top:solid 1px rgba(128, 128, 128, 0.8);
+    padding-top:4%;
+   
+
+    
+}
+.container-center {
+
+    margin: 1% 5%;
+    padding: 9% 2%;
+  
+
+}
+    .login-container-content{
+        margin: 6% 10%;
+        width: 50%;
+    }
