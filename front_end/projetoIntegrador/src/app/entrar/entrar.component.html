@@ -1,61 +1,57 @@
-<div class="d-flex justify-content-center ">
+<div class="d-flex justify-content-center">
+  <div
+    class="login-container border border-success shadow-lg p-3 mb-5 bg-white rounded"
+  >
+    <div class="login-content">
+      <h2 class="d-flex justify-content-center">Entrar</h2>
 
+      <form class="forms-container">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
 
-    <div class="login-container border border-success shadow-lg p-3 mb-5 bg-white rounded  ">
-
-        <div class="login-content">
-
-            <h2 class=" d-flex justify-content-center">Entrar </h2>
-
-
-            <form class="forms-container">
-
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email</label>
-
-                    <div class="col-md-20 mb-5">
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Digite o  o Email">
-                        <small id="emailHelp" class="form-text text-muted"></small>
-
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Senha</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1"
-                        placeholder="Digite sua Senha">
-                </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Manter-me conectado</label>
-                </div>
-
-                <button type="submit"
-                    class="btn btn btn-outline-success btn-acessar justify-content-around  ">Acessar</button>
-            </form>
-
-            <div class="conta-content">
-
-                <p class="d-flex justify-content-center">
-                    Não tenho conta !
-                </p>
-                <a class="criar-conta d-flex justify-content-center" href="#"> Criar uma conta</a>
-            </div>
-
-
-
-
-
-
-
-
-
+          <div class="col-md-20 mb-5">
+            <input [(ngModel)]="userLogin.email"
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Digite o  o Email"
+            />
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input
+            [(ngModel)]="userLogin.senha"
+            type="password"
+            class="form-control"
+            id="senha"
+            placeholder="Digite sua Senha"
+          />
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Manter-me conectado</label
+          >
         </div>
 
+        <button
+          type="submit"
+          class="btn btn btn-outline-success btn-acessar justify-content-around"
+          (click)='entrar()'
+        >
+          Acessar
+        </button>
+      </form>
+
+      <div class="conta-content">
+        <p class="d-flex justify-content-center">Não tenho conta !</p>
+        <a class="criar-conta d-flex justify-content-center" routerLink="/cadastrar">
+          Criar uma conta</a
+        >
+      </div>
     </div>
+  </div>
 </div>
-
-
-
-
-
