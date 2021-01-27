@@ -21,7 +21,7 @@ public class Cliente {
 	private String nome;
 	
 	@Column
-	private int cpf;
+	private String cpf;
 	
 	@Column
 	private String email;
@@ -48,11 +48,11 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
