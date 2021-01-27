@@ -9,7 +9,7 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="nome">Nome</label>
-            <input  [(ngModel)]='cliente.nome' type="text" class="form-control" placeholder="Nome" />
+            <input  [(ngModel)]='cliente.nome' name="nome" type="text" class="form-control" placeholder="Nome" />
           </div>
           <div class="col-md-6 mb-5">
             <label for="sobrenome">Sobrenome</label>
@@ -19,7 +19,7 @@
         <div class="form-row">
           <div class="col-md-6">
             <label for="cpf">CPF</label>
-            <input [(ngModel)]='cliente.cpf' type="text" class="form-control" placeholder="CPF" />
+            <input [(ngModel)]='cliente.cpf' name="cpf" type="text" class="form-control" placeholder="CPF" />
           </div>
           <div class="col-6 mb-5">
             <label for="RG">RG</label>
@@ -57,13 +57,7 @@
 
           <div class="col-6">
             <label for="exampleInputEmail1">Confirmar Email</label>
-            <input [(ngModel)]='cliente.email'
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Confirmar Email"
-            />
+            <input [(ngModel)]='cliente.email' name="confirEmail" type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Confirmar Email"/>
           </div>
         </div>
         <div class="form-row">
@@ -79,6 +73,7 @@
           <div class="col-6 mb-4">
             <label for="exampleInputPassword1">Confirmar Senha</label>
             <input [(ngModel)]='cliente.senha'
+              name="confirSenha"
               type="password"
               class="form-control"
               id="exampleInputPassword1"
