@@ -26,12 +26,15 @@
   
 
 }
- .navbar-container {
-        margin: 0 3%;
-        border-bottom: solid 1px #70DB56;
+
+    #img-bg{
+        background-image: url('https://smastr16.blob.core.windows.net/home/2020/09/istock-1085122436-1024x683.jpg');
+        min-height: 695px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-    
-    .login-container-content{
-        margin: 6% 10%;
-        width: 50%;
-    }
+    .opacity{
+        opacity:0.8;
+        filter:alpha(opacity=60);
+        }

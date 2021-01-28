@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center " id='img-bg'>
   <div
-    class="login-container border border-success shadow-lg p-3 mb-5 bg-white rounded"
+    class="login-container border border-success shadow-lg p-3 mb-5 bg-white rounded opacity hg"
   >
     <div class="login-content">
       <h2 class="d-flex justify-content-center">Entrar</h2>
@@ -9,7 +9,7 @@
         <div class="form-group">
           <label for="exampleInputEmail1">Email</label>
 
-          <div class="col-md-20 mb-5">
+          <div class="col-md-20 mb-4">
             <input [(ngModel)]="userLogin.email"
               name="email"
               type="text"
@@ -41,7 +41,7 @@
 
         <button
           type="submit"
-          class="btn btn btn-outline-success btn-acessar justify-content-around"
+          class="btn btn btn-outline-success btn-acessar justify-content-center"
           (click)='entrar()'
         >
           Acessar

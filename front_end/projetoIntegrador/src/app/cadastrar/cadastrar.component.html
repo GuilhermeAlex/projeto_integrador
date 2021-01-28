@@ -1,97 +1,78 @@
-<div class="d-flex justify-content-center container-fluid">
-  <div
-    class="login-container-content border border-success shadow-lg p-3 mb-5 bg-white rounded"
-  >
-    <div class="login-content">
-      <h2 class="d-flex justify-content-center mb-5">Cadastrar</h2>
 
-      <form class="forms-container">
-        <div class="form-row">
-          <div class="col-md-6">
-            <label for="nome">Nome</label>
-            <input  [(ngModel)]='cliente.nome' name="nome" type="text" class="form-control" placeholder="Nome" />
+<div class="container-fluid" id='img-bg'>
+  <div class ="row d-flex align-items-center justify-content-center">
+      <div class = "col-md-4">
+          <p class="text-center"> <img class ="logotipo mt-5" src="https://image.freepik.com/fotos-gratis/eco-dia-da-terra-conceito-mao-segurando-a-planta-jovem-no-sol-e-natureza-verde_34152-1597.jpg" width="70px" height="70px" class="img-fluid rounded-circle mr-2">SustenArt</p>
+      </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+      <div class="col-md-11 mt-5 mb-5 border border-success shadow-lg p-3 bg-white rounded opacity hg" >
+          <h4>Cadastrar</h4>
+          <div class="row">
+              <div class="col-md-12">
+                  <form>
+                      <hr>
+                      <div class="form-row">
+                          <div class="col-md-6 mb-1">
+                              <label for="validationDefault01">Nome</label>
+                              <input [(ngModel)]='cliente.nome' name="nome" type="text" class="form-control"  placeholder="Seu Nome">
+                          </div>
+                          <div class="col-md-6 mb-1">
+                              <label for="validationDefault02">Sobrenome</label>
+                              <input type="text" class="form-control" id="sobrenome" placeholder="Seu Sobrenome">
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="col-md-4 mb-1">
+                              <label for="validationDefault03">CPF</label>
+                              <input [(ngModel)]='cliente.cpf' name="cpf" type="text" class="form-control" placeholder="Seu CPF">
+                          </div>
+                          <div class="col-md-4 mb-1">
+                              <label for="validationDefault04">RG</label>
+                              <input type="text" class="form-control" placeholder="Seu RG">
+                          </div>
+                          <div class="col-md-4 mb-1">
+                              <label for="validationDefault05">Telefone</label>
+                              <input type="text" class="form-control" id="telefone" placeholder="Telefone">
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="form-row">
+                          <div class="form-group col-md-6 mb-1">
+                              <label for="inputEmail4">Email</label>
+                              <input (input)='confirmarEmail($event)' type="email" class="form-control" id="inputEmail4" aria-describedby="emailHelp" placeholder="Email">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="inputPassword4">Senha</label>
+                              <input (input)='confirmarSenha($event)' type="password" class="form-control" id="inputSenha" placeholder="Senha">
+                          </div>
+                      </div>
+                      <div class="form-row">
+                          <div class="form-group col-md-6 mb-1">
+                              <label for="inputEmail4">Confirmar Email</label>
+                              <input [(ngModel)]='cliente.email' name="confirEmail" type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="inputPassword4">Confirmar Senha</label>
+                              <input [(ngModel)]='cliente.senha' name="confirSenha" type="password" class="form-control" id="inputConfirmSenha" placeholder="Senha">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="form-check">
+                              <input class="form-check-input mb-1 ml-1" type="checkbox" value="" id="invalidCheck2"
+                                  required>
+                              <label class="form-check-label mb-1 mr-3 ml-4" for="invalidCheck2">
+                                  Concordo com os termos e condições
+                              </label>
+                          </div>
+                          <div class="row d-flex align-items-center justify-content-center">
+                              <button type="button" class="btn btn-danger mb-1 ml-3" routerLink='/entrar'>Cancelar</button>
+                              <button type="submit" class="btn  btn-success mb-1 ml-5" (click)='cadastrar()'>Cadastrar</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
           </div>
-          <div class="col-md-6 mb-5">
-            <label for="sobrenome">Sobrenome</label>
-            <input type="text" class="form-control" placeholder="Sobrenome" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6">
-            <label for="cpf">CPF</label>
-            <input [(ngModel)]='cliente.cpf' name="cpf" type="text" class="form-control" placeholder="CPF" />
-          </div>
-          <div class="col-6 mb-5">
-            <label for="RG">RG</label>
-            <input type="text" class="form-control" placeholder="RG" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-6">
-            <label for="nacionalidade">Nacionalidade</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Nacionalidade"
-            />
-          </div>
-          <div class="col-6 mb-5">
-            <label for="validationCustom01">Telefone</label>
-            <input type="text" class="form-control" placeholder="Telefone" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-6">
-            <label for="email">Endereço de email</label>
-            <input (input)='confirmarEmail($event)'
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Seu email"
-            />
-            <small id="emailHelp" class="form-text text-muted"
-              >Nunca vamos compartilhar seu email, com ninguém.</small
-            >
-          </div>
-
-          <div class="col-6">
-            <label for="exampleInputEmail1">Confirmar Email</label>
-            <input [(ngModel)]='cliente.email' name="confirEmail" type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Confirmar Email"/>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-6">
-            <label for="exampleInputPassword1">Senha</label>
-            <input (input)='confirmarSenha($event)'
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="Senha"
-            />
-          </div>
-          <div class="col-6 mb-4">
-            <label for="exampleInputPassword1">Confirmar Senha</label>
-            <input [(ngModel)]='cliente.senha'
-              name="confirSenha"
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-              placeholder="Confirmar Senha"
-            />
-          </div>
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Manter-me conectado
-          </label>
-        </div>
-        <div class="d-flex justify-content-around">
-          <button type="button" class="btn btn-outline-danger" routerLink='/entrar'>Cancelar</button>
-          <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
-        </div>
-      </form>
-    </div>
+      </div>
   </div>
 </div>
