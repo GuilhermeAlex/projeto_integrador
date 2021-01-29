@@ -19,7 +19,12 @@ import { CategoriasComponent } from './home/categorias/categorias.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ContatoComponent } from './contato/contato.component';
+<<<<<<< HEAD
 
+=======
+import { EditClienteComponent } from './edit/edit-cliente/edit-cliente.component';
+import { PerfilComponent } from './perfil/perfil.component';
+>>>>>>> 51fd1b56440262098433e97c12d41456aa9d463a
 
 
 @NgModule({
@@ -37,7 +42,13 @@ import { ContatoComponent } from './contato/contato.component';
     CategoriasComponent,
     NewsletterComponent,
     CarrinhoComponent,
+<<<<<<< HEAD
     ContatoComponent
+=======
+    ContatoComponent,
+    EditClienteComponent,
+    PerfilComponent
+>>>>>>> 51fd1b56440262098433e97c12d41456aa9d463a
   ],
   imports: [
     BrowserModule,

@@ -48,7 +48,7 @@ import com.projeto.ecommerce.repository.RepositoryProduto;
 		
 		@GetMapping("/preco/{preco}")
 		public ResponseEntity<List<Produto>> getByPreco ( @PathVariable double preco){
-			return ResponseEntity.ok(repository.findAllByPrecoContainingIgnoreCase(preco));
+			return ResponseEntity.ok(repository.findAllByPreco(preco));
 		}
 			
 		@PutMapping  ("/put/{id}")
