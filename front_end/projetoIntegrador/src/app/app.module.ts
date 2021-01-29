@@ -19,8 +19,8 @@ import { CategoriasComponent } from './home/categorias/categorias.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ContatoComponent } from './contato/contato.component';
-import { EditarClienteComponent } from './app/editar-cliente/editar-cliente.component';
 import { EditClienteComponent } from './edit/edit-cliente/edit-cliente.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
@@ -39,8 +39,8 @@ import { EditClienteComponent } from './edit/edit-cliente/edit-cliente.component
     NewsletterComponent,
     CarrinhoComponent,
     ContatoComponent,
-    EditarClienteComponent,
-    EditClienteComponent
+    EditClienteComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
