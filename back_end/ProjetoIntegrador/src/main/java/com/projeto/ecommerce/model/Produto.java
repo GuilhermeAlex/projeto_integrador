@@ -34,6 +34,17 @@ public class Produto {
 		@Column
 		private String tamanho;
 		
+		@Column
+		private String foto;
+		
+		public String getFoto() {
+			return foto;
+		}
+
+		public void setFoto(String foto) {
+			this.foto = foto;
+		}
+
 		public String getTamanho() {
 			return tamanho;
 		}

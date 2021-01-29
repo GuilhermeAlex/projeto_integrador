@@ -34,19 +34,23 @@ import com.projeto.ecommerce.repository.RepositoryProduto;
 			return ResponseEntity.ok (repository.findAll());
 		}
 		
-		@GetMapping ("/getById/{id}")
+		@GetMapping ("/id/{id}")
 		public ResponseEntity <Produto> GetById (@PathVariable Long id){	
 			return repository.findById(id)
 					.map(resp -> ResponseEntity.ok(resp))
 					.orElse(ResponseEntity.notFound().build());
 		}
 		
-
-		@GetMapping("/getByNome/{nome}")
+		@GetMapping("/nome/{nome}")
 		public ResponseEntity<List<Produto>> getByNome ( @PathVariable String nome){
 			return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
 		}
 		
+		@GetMapping("/preco/{preco}")
+		public ResponseEntity<List<Produto>> getByPreco ( @PathVariable double preco){
+			return ResponseEntity.ok(repository.findAllByPrecoContainingIgnoreCase(preco));
+		}
+			
 		@PutMapping  ("/put/{id}")
 		public Produto atualizar (@PathVariable Long id, @RequestBody Produto objetinho) {
 			objetinho.setId_produto(id);

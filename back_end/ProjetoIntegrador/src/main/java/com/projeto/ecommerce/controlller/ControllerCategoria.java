@@ -34,18 +34,24 @@ public class ControllerCategoria {
 		return ResponseEntity.ok (repository.findAll());
 	}
 	
-	@GetMapping ("/getById/{id}")
+	@GetMapping ("/id/{id}")
 	public ResponseEntity <Categoria> GetById (@PathVariable Long id){	
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
+	@GetMapping("/material/{material}")
+	public ResponseEntity<List<Categoria>> getByMaterial ( @PathVariable String material){
+		return ResponseEntity.ok(repository.findAllByMaterialContainingIgnoreCase(material));
+	}
+	
 
-	@GetMapping("/getByTipo/{tipo}")
+	@GetMapping("/tipo/{tipo}")
 	public ResponseEntity<List<Categoria>> getByTipo ( @PathVariable String tipo){
 		return ResponseEntity.ok(repository.findAllByTipoContainingIgnoreCase(tipo));
 	}
+	
 	
 	@PutMapping  ("/put/{id}")
 	public Categoria atualizar (@PathVariable Long id, @RequestBody Categoria objetinho) {
