@@ -19,6 +19,8 @@ import { CategoriasComponent } from './home/categorias/categorias.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { ContatoComponent } from './contato/contato.component';
+import { PerfilComponent } from './perfil/perfil.component';
+ 
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { ContatoComponent } from './contato/contato.component';
     CategoriasComponent,
     NewsletterComponent,
     CarrinhoComponent,
+    PerfilComponent,
+
   ],
   imports: [
     BrowserModule,

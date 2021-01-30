@@ -4,13 +4,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'entrar', pathMatch: 'full' },
   { path: 'entrar', component: EntrarComponent },
   { path: 'cadastrar', component: CadastrarComponent },
-  {path: 'home', component: DestaquesComponent},
-  {path: 'contato', component: ContatoComponent}
+  { path: 'home', component: DestaquesComponent},
+  { path: 'contato', component: ContatoComponent},
+  { path: 'perfil', component: PerfilComponent }
 ];
 
 @NgModule({
