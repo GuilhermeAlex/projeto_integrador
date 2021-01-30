@@ -1,6 +1,6 @@
 
     #img-bg{
-        background-image: url('https://asplanpb.com.br/wp-content/uploads/2018/02/meioambiente.jpg');
+        background-image: url('https://media-manager.noticiasaominuto.com/1920/1566385498/naom_5d078fe5d7c92.jpg?crop_params=eyJwb3J0cmFpdCI6eyJjcm9wV2lkdGgiOjQ3MCwiY3JvcEhlaWdodCI6ODM1LCJjcm9wWCI6Mzg2LCJjcm9wWSI6MH0sImxhbmRzY2FwZSI6eyJjcm9wV2lkdGgiOjEyNTQsImNyb3BIZWlnaHQiOjcwNSwiY3JvcFgiOjAsImNyb3BZIjo1M319');
         min-height: 695px;
         background-position: center;
         background-repeat: no-repeat;
@@ -9,7 +9,8 @@
     p{
         font-size: 25pt;
     }
-    .logotipo{
-        height:50px;
-        weight: 50px;
-    }
+    
+    .opacity{
+        opacity:0.8;
+        filter:alpha(opacity=60);
+        }
