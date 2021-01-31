@@ -1,57 +1,42 @@
 <div class="d-flex justify-content-center " id='img-bg'>
-  <div
-    class="login-container border border-success shadow-lg p-3 mb-5 bg-white rounded opacity hg"
-  >
+  <div class="login-container border border-dark shadow-lg p-3 mb-5 bg-white rounded opacity">
     <div class="login-content">
       <h2 class="d-flex justify-content-center">Entrar</h2>
 
       <form class="forms-container">
         <div class="form-group">
-          <label for="exampleInputEmail1">Email</label>
+          <label for="exampleInputEmail1"><b>Email</b></label>
 
           <div class="col-md-20 mb-4">
-            <input [(ngModel)]="userLogin.email"
-              name="email"
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Digite o  o Email"
-            />
+            <input [(ngModel)]="userLogin.email" name="email" type="text" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Digite seu Email" />
             <small id="emailHelp" class="form-text text-muted"></small>
           </div>
         </div>
         <div class="form-group">
-          <label for="senha">Senha</label>
-          <input
-            [(ngModel)]="userLogin.senha"
-            name="senha"
-            type="password"
-            class="form-control"
-            id="senha"
-            placeholder="Digite sua Senha"
-          />
+          <label for="senha"><b>Senha</b></label>
+          <input [(ngModel)]="userLogin.senha" name="senha" type="password" class="form-control" id="senha"
+            placeholder="Digite sua Senha" />
         </div>
         <div class="form-group form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Manter-me conectado</label
-          >
+          <label class="form-check-label" for="exampleCheck1">Manter-me conectado</label>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center ">
+
+          <button type="submit" class="btn btn-outline-success mb-3 ml-3 d-flex justify-content-center "
+            (click)='entrar()'>
+            Acessar
+          </button>
+
         </div>
 
-        <button
-          type="submit"
-          class="btn btn btn-outline-success btn-acessar justify-content-center"
-          (click)='entrar()'
-        >
-          Acessar
-        </button>
       </form>
 
       <div class="conta-content">
         <p class="text-center">
           Não tem uma conta? <a routerLink='/cadastrar'>Cadastre-se</a>
-      </p>
+        </p>
       </div>
     </div>
   </div>

@@ -1,0 +1,15 @@
+#img-bg{
+    background-image: url('https://i.imgur.com/zj0eXIr.jpg');
+    min-height: 695px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p{
+    font-size: 25pt;
+}
+
+.opacity{
+    opacity:0.8;
+    filter:alpha(opacity=60);
+    }

@@ -7,12 +7,8 @@
     margin: 6% 15%;
 
 }
-.btn-acessar{
-    width: 140px;
-    margin-left: 35%;
-    margin-bottom: 8%;
 
-}
+
 .conta-content{
     border-top:solid 1px rgba(128, 128, 128, 0.8);
     padding-top:4%;
@@ -28,13 +24,13 @@
 }
 
     #img-bg{
-        background-image: url('https://smastr16.blob.core.windows.net/home/2020/09/istock-1085122436-1024x683.jpg');
+        background-image: url('https://i.imgur.com/1hYfs5w.jpg');
         min-height: 695px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
     .opacity{
-        opacity:0.8;
+        opacity:0.9;
         filter:alpha(opacity=60);
         }
