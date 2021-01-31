@@ -11,9 +11,16 @@
 }
 
 .border-radius{
-    border-radius: 20px;
+    border-radius: 20px 0  0 20px ;
+
 }
 
 .ml-100{
     margin-left: 100px;
+}
+
+.b-search{
+    border-radius: 0 20px 20px 0;
+    margin-left: -1em;
+    border-left: none;
 }
