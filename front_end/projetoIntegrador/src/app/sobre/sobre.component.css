@@ -1,0 +1,48 @@
+.foto-perfil {
+    width: 100px;
+    margin-left: 30%;
+    position: relative;
+    top: -15%;
+    margin-bottom: -15%;
+}
+
+.objetivoOnu {
+    width: 200px;
+}
+
+.group-onu {
+    border: none;
+}
+
+.card-devs {
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+.card-img-top {
+    border: 3px;
+    border-radius: 20px 20px 0 0;
+}
+
+.redes-sociais p{
+    font-size: 14pt;
+}
+
+.redes-sociais a:hover{
+    text-decoration: none;
+}
+
+.redes-sociais github, linkedin, a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.github:hover {
+    color: black;
+    transform:scale(1.1);
+}
+
+.linkedin:hover {
+    color: #0e76a8;
+    transform:scale(1.1);
+}
