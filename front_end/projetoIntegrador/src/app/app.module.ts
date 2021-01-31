@@ -18,8 +18,9 @@ import { DestaquesComponent } from './home/destaques/destaques.component';
 import { CategoriasComponent } from './home/categorias/categorias.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
-import { ContatoComponent } from './contato/contato.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { ContatoComponent } from './contato/contato.component';
  
 
 @NgModule({
@@ -38,7 +39,8 @@ import { PerfilComponent } from './perfil/perfil.component';
     NewsletterComponent,
     CarrinhoComponent,
     PerfilComponent,
-
+    SobreComponent,
+    ContatoComponent
   ],
   imports: [
     BrowserModule,
