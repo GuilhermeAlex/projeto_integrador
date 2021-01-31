@@ -1,0 +1,21 @@
+input{
+    all: unset;
+    border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+}
+input:checked{
+  background-color: rgb(217, 255, 0);
+  width: 20px;
+  height: 20px;
+}
+
+.t-img{
+    width: 253px;
+    height: 200px;
+}
+
+.redondo{
+  border-radius: 30%;
+}
