@@ -1,5 +1,6 @@
 .ponto{
     list-style:none ;
+    color: black;
 }
 
 .mr-30{
@@ -23,4 +24,8 @@
     border-radius: 0 20px 20px 0;
     margin-left: -1em;
     border-left: none;
+}
+
+.fundo{
+    background-color: #009900;
 }

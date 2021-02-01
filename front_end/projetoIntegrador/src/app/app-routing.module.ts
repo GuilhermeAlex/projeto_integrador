@@ -7,6 +7,7 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ProductPageComponent } from './loja/product-page/product-page.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent},
   { path: 'perfil', component: PerfilComponent },
   { path: 'sobre', component: SobreComponent },
-  { path: 'produtos', component: ProductPageComponent }
+  { path: 'produtos', component: ProductPageComponent },
+  { path: 'carrinho', component: CarrinhoComponent}
 ];
 
 @NgModule({
