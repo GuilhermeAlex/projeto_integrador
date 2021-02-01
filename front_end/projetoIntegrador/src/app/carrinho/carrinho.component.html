@@ -129,129 +129,371 @@
           </div>
         </div>
       </div>
-      <div class="row pl-5 align-items-center mb-4 mt-4 border-bottom">
-        <h3 class="font-weight-bold display-5 pr-3">Forma de Pagamento</h3>
-        <nav>
-          <div
-            class="nav nav-tabs d-flex justify-content-center"
-            id="nav-tab"
-            role="tablist"
-          >
-            <a
-              class="nav-item nav-link active text-secondary font-weight-bold"
-              id="nav-cartao-tab"
-              data-toggle="tab"
-              href="#boleto"
-              role="tab"
-              aria-controls="nav-boleto"
-              aria-selected="true"
-              ><img
-                src="https://i.imgur.com/D4HuSyG.png"
-                alt="Imagem código de barras"
-                width="40px"
-                height="40px"
-            /></a>
-            <a
-              class="nav-item nav-link text-secondary font-weight-bold"
-              id="nav-cartao-tab"
-              data-toggle="tab"
-              href="#cartao"
-              role="tab"
-              aria-controls="nav-cartao"
-              aria-selected="false"
-            >
-              <img
-                class="pl-3"
-                src="https://i.imgur.com/l2PdFXB.png"
-                alt="Imagem cartão de crédito"
-                width="60px"
-                height="60px"
-            /></a>
-          </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-          <div
-            class="tab-pane fade show active"
-            id="nav-boleto-tab"
-            role="tabpanel"
-            aria-labelledby="nav-boleto-tab"
-          ></div>
-          <div
-            class="tab-pane fade"
-            id="nav-cartao-tab"
-            role="tabpanel"
-            aria-labelledby="nav-cartao-tab"
-          ></div>
-        </div>
+      <div class="row align-self-center mb-3 mt-4">
+        <h3 class="font-weight-bold display-5">Forma de Pagamento</h3>
       </div>
     </div>
-    <div class="row mt-3 mb-5">
-      <div class="col-md-4 font-weight-bold">
-        <div class="form-group" id="cartao">
-          <form>
-            <div class="form-group">
-              <label for="inputAddress">Número do Cartão</label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputAddress"
-                placeholder="Digite o número do Cartão"
-              />
+    <div class="row mb-5 align-items-center border-top">
+      <div class="col-md-8 font-weight-bold">
+        <ul
+          class="nav nav-pills mb-3 d-flex justify-content-start"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item">
+            <a
+              class="nav-link active mt-3"
+              id="pills-home-tab"
+              data-toggle="pill"
+              href="#pills-home"
+              role="tab"
+              aria-controls="pills-home"
+              aria-selected="true"
+              >Boleto
+              <img
+                src="https://i.imgur.com/MSXmGq0.png"
+                alt="Imagem código de barras"
+                width="30px"
+                height="30px"
+            /></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link pr-2 mt-3"
+              id="pills-profile-tab"
+              data-toggle="pill"
+              href="#pills-profile"
+              role="tab"
+              aria-controls="pills-profile"
+              aria-selected="false"
+              >Cartão
+              <img
+                src="https://i.imgur.com/kOcBMuL.png"
+                alt="Imagem cartão de crédito"
+                width="30px"
+                height="30px"
+            /></a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="pills-home"
+            role="tabpanel"
+            aria-labelledby="pills-home-tab"
+          >
+            <div class="form-group" id="boleto">
+              <form>
+                <h5 class="border-bottom">Dados Pessoais</h5>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputEmail4">Nome</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Primeiro Nome"
+                    />
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputPassword4">Sobrenome</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassword4"
+                      placeholder="Último Sobrenome"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Número do Cartão</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="Digite o número do Cartão"
+                  />
+                  </div>
+
+                <h5 class="border-bottom">Endereço</h5>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputEmail4">Rua ou Avenida</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Nome da Rua ou Avenida"
+                    />
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputPassword4">Bairro</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassword4"
+                      placeholder="Nome do Bairro"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-2">
+                    <label for="inputEmail4">Número</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Nº Residência"
+                    />
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputPassword4">CEP</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassword4"
+                      placeholder="CEP da Residência"
+                    />
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputPassword4">Complemento</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassword4"
+                      placeholder="Complemento"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputEmail4">Cidade</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Cidade"
+                    />
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputEstado">Estado</label>
+                    <select id="inputEstado" class="form-control">
+                      <option selected>Selecione o Estado</option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                      <option value="EX">Estrangeiro</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="form-group">
-              <label for="inputAddress2">Nome</label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputAddress2"
-                placeholder="Nome Completo"
-              />
+          </div>
+
+          <div
+            class="tab-pane fade d-flex flex-row"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+          >
+            <div class="form-group" id="cartao">
+              <form>
+                <h5 class="border-bottom">Dados do Cartão</h5>
+                <div class="form-group">
+                  <label for="inputAddress">Número do Cartão</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="Digite o número do Cartão"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress2"
+                    placeholder="Nome Completo"
+                  />
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Data de vencimento</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Vencimento do Cartão"
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Código de Segurança</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="inputPassword4"
+                      placeholder="Cod.Segurança"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">CPF</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputAddress"
+                    placeholder="CPF do Titular"
+                  />
+                </div>
+                <h5 class="border-bottom">Endereço</h5>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Rua ou Avenida</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Nome da Rua ou Avenida"
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Bairro</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassword4"
+                      placeholder="Nome do Bairro"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputEmail4">Número</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Número da Residência"
+                    />
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputPassword4">CEP</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassword4"
+                      placeholder="CEP da Residência"
+                    />
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputPassword4">Complemento</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputPassword4"
+                      placeholder="Complemento"
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Cidade</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputEmail4"
+                      placeholder="Cidade"
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEstado">Estado</label>
+                    <select id="inputEstado" class="form-control">
+                      <option selected>Selecione o Estado</option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                      <option value="EX">Estrangeiro</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputEmail4">Data de vencimento</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="inputEmail4"
-                  placeholder="Vencimento do Cartão"
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Código de Segurança</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword4"
-                  placeholder="Cod.Segurança"
-                />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="inputAddress">CPF</label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputAddress"
-                placeholder="CPF do Titular"
-              />
-            </div>
-          </form>
+
+          </div>
         </div>
       </div>
-      <div class="col-md-3">
-        <img
-          class="rounded mx-auto d-block border-right mt-5"
-          src="https://i.imgur.com/l2PdFXB.png"
-          alt="Imagem cartão"
-          width="250"
-          height="250"
-        />
-      </div>
-      <div class="col-md-5">
-        <h4 class="text center mb-4">Resumo da compra</h4>
-        <p>Produtos</p>
-        <p class="border-bottom">Envio</p>
+
+      <div class="col-md-4 border-left align-top">
+        <h4 class="text center mb-4 mt-5">Resumo da compra</h4>
+        <div class="d-flex justify-content-between">
+          <p>Produtos</p>
+          <p>R$ 0,00</p>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <p>Envio</p>
+          <p>R$ 0,00</p>
+        </div>
+        <div class="row mt-5 ml-1 mr-1 justify-content-between border-top">
+          <p>Pagará</p>
+          <p>R$ 0,00</p>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4 mt-5">
+            <button type="button" class="btn btn-warning">
+              Finalizar compra
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
