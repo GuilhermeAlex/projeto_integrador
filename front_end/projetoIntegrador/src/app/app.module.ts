@@ -21,6 +21,7 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
+import { ModalComponent } from './modal/modal.component';
  
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ContatoComponent } from './contato/contato.component';
     CarrinhoComponent,
     PerfilComponent,
     SobreComponent,
-    ContatoComponent
+    ContatoComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

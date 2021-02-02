@@ -10,3 +10,7 @@
 .fundo-menu{
     background-color: #009900;
 }
+
+.modal-dialog{
+    min-width: 80vw;
+ }
