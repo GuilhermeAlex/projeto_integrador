@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg navbar-light fundo">
   <button
     class="navbar-toggler"
     type="button"
@@ -12,29 +12,31 @@
   </button>
 
   <div class="collapse navbar-collapse ml-100" id="conteudoNavbarSuportado">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto align-items-center">
       <li>
-        <img
-          src="*ngIf='mostraFoto()'"
+        <a routerLink="/home">
+          <img
+          src="https://i.imgur.com/dI0Vph1.png"
           alt="logo"
-          width="40px"
-          height="40px"
+          width="80px"
+          height="80px"
           class="img-fluid"
         />
+      </a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" routerLink="/home"
-          >Home <span class="sr-only">(página atual)</span></a
+          ><i>Home</i> <span class="sr-only">(página atual)</span></a
         >
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/sobre">Sobre Nós</a>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/sobre"><i>Sobre Nós</i></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/produtos">Produto</a>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/produtos"><i>Produto</i></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/contato">Contato</a>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/contato"><i>Contato</i></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0 mr-30">
@@ -42,18 +44,18 @@
         class="form-control mr-sm-2 border-radius"
         type="search"
         placeholder="Pesquisar"
-        aria-label="Pesquisar"
-      />
-      <i class="fa fa-search" aria-hidden="true"></i>
+        aria-label="Pesquisar" />
+        <a href=""><i class="fa fa-search b-search form-control" aria-hidden="true"></i></a>
+
     </form>
-    <li class="ponto"><i class="fa fa-user-circle" aria-hidden="true"></i></li>
+    <a routerLink="/entrar"><li class="ponto"><i class="fa fa-user-circle" aria-hidden="true"></i></li></a>
     <li class="nav-item ponto">
-      <a class="nav-link" href="#"
-        >*ngIf="mostraNome()"</a
+      <a class="nav-link" [routerLink]="['/{{linkUsuario}}']"
+      >{{nomeMostra}}</a
       >
     </li>
-    <li class="ponto mr-15">
+    <a routerLink="/carrinho"><li class="ponto mr-15">
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-    </li>
+    </li></a>
   </div>
 </nav>

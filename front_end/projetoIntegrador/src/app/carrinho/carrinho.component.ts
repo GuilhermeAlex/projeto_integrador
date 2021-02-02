@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { truncate } from 'fs';
+
 
 @Component({
   selector: 'app-carrinho',

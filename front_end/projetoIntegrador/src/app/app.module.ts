@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
-import { NavbarComponent } from './navbar-destaques/navbar.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductPageComponent } from './loja/product-page/product-page.component';
 import { ProductsComponent } from './loja/products/products.component';
@@ -22,7 +22,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
 import { ModalComponent } from './modal/modal.component';
- 
+
 
 @NgModule({
   declarations: [
