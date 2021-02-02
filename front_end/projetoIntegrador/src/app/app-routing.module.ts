@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'sobre', component: SobreComponent },
   { path: 'produtos', component: ProductPageComponent },
   { path: 'carrinho', component: CarrinhoComponent},
-  {path: 'perfil/:id', component: PerfilComponent}
+  {path: 'perfil/:id', component: PerfilComponent},
+  {path: 'produtos/:tipo', component: ProductPageComponent}
 ];
 
 @NgModule({

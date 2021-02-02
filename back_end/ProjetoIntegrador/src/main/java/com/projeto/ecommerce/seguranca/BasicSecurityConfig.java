@@ -32,7 +32,7 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
 		.antMatchers("/cliente/**").permitAll()
-		.antMatchers("/cliente/**").permitAll()
+		.antMatchers(HttpMethod.GET,"/produto").permitAll()
 		.anyRequest().authenticated()
 		.and().httpBasic()
 		.and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
