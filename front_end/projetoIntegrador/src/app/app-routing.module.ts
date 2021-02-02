@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
   { path: 'sobre', component: SobreComponent },
   { path: 'produtos', component: ProductPageComponent },
-  { path: 'carrinho', component: CarrinhoComponent}
+  { path: 'carrinho', component: CarrinhoComponent},
+  {path: 'perfil/:id', component: PerfilComponent}
 ];
 
 @NgModule({
