@@ -101,7 +101,9 @@
           limpadores descartáveis por outros feitos a mão, de forma fácil? Qualquer iniciante consegue fazer, 
           são praticamente só 2 costuras!
         </p>
-        <a class="_blank" href="https://www.youtube.com/watch?v=4kdJFXcnMSc" target="_blank">Link Video</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+          Ver Mais.
+        </button>
       </div>
     </div>
     <div class="card">
@@ -117,7 +119,9 @@
           que destroem nosso meio ambiente. Qualquer iniciante consegue, vamos salvar nosso planeta! <br> <br>
 
         </p>
-        <a href="https://www.youtube.com/watch?v=MhWhmwpKzyw" target="_blank">Link Video</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal2">
+          Ver Mais.
+        </button>
       </div>
     </div>
     <div class="card">
@@ -133,7 +137,9 @@
           Apenas com a reciclagem desses dois itens, podemos fazer coisas incriveis como o lar do 
           seu bichinho. <br><br>
         </p>
-        <a href="https://www.youtube.com/watch?v=VEKLl65ZjJI" target="_blank">Link Video</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal3">
+          Ver Mais.
+        </button>
       </div>
     </div>
   </div>
@@ -146,7 +152,7 @@
     <h3 class="font-weight-bold display-5 mt-5">Categorias</h3>
     <div class="card-group mt-3">
       <div class="card" style="width: 18rem">
-        <img src="https://i.imgur.com/nJkOncE.png" class="card-img-top" alt="Utensilios" />
+        <img src="https://i.imgur.com/GqCkcJp.pngg" class="card-img-top" alt="Utensilios" />
         <div class="card-body">
           <p class="card-text d-flex justify-content-center">
            <b>Utensílios Diarios.</b> 
@@ -162,7 +168,7 @@
         </div>
       </div>
       <div class="card" style="width: 18rem">
-        <img src="https://i.imgur.com/sXh0eth.png" class="card-img-top" alt="Objeto de Decoração" />
+        <img src="https://i.imgur.com/xlTyzxH.png" class="card-img-top" alt="Objeto de Decoração" />
         <div class="card-body">
           <p class="card-text d-flex justify-content-center">
             <b>Objetos de Decoração</b>
@@ -170,7 +176,7 @@
         </div>
       </div>
       <div class="card" style="width: 18rem">
-        <img src="https://i.imgur.com/Re2oYTu.png" class="card-img-top" alt="Moveis" />
+        <img src="https://i.imgur.com/cDs76NK.png" class="card-img-top" alt="Moveis" />
         <div class="card-body">
           <p class="card-text d-flex justify-content-center">
             <b>Moveis</b>
@@ -183,3 +189,95 @@
 
 <br><br><br>
   <hr>
+
+<app-newsletter></app-newsletter>
+
+<!--Inicio Modal-->
+<!-- Modal 1 -->
+<!-- Botão para acionar modal -->
+
+
+<!-- Modal 1 -->
+<div class="modal fade" id="Modal2" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Espandor de Pano</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+         <div class="col-md-6">  Esse vídeo é para você aprender a criar a sua sacola ecologica. Vamos juntos dizer não as sacolas de Plastico
+          que destroem nosso meio ambiente. Qualquer iniciante consegue, vamos salvar nosso planeta!</div>
+        <div class="col-md-6">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/MhWhmwpKzyw" frameborder="0" 
+          allow="accelerometer; autoplay;
+           clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Fim do Modal 1-->
+<!--Inicio Modal 2-->
+<div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Espandor de Pano</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+         <div class="col-md-6"> Que tal ajudar com a sustentabilidade do nosso planeta substituindo nossos 
+        limpadores descartáveis por outros feitos a mão, de forma fácil? Qualquer iniciante consegue fazer, 
+        são praticamente só 2 costuras!</div>
+        <div class="col-md-6">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/4kdJFXcnMSc" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fim do Modal2-->
+<!--Inicio Modal 3-->
+<div class="modal fade" id="Modal3" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="TituloModalCentralizado">Espandor de Pano</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <div class="row">
+         <div class="col-md-6"> Nesse video ensinamos a montar uma casinha pro seu pet, de GARRAFA PET e ISOPOR.
+          Apenas com a reciclagem desses dois itens, podemos fazer coisas incriveis como o lar do 
+          seu bichinho.</div>
+        <div class="col-md-6">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/VEKLl65ZjJI" frameborder="0" 
+          allow="accelerometer; autoplay; 
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Fim do Modal3-->
