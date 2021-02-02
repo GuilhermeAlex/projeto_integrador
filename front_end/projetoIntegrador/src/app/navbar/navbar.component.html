@@ -15,7 +15,7 @@
     <ul class="navbar-nav mr-auto">
       <li>
         <img
-          src="https://cdn.pixabay.com/photo/2017/05/13/23/05/img-src-x-2310895_960_720.png"
+          src="*ngIf='mostraFoto()'"
           alt="logo"
           width="40px"
           height="40px"
@@ -49,8 +49,7 @@
     <li class="ponto"><i class="fa fa-user-circle" aria-hidden="true"></i></li>
     <li class="nav-item ponto">
       <a class="nav-link" href="#"
-        >Entre ou <br />
-        Cadastre-se</a
+        >*ngIf="mostraNome()"</a
       >
     </li>
     <li class="ponto mr-15">
