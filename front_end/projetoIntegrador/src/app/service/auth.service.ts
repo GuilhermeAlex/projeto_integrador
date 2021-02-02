@@ -10,6 +10,8 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class AuthService {
 
+  
+
   constructor(
     private http: HttpClient
   ) { }
@@ -32,4 +34,12 @@ export class AuthService {
 
     return ok
   }
+  // destaquePage(){
+  
+  //   let ok: boolean = false
+  //   if(this.router.url == '/' || this.router.url == 'http://localhost:4200/#/home' ){
+  //     ok = true
+  //   }
+  //   return ok
+  // }
 }
