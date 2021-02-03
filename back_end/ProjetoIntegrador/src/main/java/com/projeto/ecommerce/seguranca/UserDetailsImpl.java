@@ -18,12 +18,14 @@ public class UserDetailsImpl implements UserDetails {
 	private String userName;
 	private String password;
 	private String nome;
+	private long id;
 	private List<GrantedAuthority> authorities;
 
 	public UserDetailsImpl(Cliente user) {
 		this.userName = user.getEmail();
 		this.password = user.getSenha();
 		this.nome = user.getNome();
+		this.id = user.getId_cliente();
 	}
 	
 	public String getNome() {

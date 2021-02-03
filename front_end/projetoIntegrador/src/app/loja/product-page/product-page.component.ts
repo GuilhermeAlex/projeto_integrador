@@ -15,7 +15,10 @@ export class ProductPageComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProdutos: Produto[];
-  listaCategoria: Categoria[];
+  listaTipo: Categoria[];
+  listaMaterial: Categoria[];
+
+  tipo: string
 
   tipoCategoria: string
 
@@ -32,21 +35,28 @@ export class ProductPageComponent implements OnInit {
     window.scroll(0, 0);
 
     this.getAllProdutos()
-    this.findAllCategoria()
+    // this.findAllCategoria()
   }
 
 
   getAllProdutos(){
     this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-      
+
       this.listaProdutos = resp
     })
   }
-  findAllCategoria(){
-    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
-      this.listaCategoria = resp
-      console.log(resp)
-    })
-  }
+  // findAllCategoria(){
+  //   this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+  //     this.listaCategoria = resp
+  //     console.log(resp)
+  //   })
+  // }
+
+  // findAllTipo(){
+  //   this.categoriaService.getByTipoCategoria(this.tipo).subscribe((resp: Categoria[])=>{
+  //     this.listaMaterial = resp
+  //     console.log(resp)
+  //   })
+  // }
 
 }

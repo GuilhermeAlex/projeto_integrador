@@ -1,47 +1,78 @@
 <!--Imagem de background-->
-<div class="p-5 text-center bg-image" style="
+<div
+  class="p-5 text-center bg-image"
+  style="
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQchzT-ayrVejYZAj4AeNjedQ0huDWTwMZow&usqp=CAU');
     background-size: 100% 100%;
-  ">
+  "
+>
   <!--container -->
   <div class="container">
     <div class="row">
       <!--Filtro-->
-      <div class="col-md-3 aline">    
+      <div class="col-md-3 aline">
         <div class="row mt-3">
           <h5>Material</h5>
         </div>
         <hr />
-        
-        <div class="row ml-2" *ngFor="let categoria of listaCategoria">
+
+        <div class="row ml-2" *ngFor="let categoria of listaMaterial">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions2" id="inlineRadio11" value="opcao2" />
-            <label class="form-check-label" for="inlineRadio11">{{categoria.material}}</label>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="inlineRadioOptions2"
+              id="inlineRadio11"
+              value="opcao2"
+            />
+            <label class="form-check-label" for="inlineRadio11">{{
+              categoria.material
+            }}</label>
           </div>
         </div>
         <div class="row mt-3">
           <h5>Categoria</h5>
         </div>
         <hr />
-        <div class="row ml-2" *ngFor="let categoria of listaCategoria">
+        <div class="row ml-2" *ngFor="let categoria of listaTipo">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" name="inlineRadioOptions3" id="inlineRadio12" value="opcao2" />
-            <label class="form-check-label" for="inlineRadio12">{{categoria.tipo}}</label>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="inlineRadioOptions3"
+              id="inlineRadio12"
+              value="opcao2"
+            />
+            <label class="form-check-label" for="inlineRadio12">{{
+              categoria.tipo
+            }}</label>
           </div>
         </div>
-       
       </div>
       <div class="col-md-9 d-flex flex-wrap d-flex justify-content-arround">
-        <div class="card mr-3 mb-2 mt-3 bg-transparent" style="width: 15rem;" *ngFor="let produto of listaProdutos">
-          <img class="card-img-top t-img" src="{{ produto.foto }}" alt="Imagem de capa do card" />
+        <div
+          class="card mr-3 mb-2 mt-3 bg-transparent"
+          style="width: 15rem"
+          *ngFor="let produto of listaProdutos"
+        >
+          <img
+            class="card-img-top t-img"
+            src="{{ produto.foto }}"
+            alt="Imagem de capa do card"
+          />
           <div class="card-body">
             <h5 class="card-title">Título do card</h5>
             <p class="card-text">
               {{ produto.descricao }}
             </p>
             R$ {{ produto.preco }}
-            <button type="button" class="btn btn-warning btn-sm ml-5 rounded" data-toggle="modal" data-target="#comprar"
-              routerLink="/carrinho">
+            <button
+              type="button"
+              class="btn btn-warning btn-sm ml-5 rounded"
+              data-toggle="modal"
+              data-target="#comprar"
+              routerLink="/carrinho"
+            >
               Comprar
             </button>
           </div>

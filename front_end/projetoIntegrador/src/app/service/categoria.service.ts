@@ -20,7 +20,9 @@ export class CategoriaService {
     return this.http.get<Categoria[]>('http://localhost:8080/categoria',this.token)
   }
 
-  
+  getByIdCategoria(id: number):Observable<Categoria>{
+    return this.http.get<Categoria>(`http://localhost:8080/categoria/id/${id}`,this.token)
+  }
 
   getByTipoCategoria(tipo: string):Observable<Categoria>{
     return this.http.get<Categoria>(`http://localhost:8080/categoria/tipo/${tipo}`,this.token)
