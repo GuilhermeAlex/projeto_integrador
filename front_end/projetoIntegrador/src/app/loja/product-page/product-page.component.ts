@@ -4,6 +4,7 @@ import { AuthService } from './../../service/auth.service';
 import { Produto } from './../../model/Produto';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CategoriaService } from 'src/app/service/categoria.service';
 
 @Component({
   selector: 'app-product-page',
@@ -14,26 +15,37 @@ export class ProductPageComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProdutos: Produto[];
+  listaCategoria: Categoria[];
+
+  tipoCategoria: string
 
   categoria: Categoria = new Categoria();
 
   constructor(
     private router: Router,
     private auth: AuthService,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private categoriaService: CategoriaService
   ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
 
     this.getAllProdutos()
+    this.findAllCategoria()
   }
 
 
   getAllProdutos(){
     this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-      console.log(resp)
+      
       this.listaProdutos = resp
+    })
+  }
+  findAllCategoria(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
+      this.listaCategoria = resp
+      console.log(resp)
     })
   }
 
