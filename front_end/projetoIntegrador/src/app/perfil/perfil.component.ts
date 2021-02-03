@@ -47,7 +47,7 @@ export class PerfilComponent implements OnInit {
         this.router.navigate(['/home'])
         alert('Usuário atualizado com sucesso, faça o login novamente.')
         environment.token = ''
-        environment.usuario = ''
+        environment.nome = ''
         environment.email = ''
 
         this.router.navigate(['/entrar'])

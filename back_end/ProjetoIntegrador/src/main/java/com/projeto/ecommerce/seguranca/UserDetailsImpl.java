@@ -15,18 +15,25 @@ public class UserDetailsImpl implements UserDetails {
 	 */
 	private static final long serialVersionUID = 1L;
 
-
-
-	
 	private String userName;
 	private String password;
+	private String nome;
 	private List<GrantedAuthority> authorities;
 
 	public UserDetailsImpl(Cliente user) {
 		this.userName = user.getEmail();
 		this.password = user.getSenha();
+		this.nome = user.getNome();
 	}
 	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public UserDetailsImpl() {}
 
 	

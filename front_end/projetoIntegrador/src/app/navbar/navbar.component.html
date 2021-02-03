@@ -50,9 +50,15 @@
     </form>
     <a routerLink="/entrar"><li class="ponto"><i class="fa fa-user-circle" aria-hidden="true"></i></li></a>
     <li class="nav-item ponto">
-      <a class="nav-link" [routerLink]="['/{{linkUsuario}}']"
-      >{{nomeMostra}}</a
+
+
+      <a class="nav-link" *ngIf='mostraNome()' routerLink='/perfil' style="color:white"
+      >{{nome}}</a
       >
+      <a class="nav-link" *ngIf='escondeNome()' routerLink="/entrar" style="color:white "
+      >Entre ou Cadastre-se</a
+      >
+
     </li>
     <a routerLink="/carrinho"><li class="ponto mr-15">
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>

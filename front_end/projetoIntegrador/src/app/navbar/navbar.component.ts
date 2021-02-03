@@ -1,5 +1,10 @@
-import { environment } from '../../environments/environment.prod';
+import { environment } from './../../environments/environment.prod';
+import { AuthService } from './../service/auth.service';
+import { ClienteService } from './../service/cliente.service';
+import { Cliente } from './../model/Cliente';
+
 import { Component, OnInit } from '@angular/core';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-navbar',
@@ -7,19 +12,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  nome = environment.nome;
-  nomeMostra: string
-  linkUsuario: string
-  constructor() {}
+  nome: string;
 
-  ngOnInit() {
-    if (this.nome == '') {
-      this.nomeMostra = 'Entre ou cadastre-se'
-      this.linkUsuario = 'entrar'
-    }else{
-      this.nomeMostra = this.nome
+  constructor(
+    private auth: AuthService,
+  ) {}
+
+  ngOnInit() {}
+
+  mostraNome() {
+    let ok: boolean = false;
+
+    if (environment.token != '') {
+      ok = true;
+      this.nome = environment.nome;
+      console.log(this.nome);
     }
+
+    return ok;
   }
 
+  escondeNome() {
+    let ok: boolean = false;
+    if (environment.token == '') {
+      ok = true;
+    }
 
+    return ok;
+  }
 }

@@ -1,3 +1,4 @@
+import { Cliente } from './../model/Cliente';
 import { AuthService } from './../service/auth.service';
 import { environment } from './../../environments/environment.prod';
 import { UserLogin } from './../model/UserLogin';
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 export class EntrarComponent implements OnInit {
 
   userLogin: UserLogin = new UserLogin()
+  cliente: Cliente = new Cliente()
 
   constructor(
     private auth: AuthService,
@@ -27,8 +29,9 @@ export class EntrarComponent implements OnInit {
       this.userLogin = resp
 
       environment.token = this.userLogin.token
-      environment.usuario = this.userLogin.usuario
+      environment.nome = this.userLogin.nome
       environment.email = this.userLogin.email
+
 
       this.router.navigate(['/home'])
     }, erro =>{
