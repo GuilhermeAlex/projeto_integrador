@@ -17,7 +17,7 @@
                           </div>
                           <div class="col-md-6 mb-1">
                               <label for="validationDefault02"><b>Sobrenome</b></label>
-                              <input type="text" class="form-control" id="sobrenome" placeholder="Seu Sobrenome">
+                              <input [(ngModel)]='cliente.sobrenome' type="text" class="form-control" id="sobrenome" placeholder="Seu Sobrenome">
                           </div>
                       </div>
                       <div class="form-row">
@@ -27,11 +27,11 @@
                           </div>
                           <div class="col-md-4 mb-1">
                               <label for="validationDefault04"><b>RG</b></label>
-                              <input type="text" class="form-control" placeholder="Seu RG">
+                              <input [(ngModel)]='cliente.rg' type="text" class="form-control" placeholder="Seu RG">
                           </div>
                           <div class="col-md-4 mb-1">
                               <label for="validationDefault05"><b>Telefone</b></label>
-                              <input type="text" class="form-control" id="telefone" placeholder="Telefone">
+                              <input [(ngModel)]='cliente.telefone' type="text" class="form-control" id="telefone" placeholder="Telefone">
                           </div>
                       </div>
                       <hr>
