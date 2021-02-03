@@ -21,13 +21,23 @@ public class Cliente {
 	private String nome;
 	
 	@Column
+	private String sobrenome;
+	
+	@Column
 	private String cpf;
+	
+	@Column
+	private String rg;
+	
+	@Column
+	private String telefone;
 	
 	@Column
 	private String email;
 	
 	@Column
 	private String senha;
+	
 	
 	@OneToOne
 	private Carrinho carrinho;
