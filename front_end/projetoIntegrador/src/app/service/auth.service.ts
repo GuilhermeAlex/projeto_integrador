@@ -34,12 +34,9 @@ export class AuthService {
 
     return ok;
   }
-  // destaquePage(){
 
-  //   let ok: boolean = false
-  //   if(this.router.url == '/' || this.router.url == 'http://localhost:4200/#/home' ){
-  //     ok = true
-  //   }
-  //   return ok
-  // }
+  getByIdCliente(id: number):Observable<Cliente>{
+    return this.http.get<Cliente>(`http://localhost:8080/cliente/id/${id}`)
+  }
+
 }

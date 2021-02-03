@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Cliente } from '../model/Cliente';
 import { AuthService } from '../service/auth.service';
-import { ClienteService } from '../service/cliente.service';
 
 @Component({
   selector: 'app-perfil',
@@ -11,15 +10,15 @@ import { ClienteService } from '../service/cliente.service';
   styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-  cliente: Cliente = new Cliente();
-  idCliente: number;
+  
+  cliente: Cliente = new Cliente()
+  idUser: number;
   confirmarSenha: string;
 
   constructor(
     private authService: AuthService,
     private route: ActivatedRoute,
     private router: Router,
-    private clienteService: ClienteService
   ) {}
 
   ngOnInit() {
@@ -29,15 +28,16 @@ export class PerfilComponent implements OnInit {
       this.router.navigate(['/entrar']);
     }
 
-    this.idCliente = this.route.snapshot.params['id'];
-    this.findByIdUser(this.idCliente);
+    this.idUser = this.route.snapshot.params['id'];
+    this.findById(this.idUser)
   }
 
-  findByIdUser(id: number) {
-    this.clienteService.getByIdCliente(id).subscribe((resp: Cliente) => {
-      this.cliente = resp;
-    });
+  findById(id: number){
+    this.authService.getByIdCliente(id).subscribe((resp: Cliente) => {
+      this.cliente = resp      
+    })
   }
+
   confirmSenha(event: any) {
     this.confirmarSenha = event.target.value;
   }

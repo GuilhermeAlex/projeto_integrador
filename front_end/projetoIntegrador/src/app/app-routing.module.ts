@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'sobre', component: SobreComponent },
   { path: 'produtos', component: ProductPageComponent },
   { path: 'carrinho', component: CarrinhoComponent},
-  {path: 'perfil/:email', component: PerfilComponent},
+  {path: 'perfil/:id', component: PerfilComponent},
   {path: 'produtos/:tipo', component: ProductPageComponent}
 ];
 

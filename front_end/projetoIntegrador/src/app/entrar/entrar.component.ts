@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
 export class EntrarComponent implements OnInit {
 
   userLogin: UserLogin = new UserLogin()
-  cliente: Cliente = new Cliente()
 
   constructor(
     private auth: AuthService,
@@ -31,6 +30,7 @@ export class EntrarComponent implements OnInit {
       environment.token = this.userLogin.token
       environment.nome = this.userLogin.nome
       environment.email = this.userLogin.email
+      environment.id = this.userLogin.id
 
 
       this.router.navigate(['/home'])

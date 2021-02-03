@@ -11,13 +11,14 @@
               <hr />
               <div class="form-row">
                 <div class="col-md-6 mb-1">
-                  <label for="validationDefault01"><b>Nome</b></label>
+                  <label for="nome"><b>Nome</b></label>
                   <input
-                    [(ngModel)]="cliente.nome"
+                    [(ngModel)]='cliente.nome'
                     name="nome"
                     type="text"
+                    id="nome"
                     class="form-control"
-                    placeholder=" Nome"
+                    placeholder="Seu Nome"
                   />
                 </div>
                 <div class="col-md-6 mb-1">
@@ -39,6 +40,7 @@
                     [(ngModel)]="cliente.cpf"
                     name="cpf"
                     type="text"
+                    id="cpf"
                     class="form-control"
                     placeholder="CPF"
                   />
@@ -49,6 +51,7 @@
                     [(ngModel)]="cliente.rg"
                     name="rg"
                     type="text"
+                    id="rg"
                     class="form-control"
                     placeholder=" RG"
                   />
@@ -74,26 +77,17 @@
                     name="email"
                     type="email"
                     class="form-control"
-                    id="inputEmail4"
+                    id="email"
                     aria-describedby="emailHelp"
                     placeholder="Email"
-                  />
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputPassword4"><b>Nova Senha</b></label>
-                  <input
-                    (input)="confirmSenha($event)"
-                    type="password"
-                    class="form-control"
-                    id="inputSenha"
-                    placeholder="Digite sua nova senha"
                   />
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputPassword4"><b>Senha Atual</b></label>
+                  <label for="inputPassword4"><b>Nova Senha</b></label>
                   <input
+                    (input)="confirmSenha($event)"
                     type="password"
                     class="form-control"
                     id="inputSenha"
