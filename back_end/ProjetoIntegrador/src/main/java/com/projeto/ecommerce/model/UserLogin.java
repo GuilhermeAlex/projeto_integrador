@@ -1,7 +1,7 @@
 package com.projeto.ecommerce.model;
 
 public class UserLogin {
-
+	
 	private String email;
 	
 	private String nome;
