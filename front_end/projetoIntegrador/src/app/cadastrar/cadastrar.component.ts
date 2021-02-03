@@ -35,6 +35,8 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar() {
 
+    console.log(this.cliente.sobrenome)
+
     if(this.cliente.senha != this.confirmSenha && this.cliente.email != this.confirmEmail){
       alert("As senhas ou e-mail´s não coincidem")
     }else{

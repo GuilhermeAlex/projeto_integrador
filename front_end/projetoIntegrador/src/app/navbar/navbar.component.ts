@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment.prod';
 import { environment } from './../../environments/environment.prod';
 import { AuthService } from './../service/auth.service';
 import { ClienteService } from './../service/cliente.service';
@@ -12,7 +13,8 @@ import { stringify } from '@angular/compiler/src/util';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  nome: string;
+  nome: string
+  email: string
 
   constructor(
     private auth: AuthService,
@@ -26,7 +28,7 @@ export class NavbarComponent implements OnInit {
     if (environment.token != '') {
       ok = true;
       this.nome = environment.nome;
-      console.log(this.nome);
+      this.email = environment.email;
     }
 
     return ok;

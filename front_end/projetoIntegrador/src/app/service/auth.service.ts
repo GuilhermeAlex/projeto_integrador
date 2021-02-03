@@ -6,36 +6,36 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
+  constructor(private http: HttpClient) {}
 
-  
-
-  constructor(
-    private http: HttpClient
-  ) { }
-
-  entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/cliente/logar', userLogin)
+  entrar(userLogin: UserLogin): Observable<UserLogin> {
+    return this.http.post<UserLogin>(
+      'http://localhost:8080/cliente/logar',
+      userLogin
+    );
   }
 
-  cadastrar(cliente: Cliente): Observable<Cliente>{
-    return this.http.post<Cliente>('http://localhost:8080/cliente/cadastrar', cliente)
-
+  cadastrar(cliente: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>(
+      'http://localhost:8080/cliente/cadastrar',
+      cliente
+    );
   }
 
-  logado(){
-    let ok: boolean = false
+  logado() {
+    let ok: boolean = false;
 
-    if (environment.token != ''){
-      ok=true
+    if (environment.token != '') {
+      ok = true;
     }
 
-    return ok
+    return ok;
   }
   // destaquePage(){
-  
+
   //   let ok: boolean = false
   //   if(this.router.url == '/' || this.router.url == 'http://localhost:4200/#/home' ){
   //     ok = true
