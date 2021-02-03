@@ -23,3 +23,7 @@ input:checked{
 .t-card{
   width: 35%;
 }
+
+.fundo{
+  background-color:rgb(217, 255, 0)
+}
