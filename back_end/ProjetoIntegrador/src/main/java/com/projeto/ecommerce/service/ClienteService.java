@@ -39,6 +39,7 @@ public class ClienteService {
 				user.get().setToken(authHeader);
 				user.get().setEmail(cliente.get().getEmail());
 				user.get().setNome(cliente.get().getNome());
+				user.get().setId(cliente.get().getId_cliente());
 				
 				return user;
 			}

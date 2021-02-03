@@ -1,6 +1,8 @@
 package com.projeto.ecommerce.model;
 
 public class UserLogin {
+	
+	private long id;
 
 	private String email;
 	
@@ -10,11 +12,22 @@ public class UserLogin {
 	
 	private String token;
 
+	
 	// Get e Set
+	public long getId() {
+		return id;
+	}
 
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getEmail() {
 		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getNome() {
@@ -24,11 +37,6 @@ public class UserLogin {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 
 	public String getSenha() {
 		return senha;
@@ -45,4 +53,9 @@ public class UserLogin {
 	public void setToken(String token) {
 		this.token = token;
 	}
+
+	
+
+
+	
 }
