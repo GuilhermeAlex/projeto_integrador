@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light fundo">
+<nav class="navbar navbar-expand-lg navbar-light fundo ">
   <button
     class="navbar-toggler"
     type="button"
@@ -11,8 +11,8 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse ml-100" id="conteudoNavbarSuportado">
-    <ul class="navbar-nav mr-auto align-items-center">
+  <div class="collapse navbar-collapse ml-100 " id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto align-items-center ">
       <li>
         <a routerLink="/home">
           <img
@@ -25,42 +25,42 @@
       </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/home"
+        <a class="nav-link text-light" routerLink="/home"
           ><i>Home</i> <span class="sr-only">(página atual)</span></a
         >
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/sobre"><i>Sobre Nós</i></a>
+        <a class="nav-link text-light" routerLink="/sobre"><i>Sobre Nós</i></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/produtos"><i>Produto</i></a>
+        <a class="nav-link text-light" routerLink="/produtos"><i>Produtos</i></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/contato"><i>Contato</i></a>
+        <a class="nav-link text-light" routerLink="/contato"><i>Contato</i></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0 mr-30">
+    <form class="form-inline my-2 my-lg-0 mr-30 ">
       <input
-        class="form-control mr-sm-2 border-radius "
+        class="form-control mr-sm-1 border-radius "
         type="search"
         placeholder="Pesquisar"
         aria-label="Pesquisar" />
         <a href=""><i class="fa fa-search b-search form-control" aria-hidden="true"></i></a>
 
     </form>
-    <a routerLink="/entrar"><li class="ponto"><i class="fa fa-user-circle" aria-hidden="true"></i></li></a>
+    <a routerLink="/entrar"><li class="ponto text-light"><i class="fa fa-user-circle" aria-hidden="true"></i></li></a>
     <li class="nav-item ponto">
 
 
       <a class="nav-link" *ngIf='mostraNome()' [routerLink]="['/perfil', id]" style="color:white"
       >{{nome}}</a
       >
-      <a class="nav-link text-dark" *ngIf='escondeNome()' routerLink="/entrar" style="color:white "
+      <a class="nav-link text-light" *ngIf='escondeNome()' routerLink="/entrar" style="color:white "
       >Entre ou<br> Cadastre-se</a
       >
 
     </li>
-    <a routerLink="/carrinho"><li class="ponto mr-15">
+    <a routerLink="/carrinho"><li class="ponto mr-15 text-light ">
       <i class="fa fa-shopping-cart" aria-hidden="true"></i>
     </li></a>
   </div>
