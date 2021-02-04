@@ -16,8 +16,5 @@ export class DestaquesComponent implements OnInit {
     window.scroll(0,0)
   }
 
-  inscreva(){
-    alert('hahaha')
-  }
-
+ 
 }

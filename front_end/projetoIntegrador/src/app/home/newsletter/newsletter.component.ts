@@ -9,7 +9,11 @@ export class NewsletterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  inscreva(){
+    alert('E-mail cadastrado com sucesso!')
   }
 
 }
