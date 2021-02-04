@@ -1,4 +1,4 @@
-input{
+/* input{
     all: unset;
     border: 1px solid black;
   width: 15px;
@@ -9,7 +9,7 @@ input:checked{
   background-color: rgb(217, 255, 0);
   width: 20px;
   height: 20px;
-}
+} */
 
 .t-img{
     width: 100%;
@@ -20,9 +20,9 @@ input:checked{
   border-radius: 30%;
 }
 
-.t-card{
+/* .t-card{
   width: 35%;
-}
+} */
 
 .fundo{
   background-color:rgb(217, 255, 0)
