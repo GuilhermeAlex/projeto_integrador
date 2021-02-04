@@ -15,48 +15,46 @@ export class ProductPageComponent implements OnInit {
 
   produto: Produto = new Produto();
   listaProdutos: Produto[];
-  listaTipo: Categoria[];
-  listaMaterial: Categoria[];
 
-  tipo: string
-
-  tipoCategoria: string
+  listaCategoria: Categoria[];
 
   categoria: Categoria = new Categoria();
+  pegarTipo: number;
+  tipo: number;
+
 
   constructor(
-    private router: Router,
-    private auth: AuthService,
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService
-  ) {}
+  ) { }
 
   ngOnInit() {
     window.scroll(0, 0);
 
-    this.getAllProdutos()
-    // this.findAllCategoria()
+    this.findAllCategoria()
+    this.findAllProdutos()
   }
 
-
-  getAllProdutos(){
-    this.produtoService.getAllProdutos().subscribe((resp: Produto[])=>{
-
-      this.listaProdutos = resp
+  findAllCategoria(){
+    this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
+      this.listaCategoria = resp
     })
   }
-  // findAllCategoria(){
-  //   this.categoriaService.getAllCategoria().subscribe((resp: Categoria[])=>{
-  //     this.listaCategoria = resp
-  //     console.log(resp)
-  //   })
-  // }
 
-  // findAllTipo(){
-  //   this.categoriaService.getByTipoCategoria(this.tipo).subscribe((resp: Categoria[])=>{
-  //     this.listaMaterial = resp
-  //     console.log(resp)
-  //   })
-  // }
+  findAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+      this.findAllCategoria()
+    })
+  }
+
+  findByIdCategoria(event: any) {
+     
+    this.categoriaService.getByIdCategoria(event.target.value).subscribe((resp: Categoria) => {
+      this.categoria = resp
+      this.listaProdutos = this.categoria.produto
+    })
+  }
+
 
 }

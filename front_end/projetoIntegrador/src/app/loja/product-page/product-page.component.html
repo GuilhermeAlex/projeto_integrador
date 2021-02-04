@@ -1,6 +1,6 @@
 <!--Imagem de background-->
 <div
-  class="p-5 text-center bg-image"
+  class="py-5 text-center bg-image"
   style="
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQchzT-ayrVejYZAj4AeNjedQ0huDWTwMZow&usqp=CAU');
     background-size: 100% 100%;
@@ -10,42 +10,40 @@
   <div class="container">
     <div class="row">
       <!--Filtro-->
-      <div class="col-md-3 aline">
-        <div class="row mt-3">
-          <h5>Material</h5>
-        </div>
-        <hr />
 
-        <div class="row ml-2" *ngFor="let categoria of listaMaterial">
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="inlineRadioOptions2"
-              id="inlineRadio11"
-              value="opcao2"
-            />
-            <label class="form-check-label" for="inlineRadio11">{{
-              categoria.material
-            }}</label>
+      <div class="row">
+        <div class="col-md-2">
+          <div
+            class="row my-3 pb-2 d-flex justify-content-around border-bottom"
+          >
+            <h5>Categoria</h5>
+            <button
+              class="btn btn-success btn-sm text-white"
+              (click)="findAllProdutos()"
+            >
+              Limpar Filtro
+            </button>
           </div>
-        </div>
-        <div class="row mt-3">
-          <h5>Categoria</h5>
-        </div>
-        <hr />
-        <div class="row ml-2" *ngFor="let categoria of listaTipo">
-          <div class="form-check form-check-inline">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              name="inlineRadioOptions3"
-              id="inlineRadio12"
-              value="opcao2"
-            />
-            <label class="form-check-label" for="inlineRadio12">{{
-              categoria.tipo
-            }}</label>
+          <div class="row">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="row ml-2" *ngFor="let tipo of listaCategoria">
+                  <div class="form-check">
+                    <input
+                      (input)="findByIdCategoria($event)"
+                      class="form-check-input"
+                      name="papelao"
+                      type="radio"
+                      value="{{ tipo.id_categoria }}"
+                      id="papelao"
+                    />
+                    <label class="form-check-label" for="papelao">
+                      {{ tipo.tamanho }}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,7 +59,7 @@
             alt="Imagem de capa do card"
           />
           <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
+            <h5 class="card-title">{{ produto.nome }}</h5>
             <p class="card-text">
               {{ produto.descricao }}
             </p>
@@ -75,7 +73,82 @@
             >
               Comprar
             </button>
+
+            <div class="col-md-10 d-flex flex-wrap" width="100%">
+              <div
+                class="card mx-3 my-3 bg-transparent"
+                style="width: 29%"
+                *ngFor="let produto of listaProdutos"
+              >
+                <img
+                  class="card-img-top t-img"
+                  src="{{ produto.foto }}"
+                  alt="Imagem de capa do card"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">{{ produto.nome }}</h5>
+                  <p class="card-text">
+                    {{ produto.descricao }}
+                  </p>
+                  R$ {{ produto.preco }}
+                  <button
+                    type="button"
+                    class="btn btn-warning btn-sm rounded"
+                    data-toggle="modal"
+                    data-target="#comprar"
+                    routerLink="/carrinho"
+                  >
+                    Comprar
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- <div class="row ml-2">
+          <div class="form-check">
+            <input (input)="getAllProdutos()" class="form-check-input" name="papelao" type="radio" value=0
+              id="papelao">
+            <label class="form-check-label" for="papelao">
+              Todos
+            </label>
+          </div>
+          <div class="form-check">
+            <input (input)="findByIdCategoria($event)" class="form-check-input" name="papelao" type="radio" value=1
+              id="papelao">
+            <label class="form-check-label" for="papelao">
+              Papelão
+            </label>
+          </div>
+          <div class="form-check">
+            <input (input)="findByIdCategoria($event)" class="form-check-input" name="papelao" type="radio" value=2
+              id="papelao">
+            <label class="form-check-label" for="papelao">
+              Madeira
+            </label>
+          </div>
+        </div> -->
+
+          <!-- <ng-template #filtroCategoria>
+          *ngIf="filtroTipo; else filtroCategoria"
+          <div class="col-md-9 d-flex flex-wrap d-flex justify-content-arround">
+            <div class="card mr-3 mb-2 mt-3 bg-transparent" style="width: 15rem"
+              *ngFor="let produto of categoria.produto">
+              <img class="card-img-top t-img" src="{{ produto.foto }}" alt="Imagem de capa do card" />
+              <div class="card-body">
+                <h5 class="card-title">{{ produto.nome }}</h5>
+                <p class="card-text">
+                  {{ produto.descricao }}
+                </p>
+                R$ {{ produto.preco }}
+                <button type="button" class="btn btn-warning btn-sm ml-5 rounded" data-toggle="modal"
+                  data-target="#comprar" routerLink="/carrinho">
+                  Comprar
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-template> -->
         </div>
       </div>
     </div>
