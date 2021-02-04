@@ -1,76 +1,178 @@
-
-<div class="container-fluid" id='img-bg'>
-  <div class ="row d-flex align-items-center justify-content-center">
-
-  </div>
+<div class="container-fluid" id="img-bg">
+  <div class="row d-flex align-items-center justify-content-center"></div>
   <div class="row d-flex justify-content-center">
-      <div class="col-md-7 mt-5 mb-5 border border-dark shadow-lg p-3 bg-white rounded opacity hg" >
-          <h4>Cadastrar</h4>
-          <div class="row">
-              <div class="col-md-12">
-                  <form>
-                      <hr>
-                      <div class="form-row">
-                          <div class="col-md-6 mb-1">
-                              <label for="validationDefault01"><b>Nome</b></label>
-                              <input [(ngModel)]='cliente.nome' name="nome" type="text" class="form-control"  placeholder="Seu Nome">
-                          </div>
-                          <div class="col-md-6 mb-1">
-                              <label for="validationDefault02"><b>Sobrenome</b></label>
-                              <input [(ngModel)]='cliente.sobrenome' name="sobrenome" type="text" class="form-control" id="sobrenome" placeholder="Seu Sobrenome">
-                          </div>
-                      </div>
-                      <div class="form-row">
-                          <div class="col-md-4 mb-1">
-                              <label for="validationDefault03"><b>CPF</b></label>
-                              <input [(ngModel)]='cliente.cpf' name="cpf" type="text" class="form-control" placeholder="Seu CPF">
-                          </div>
-                          <div class="col-md-4 mb-1">
-                              <label for="validationDefault04"><b>RG</b></label>
-                              <input [(ngModel)]='cliente.rg' name="rg" type="text" class="form-control" placeholder="Seu RG">
-                          </div>
-                          <div class="col-md-4 mb-1">
-                              <label for="validationDefault05"><b>Telefone</b></label>
-                              <input [(ngModel)]='cliente.telefone' name="telefone" type="text" class="form-control" id="telefone" placeholder="Telefone">
-                          </div>
-                      </div>
-                      <hr>
-                      <div class="form-row">
-                          <div class="form-group col-md-6 mb-1">
-                              <label for="inputEmail4"><b>Email</b></label>
-                              <input (input)='confirmarEmail($event)' type="email" class="form-control" id="inputEmail4" aria-describedby="emailHelp" placeholder="Email">
-                          </div>
-                          <div class="form-group col-md-6">
-                              <label for="inputPassword4"><b>Senha</b></label>
-                              <input (input)='confirmarSenha($event)' type="password" class="form-control" id="inputSenha" placeholder="Senha">
-                          </div>
-                      </div>
-                      <div class="form-row">
-                          <div class="form-group col-md-6 mb-1">
-                              <label for="inputEmail4"><b>Confirmar Email</b></label>
-                              <input [(ngModel)]='cliente.email' name="confirEmail" type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
-                          </div>
-                          <div class="form-group col-md-6">
-                              <label for="inputPassword4"><b>Confirmar Senha</b></label>
-                              <input [(ngModel)]='cliente.senha' name="confirSenha" type="password" class="form-control" id="inputConfirmSenha" placeholder="Senha">
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <div class="form-check">
-                              <input class="form-check-input mb-1 ml-1" type="checkbox" value="" id="invalidCheck2"
-                                  required>
-                              <label class="form-check-label mb-1 mr-3 ml-4" for="invalidCheck2">
-                                  Concordo com os termos e condições
-                              </label>
-                          </div>
-                          <div class="row d-flex align-items-center justify-content-center">
-                              <button type="button" class="btn btn-danger mb-1 ml-3" routerLink='/entrar'>Cancelar</button>
-                              <button type="submit" class="btn  btn-success mb-1 ml-5" (click)='cadastrar()'>Cadastrar</button>
-                          </div>
-                      </div>
-                  </form>
+    <div
+      class="col-md-7 mt-5 mb-5 border border-dark shadow-lg p-3 bg-white rounded opacity hg"
+    >
+      <h4>Cadastrar</h4>
+      <div class="row">
+        <div class="col-md-12">
+          <form>
+            <hr />
+            <div class="form-row">
+              <div class="col-md-6 mb-1">
+                <label for="validationDefault01"><b>Nome</b></label>
+                <input
+                  [(ngModel)]="cliente.nome"
+                  name="nome"
+                  type="text"
+                  class="form-control"
+                  placeholder="Seu Nome"
+                  id="nome"
+                  (keyup)="validaNome()"
+                />
+                <div class="mt-2 text-danger">{{ alerta }}</div>
               </div>
-          </div>
+              <div class="col-md-6 mb-1">
+                <label for="validationDefault02"><b>Sobrenome</b></label>
+                <input
+                  [(ngModel)]="cliente.sobrenome"
+                  name="sobrenome"
+                  type="text"
+                  class="form-control"
+                  id="sobrenome"
+                  placeholder="Seu Sobrenome"
+                  (keyup)="validaSobrenome()"
+                />
+                <div class="mt-2 text-danger">{{ alertaSobrenome }}</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-4 mb-1">
+                <label for="validationDefault03"><b>CPF</b></label>
+                <input
+                  [(ngModel)]="cliente.cpf"
+                  name="cpf"
+                  type="text"
+                  class="form-control"
+                  placeholder="Seu CPF"
+                  id="cpf"
+                  (keyup)="validaCpf()"
+                />
+                <div class="mt-2 text-danger">{{ alertaCpf }}</div>
+              </div>
+              <div class="col-md-4 mb-1">
+                <label for="validationDefault04"><b>RG</b></label>
+                <input
+                  [(ngModel)]="cliente.rg"
+                  name="rg"
+                  type="text"
+                  class="form-control"
+                  placeholder="Seu RG"
+                  (keyup)="validaRg()"
+                />
+                <div class="mt-2 text-danger">{{ alertaRg }}</div>
+              </div>
+              <div class="col-md-4 mb-1">
+                <label for="validationDefault05"><b>Telefone</b></label>
+                <input
+                  [(ngModel)]="cliente.telefone"
+                  name="telefone"
+                  type="text"
+                  class="form-control"
+                  id="telefone"
+                  placeholder="Telefone com DDD"
+                  (keyup)="validaTel()"
+                />
+                <div class="mt-2 text-danger">{{ alertaTel }}</div>
+              </div>
+            </div>
+            <hr />
+            <div class="form-row">
+              <div class="form-group col-md-6 mb-1">
+                <label for="inputEmail4"><b>Email</b></label>
+                <input
+                  (input)="confirmarEmail($event)"
+                  type="text"
+                  class="form-control"
+                  id="inputEmail4"
+                  aria-describedby="emailHelp"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4"><b>Senha</b></label>
+                <input
+                  (input)="confirmarSenha($event)"
+                  type="password"
+                  class="form-control"
+                  id="inputSenha"
+                  placeholder="Senha"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6 mb-1">
+                <label for="inputEmail4"><b>Confirmar Email</b></label>
+                <input
+                  [(ngModel)]="cliente.email"
+                  name="confirEmail"
+                  type="text"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4"><b>Confirmar Senha</b></label>
+                <input
+                  [(ngModel)]="cliente.senha"
+                  name="confirSenha"
+                  type="password"
+                  class="form-control"
+                  id="inputConfirmSenha"
+                  placeholder="Senha"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input mb-1 ml-1"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck2"
+                  required
+                />
+                <label
+                  class="form-check-label mb-1 mr-3 ml-4"
+                  for="invalidCheck2"
+                >
+                  Concordo com os termos e condições
+                </label>
+              </div>
+              <div class="row d-flex align-items-center justify-content-center">
+                <button
+                  type="button"
+                  class="btn btn-danger mb-1 ml-3"
+                  routerLink="/entrar"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-success mb-1 ml-5"
+                  (click)="cadastrar()"
+                  disabled
+                  *ngIf="mostra()"
+                >
+                  Cadastrar
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-success mb-1 ml-5"
+
+                  (click)="cadastrar()"
+                  *ngIf="esconde()"
+                >
+                  Cadastrar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
   </div>
 </div>
