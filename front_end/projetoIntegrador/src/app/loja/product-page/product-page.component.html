@@ -19,10 +19,29 @@
               <div class="col-md-3">
                 <div class="row ml-2" *ngFor="let tipo of listaCategoria">
                   <div class="form-check">
+<<<<<<< HEAD
                     <input (input)="findByIdCategoria($event)" class="form-check-input" name="papelao" type="radio" value="{{ tipo.id_categoria }}" id="papelao"/>
                     <label class="form-check-label" for="papelao">
                       Categoria
+=======
+                    <input
+                      (input)="findByIdCategoria($event)"
+                      class="form-check-input"
+                      name="papelao"
+                      type="radio"
+                      value="{{ tipo.id_categoria }}"
+                      id="papelao"
+                    />
+<<<<<<< HEAD
+                    <label class="form-check-label" for="papelao">
+                     
+>>>>>>> 1abfced5609a2b181ee4c8c18e5d2847a1361d5d
                     </label>
+=======
+                    <!-- <label class="form-check-label" for="papelao">
+                      {{ tipo.tamanho }} -->
+                    <!-- </label> -->
+>>>>>>> 026d1af459a54e3647662f9d3c1879a9f5433bee
                   </div>
                 </div>
               </div>
@@ -30,6 +49,7 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       <div class="col-md-9 ml-3 d-flex flex-wrap d-flex justify-content-arround">
         <div class="card mr-3 mb-2 mt-3 bg-transparent" style="width: 29%" *ngFor="let produto of listaProdutos"
@@ -38,6 +58,65 @@
             height="200px" />
           <div class="card-body mx-2">
             <h5 class="card-title">{{ produto.nome }}</h5>
+=======
+      <div class="col-md-9 d-flex flex-wrap d-flex justify-content-arround">
+        <div
+          class="card mr-3 mb-2 mt-3 bg-transparent"
+          style="width: 15rem"
+          *ngFor="let produto of listaProdutos"
+        >
+          <img
+            class="card-img-top t-img"
+            src="{{ produto.foto }}"
+            alt="Imagem de capa do card"
+          />
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">
+           
+            </p>
+            
+            <button
+              type="button"
+              class="btn btn-warning btn-sm ml-5 rounded"
+              data-toggle="modal"
+              data-target="#comprar"
+              routerLink="/carrinho"
+            >
+              Comprar
+            </button>
+
+            <div class="col-md-10 d-flex flex-wrap" width="100%">
+              <div
+                class="card mx-3 my-3 bg-transparent"
+                style="width: 29%"
+                *ngFor="let produto of listaProdutos"
+              >
+                <img
+                  class="card-img-top t-img"
+                  src="{{ produto.foto }}"
+                  alt="Imagem de capa do card"
+                />
+                <div class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">
+                    
+                  </p>
+                  
+                  <button
+                    type="button"
+                    class="btn btn-warning btn-sm rounded"
+                    data-toggle="modal"
+                    data-target="#comprar"
+                    routerLink="/carrinho"
+                  >
+                    Comprar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+>>>>>>> 1abfced5609a2b181ee4c8c18e5d2847a1361d5d
 
 
             <div class="row d-flex justify-content-between align-items-center">
