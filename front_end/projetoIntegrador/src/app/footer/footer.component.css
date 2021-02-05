@@ -101,3 +101,31 @@ footer ul.quick-links li:hover a i {
 .mtl{
     margin-top: -3%;
 }
+
+@media only screen and (max-width: 414px) {
+    .clogo{
+        align-items: center;
+        height: 70px;
+        width: 70px;
+        justify-content: center;
+    }
+
+    .teste2{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .texto{
+    
+       display: flex;
+       justify-content: end;
+        
+    }
+
+    
+    
+  }
+
+.container{
+    background: #009900;
+}
