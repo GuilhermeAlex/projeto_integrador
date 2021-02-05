@@ -11,19 +11,28 @@ input:checked{
   height: 20px;
 } */
 
-.t-img{
+/* .t-img{
     width: 100%;
     height: 200px;
 }
 
 .redondo{
   border-radius: 30%;
-}
+} */
 
 /* .t-card{
   width: 35%;
 } */
 
-.fundo{
+/* .fundo{
   background-color:rgb(217, 255, 0)
+} */
+
+a:hover {
+  transform:scale(1.2);
+  color: #009900;
+}
+
+.btn-comprar:hover {
+  transform:scale(1.1);
 }

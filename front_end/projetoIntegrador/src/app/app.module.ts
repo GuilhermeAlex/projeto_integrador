@@ -12,7 +12,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductPageComponent } from './loja/product-page/product-page.component';
 import { ProductsComponent } from './loja/products/products.component';
-import { FiltersComponent } from './loja/filters/filters.component';
 import { MenuComponent } from './home/menu/menu.component';
 import { DestaquesComponent } from './home/destaques/destaques.component';
 import { CategoriasComponent } from './home/categorias/categorias.component';
@@ -21,7 +20,6 @@ import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
-import { ModalComponent } from './modal/modal.component';
 
 
 @NgModule({
@@ -33,7 +31,6 @@ import { ModalComponent } from './modal/modal.component';
     FooterComponent,
     ProductPageComponent,
     ProductsComponent,
-    FiltersComponent,
     MenuComponent,
     DestaquesComponent,
     CategoriasComponent,
@@ -42,7 +39,6 @@ import { ModalComponent } from './modal/modal.component';
     PerfilComponent,
     SobreComponent,
     ContatoComponent,
-    ModalComponent
   ],
   imports: [
     BrowserModule,

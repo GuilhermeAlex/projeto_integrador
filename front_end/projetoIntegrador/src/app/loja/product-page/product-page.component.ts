@@ -38,6 +38,8 @@ export class ProductPageComponent implements OnInit {
   findAllCategoria(){
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
       this.listaCategoria = resp
+      console.log(this.listaCategoria);
+            
     })
   }
 
@@ -45,15 +47,21 @@ export class ProductPageComponent implements OnInit {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
       this.findAllCategoria()
+      console.log(this.listaProdutos);
+      
     })
   }
 
   findByIdCategoria(event: any) {
-     
     this.categoriaService.getByIdCategoria(event.target.value).subscribe((resp: Categoria) => {
       this.categoria = resp
       this.listaProdutos = this.categoria.produto
     })
+  }
+
+  infoProduto(id: number){
+    console.log(id);
+    
   }
 
 
