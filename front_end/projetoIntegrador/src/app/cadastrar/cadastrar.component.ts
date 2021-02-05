@@ -24,6 +24,7 @@ export class CadastrarComponent implements OnInit {
   confirmSenha: string;
   confirmEmail: string;
 
+
   nome: boolean;
   sobrenome: boolean;
   cpf: boolean;
