@@ -1,35 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 
+
 @Component({
   selector: 'app-carrinho',
   templateUrl: './carrinho.component.html',
   styleUrls: ['./carrinho.component.css'],
 })
 export class CarrinhoComponent implements OnInit {
+
+  // alertaNome: string;
+  // alertaSobrenome: string;
+  // alertaCpf: string;
+  // alertaRg: string;
+  // alertaTel: string;
+  // alertaEmail: string;
+  // alertaEmailx: string;
+  // nomeOk: boolean;
+  // sobrenomeOk: boolean;
+  // cpfOk: boolean;
+
   boleto: boolean = true;
   cartao: boolean;
-
-  alertaNome: string;
-  alertaSobrenome: string;
-  alertaCpf: string;
-  alertaRg: string;
-  alertaTel: string;
-  alertaEmail: string;
-  alertaEmailx: string;
-
-  nome: string;
-  sobrenome: string;
-  cpf: string;
-
-  nomeOk: boolean;
-  sobrenomeOk: boolean;
-  cpfOk: boolean;
 
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
-    window.scroll(0, 0);
+
   }
 
   mostraBoleto() {
@@ -49,32 +46,35 @@ export class CarrinhoComponent implements OnInit {
     return this.cartao;
   }
 
-  validaNome() {
-    if (this.nome.length < 3) {
-      this.nomeOk = false;
-      this.alertaNome = 'Nome inválido';
-    } else {
-      this.nomeOk = true;
-      this.alertaNome = '';
-    }
-  }
-  validaSobrenome() {
-    if (this.sobrenome.length < 3 || this.sobrenome == this.nome) {
-      this.sobrenomeOk = false;
-      this.alertaSobrenome = 'Sobrenome inválido';
-    } else {
-      this.sobrenomeOk = true;
-      this.alertaSobrenome = '';
-    }
-  }
-
-  validaCpf() {
-    if (this.cpf.length < 11 || this.cpf.length > 12) {
-      this.cpfOk = false;
-      this.alertaCpf = 'CPF inválido';
-    } else {
-      this.cpfOk = true;
-      this.alertaCpf = '';
-    }
-  }
+  
 }
+
+  // validaNome() {
+  //   if (this.nome.length < 3) {
+  //     this.nomeOk = false;
+  //     this.alertaNome = 'Nome inválido';
+  //   } else {
+  //     this.nomeOk = true;
+  //     this.alertaNome = '';
+  //   }
+  // }
+  // validaSobrenome() {
+  //   if (this.sobrenome.length < 3 || this.sobrenome == this.nome) {
+  //     this.sobrenomeOk = false;
+  //     this.alertaSobrenome = 'Sobrenome inválido';
+  //   } else {
+  //     this.sobrenomeOk = true;
+  //     this.alertaSobrenome = '';
+  //   }
+  // }
+
+  // validaCpf() {
+  //   if (this.cpf.length < 11 || this.cpf.length > 12) {
+  //     this.cpfOk = false;
+  //     this.alertaCpf = 'CPF inválido';
+  //   } else {
+  //     this.cpfOk = true;
+  //     this.alertaCpf = '';
+  //   }
+  // }
+
