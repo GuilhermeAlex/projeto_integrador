@@ -30,9 +30,16 @@ input:checked{
 
 a:hover {
   transform:scale(1.2);
-  color: #009900;
 }
 
 .btn-comprar:hover {
   transform:scale(1.1);
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.btn-comprar-modal {
+  width: 60%;
 }

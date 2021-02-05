@@ -47,8 +47,6 @@ export class ProductPageComponent implements OnInit {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
       this.findAllCategoria()
-      console.log(this.listaProdutos);
-      
     })
   }
 
