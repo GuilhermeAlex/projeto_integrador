@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from '../model/Produto';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -26,10 +27,19 @@ export class CarrinhoComponent implements OnInit {
   sobrenomeOk: boolean;
   cpfOk: boolean;
 
+  listaCarrinho: Produto[] = []
+
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
     window.scroll(0, 0);
+
+    // var fetchedObject = localStorage.getItem('listaIdProdutos');
+    // console.log('fetchedObject for local storage: ', JSON.parse(fetchedObject ));
+    
+    // var listaCarrinho = JSON.parse( localStorage.getItem('listaIdProdutos') )
+
+
   }
 
   mostraBoleto() {
@@ -77,4 +87,7 @@ export class CarrinhoComponent implements OnInit {
       this.alertaCpf = '';
     }
   }
+
+
+
 }

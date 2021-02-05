@@ -53,6 +53,8 @@ export class ProductPageComponent implements OnInit {
   findByIdCategoria(event: any) {
     this.categoriaService.getByIdCategoria(event.target.value).subscribe((resp: Categoria) => {
       this.categoria = resp
+      console.log(this.categoria);
+      
       this.listaProdutos = this.categoria.produto
     })
   }
@@ -71,7 +73,6 @@ export class ProductPageComponent implements OnInit {
 
   addCarrinho(idProduto: Produto){
     this.listaIdProdutos.push(idProduto)
-    console.log(this.listaIdProdutos);
     
   }
   

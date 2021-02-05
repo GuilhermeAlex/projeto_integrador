@@ -31,10 +31,10 @@
           </div>
         </div>
 
-        
+        <!-- (click)="addCarrinho(produto)" -->
 
         <div class="col-md-9 ml-3 d-flex flex-wrap d-flex justify-content-arround">
-          <div class="card mr-3 mb-2 mt-3 bg-transparent cursor-pointer" style="width: 29%" data-toggle="modal" data-target="#comprar" *ngFor="let produto of listaProdutos"  (click)='findByIdProduto(produto.id_produto, produto.categoria.id_categoria)'>
+          <div class="card mr-3 mb-2 mt-3 bg-transparent cursor-pointer" style="width: 29%" data-toggle="modal" data-target="#comprar" *ngFor="let produto of listaProdutos" (click)='findByIdProduto(produto.id_produto, produto.categoria.id_categoria)' >
             <img class="card-img-top t-img" src="{{ produto.foto }}" alt="Imagem de capa do card" width="100%"
               height="200px" />
             <div class="card-body mx-2">
@@ -46,9 +46,9 @@
                   </p>
                 </div>
                 <div class="d-flex align-items-center ml-3">
-                  <a href="#" style="color:white" (click)="addCarrinho(produto)"> 
+                  <span class="carrinho" style="color:white" > 
                     <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
-                  </a>
+                  </span>
                   <button type="button" class="btn btn-warning btn-sm rounded ml-2 btn-comprar" routerLink="/carrinho">
                     Comprar
                   </button>

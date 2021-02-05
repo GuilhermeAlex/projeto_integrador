@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment.prod';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   entrar(userLogin: UserLogin): Observable<UserLogin> {
     return this.http.post<UserLogin>(
@@ -35,7 +35,7 @@ export class AuthService {
     return ok;
   }
 
-  getByIdCliente(id: number):Observable<Cliente>{
+  getByIdCliente(id: number): Observable<Cliente> {
     return this.http.get<Cliente>(`http://localhost:8080/cliente/id/${id}`)
   }
 
