@@ -3,6 +3,8 @@ import { ProdutoService } from './../../service/produto.service';
 import { Produto } from './../../model/Produto';
 import { Component, OnInit } from '@angular/core';
 import { CategoriaService } from 'src/app/service/categoria.service';
+import { Carrinho } from 'src/app/model/Carrinho';
+import { CarrinhoService } from 'src/app/service/carrinho.service';
 
 @Component({
   selector: 'app-product-page',
@@ -15,17 +17,17 @@ export class ProductPageComponent implements OnInit {
   produtoModal: Produto = new Produto();
   listaProdutos: Produto[];
   listaProdutosModal: Produto[];
-  listaIdProdutos: Produto[] = [];
+
+  carrinho: Carrinho = new Carrinho();
 
   listaCategoria: Categoria[];
   categoriaModal: Categoria = new Categoria();
   categoria: Categoria = new Categoria();
-  pegarTipo: number;
-  tipo: number;
 
   constructor(
     private produtoService: ProdutoService,
-    private categoriaService: CategoriaService
+    private categoriaService: CategoriaService,
+    private carrinhoService: CarrinhoService
   ) { }
 
   ngOnInit() {
@@ -71,9 +73,14 @@ export class ProductPageComponent implements OnInit {
     })
   }
 
-  addCarrinho(idProduto: Produto){
-    this.listaIdProdutos.push(idProduto)
+  addCarrinho(id: number){
+    this.carrinho.quantidade = id
     
+    this.carrinhoService.postCarrinho(this.carrinho).subscribe((resp: Carrinho) => {
+      this.carrinho = resp
+      console.log(this.carrinho);
+      
+    })
   }
   
 }
