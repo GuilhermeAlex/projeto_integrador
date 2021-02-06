@@ -29,16 +29,14 @@ export class CarrinhoComponent implements OnInit {
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
-<<<<<<< HEAD
+
     window.scroll(0, 0);
 
     // var fetchedObject = localStorage.getItem('listaIdProdutos');
     // console.log('fetchedObject for local storage: ', JSON.parse(fetchedObject ));
-    
+
     // var listaCarrinho = JSON.parse( localStorage.getItem('listaIdProdutos') )
 
-=======
->>>>>>> 57ec3a4492911a30290487986db7c374c427ed2f
 
   }
 
@@ -59,41 +57,7 @@ export class CarrinhoComponent implements OnInit {
     return this.cartao;
   }
 
-<<<<<<< HEAD
-  validaNome() {
-    if (this.nome.length < 3) {
-      this.nomeOk = false;
-      this.alertaNome = 'Nome inválido';
-    } else {
-      this.nomeOk = true;
-      this.alertaNome = '';
-    }
-  }
-  validaSobrenome() {
-    if (this.sobrenome.length < 3 || this.sobrenome == this.nome) {
-      this.sobrenomeOk = false;
-      this.alertaSobrenome = 'Sobrenome inválido';
-    } else {
-      this.sobrenomeOk = true;
-      this.alertaSobrenome = '';
-    }
-  }
 
-  validaCpf() {
-    if (this.cpf.length < 11 || this.cpf.length > 12) {
-      this.cpfOk = false;
-      this.alertaCpf = 'CPF inválido';
-    } else {
-      this.cpfOk = true;
-      this.alertaCpf = '';
-    }
-  }
-
-
-
-=======
-  
->>>>>>> 57ec3a4492911a30290487986db7c374c427ed2f
 }
 
   // validaNome() {
