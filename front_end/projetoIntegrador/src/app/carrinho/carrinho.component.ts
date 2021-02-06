@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Carrinho } from '../model/Carrinho';
 import { Produto } from '../model/Produto';
 import { AuthService } from '../service/auth.service';
+import { CarrinhoService } from '../service/carrinho.service';
 
 
 @Component({
@@ -24,22 +26,16 @@ export class CarrinhoComponent implements OnInit {
   boleto: boolean = true;
   cartao: boolean;
 
-  listaCarrinho: Produto[] = []
+  carrinho: Carrinho[] = []
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private carrinhoService: CarrinhoService
+
+    ) {}
 
   ngOnInit() {
-<<<<<<< HEAD
     window.scroll(0, 0);
-
-    // var fetchedObject = localStorage.getItem('listaIdProdutos');
-    // console.log('fetchedObject for local storage: ', JSON.parse(fetchedObject ));
-    
-    // var listaCarrinho = JSON.parse( localStorage.getItem('listaIdProdutos') )
-
-=======
->>>>>>> 57ec3a4492911a30290487986db7c374c427ed2f
-
   }
 
   mostraBoleto() {
@@ -59,41 +55,18 @@ export class CarrinhoComponent implements OnInit {
     return this.cartao;
   }
 
-<<<<<<< HEAD
-  validaNome() {
-    if (this.nome.length < 3) {
-      this.nomeOk = false;
-      this.alertaNome = 'Nome inválido';
-    } else {
-      this.nomeOk = true;
-      this.alertaNome = '';
-    }
-  }
-  validaSobrenome() {
-    if (this.sobrenome.length < 3 || this.sobrenome == this.nome) {
-      this.sobrenomeOk = false;
-      this.alertaSobrenome = 'Sobrenome inválido';
-    } else {
-      this.sobrenomeOk = true;
-      this.alertaSobrenome = '';
-    }
-  }
+  // findAllCarrinho(){
+  //   this.carrinhoService.getAllCarrinho().subscribe((resp: Carrinho[]) => {
+  //     this.carrinho = resp
+  //     console.log(this.carrinho);
 
-  validaCpf() {
-    if (this.cpf.length < 11 || this.cpf.length > 12) {
-      this.cpfOk = false;
-      this.alertaCpf = 'CPF inválido';
-    } else {
-      this.cpfOk = true;
-      this.alertaCpf = '';
-    }
-  }
+  //     for (let i = 0; i < this.carrinho.length; i++) {
+  //       console.log(this.carrinho[i]);
+  //     }
 
+  //   })
+  // }
 
-
-=======
-  
->>>>>>> 57ec3a4492911a30290487986db7c374c427ed2f
 }
 
   // validaNome() {
@@ -124,4 +97,3 @@ export class CarrinhoComponent implements OnInit {
   //     this.alertaCpf = '';
   //   }
   // }
-
