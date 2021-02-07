@@ -28,7 +28,7 @@ input:checked{
   background-color:rgb(217, 255, 0)
 } */
 
-a:hover {
+.carrinho:hover {
   transform:scale(1.2);
 }
 

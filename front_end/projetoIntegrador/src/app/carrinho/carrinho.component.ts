@@ -1,3 +1,4 @@
+import { Produto } from './../model/Produto';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 
@@ -7,29 +8,28 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./carrinho.component.css'],
 })
 export class CarrinhoComponent implements OnInit {
+  produto: Produto = new Produto();
+
   boleto: boolean = true;
   cartao: boolean;
 
-  alertaNome: string;
-  alertaSobrenome: string;
-  alertaCpf: string;
-  alertaRg: string;
-  alertaTel: string;
-  alertaEmail: string;
-  alertaEmailx: string;
+  valorFrete: number = 0.0;
+  preco: number = 299.0;
 
-  nome: string;
-  sobrenome: string;
-  cpf: string;
+  valFrete: string;
+  confirmFrete: boolean = true
 
-  nomeOk: boolean;
-  sobrenomeOk: boolean;
-  cpfOk: boolean;
+  listaCarrinho: Produto[] = [];
 
   constructor(private authService: AuthService) {}
 
   ngOnInit() {
     window.scroll(0, 0);
+
+    // var fetchedObject = localStorage.getItem('listaIdProdutos');
+    // console.log('fetchedObject for local storage: ', JSON.parse(fetchedObject ));
+
+    // var listaCarrinho = JSON.parse( localStorage.getItem('listaIdProdutos') )
   }
 
   mostraBoleto() {
@@ -49,32 +49,42 @@ export class CarrinhoComponent implements OnInit {
     return this.cartao;
   }
 
-  validaNome() {
-    if (this.nome.length < 3) {
-      this.nomeOk = false;
-      this.alertaNome = 'Nome inválido';
-    } else {
-      this.nomeOk = true;
-      this.alertaNome = '';
-    }
+  total() {
+    let total: number;
+    total = this.preco + this.valorFrete;
+
+    return total;
   }
-  validaSobrenome() {
-    if (this.sobrenome.length < 3 || this.sobrenome == this.nome) {
-      this.sobrenomeOk = false;
-      this.alertaSobrenome = 'Sobrenome inválido';
+
+  frete() {
+    this.valorFrete = 13.9;
+  }
+
+  validaFrete() {
+    if (this.valFrete.length < 7) {
+      this.confirmFrete = false;
     } else {
-      this.sobrenomeOk = true;
-      this.alertaSobrenome = '';
+      this.confirmFrete = true;
     }
   }
 
-  validaCpf() {
-    if (this.cpf.length < 11 || this.cpf.length > 12) {
-      this.cpfOk = false;
-      this.alertaCpf = 'CPF inválido';
+  mostra() {
+    let escondeB: boolean;
+    if (this.confirmFrete == true) {
+      escondeB = false;
     } else {
-      this.cpfOk = true;
-      this.alertaCpf = '';
+      escondeB = true;
     }
+    return escondeB;
+  }
+
+  esconde() {
+    let mostraB: boolean;
+    if (this.confirmFrete == false) {
+      mostraB = false;
+    } else {
+      mostraB = true;
+    }
+    return mostraB;
   }
 }

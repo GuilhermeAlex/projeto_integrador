@@ -12,7 +12,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductPageComponent } from './loja/product-page/product-page.component';
 import { ProductsComponent } from './loja/products/products.component';
-import { MenuComponent } from './home/menu/menu.component';
 import { DestaquesComponent } from './home/destaques/destaques.component';
 import { CategoriasComponent } from './home/categorias/categorias.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
@@ -31,7 +30,6 @@ import { ContatoComponent } from './contato/contato.component';
     FooterComponent,
     ProductPageComponent,
     ProductsComponent,
-    MenuComponent,
     DestaquesComponent,
     CategoriasComponent,
     NewsletterComponent,
