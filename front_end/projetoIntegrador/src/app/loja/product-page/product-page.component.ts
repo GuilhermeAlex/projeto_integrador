@@ -39,7 +39,7 @@ export class ProductPageComponent implements OnInit {
 
   findAllCategoria(){
     this.categoriaService.getAllCategoria().subscribe((resp: Categoria[]) => {
-      this.listaCategoria = resp                  
+      this.listaCategoria = resp
     })
   }
 
@@ -48,14 +48,14 @@ export class ProductPageComponent implements OnInit {
       this.listaProdutos = resp
 
       this.findAllCategoria()
-      
+
     })
   }
 
   findByIdCategoria(event: any) {
     this.categoriaService.getByIdCategoria(event.target.value).subscribe((resp: Categoria) => {
       this.categoria = resp
-      
+
       this.listaProdutos = this.categoria.produto
     })
   }
@@ -65,8 +65,8 @@ export class ProductPageComponent implements OnInit {
       this.produtoModal = resp
 
     this.categoriaService.getByIdCategoria(idCategoria).subscribe((resp: Categoria) => {
-      this.categoriaModal = resp      
-      this.listaProdutosModal = this.categoriaModal.produto      
+      this.categoriaModal = resp
+      this.listaProdutosModal = this.categoriaModal.produto
     })
 
     })
@@ -74,10 +74,11 @@ export class ProductPageComponent implements OnInit {
 
   addCarrinho(id: number){
     this.carrinho.quantidade = id
-    
+
     this.carrinhoService.postCarrinho(this.carrinho).subscribe((resp: Carrinho) => {
-      this.carrinho = resp      
+      this.carrinho = resp
     })
   }
-  
+
+
 }

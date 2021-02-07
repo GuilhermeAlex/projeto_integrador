@@ -20,25 +20,21 @@
     <div
       class="row align-items-center justify-content-start mb-4 mt-4 border-top border-bottom border-dark"
     >
-      <div class="col-md-4">
+      <div class="col-md-4 mt-4 mb-4">
         <img
           class="rounded mx-auto d-block img-aj"
-          src="https://i.imgur.com/YVdJqvx.jpg"
+          src="https://i.imgur.com/ME48BqO.jpg"
           alt="Imagem produto"
         />
       </div>
       <div class="col-md-4 border-right border-dark">
-        <p class="mb-3 mt-2 ml-4">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s. Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's standard
-          dummy text ever since the 1500s.
-        </p>
+        <h3 class="mb-3 mt-2 ml-4 display 5">
+         Casa para Passarinho
+        </h3>
       </div>
       <div class="col-md-4">
         <h4 class="text-center mb-3">Quantidade</h4>
-        <h5 class="text-center mb-3">R$ 00,00</h5>
+        <h5 class="text-center mb-3">R$ {{preco}}</h5>
         <form>
           <div class="form-row align-items-center justify-content-center">
             <div class="col-auto my-1">
@@ -69,26 +65,36 @@
           <div class="col-md-8 ml-md-auto mb-3 mt-3">
             <h5 class="text-center">Consulte o prazo de entrega</h5>
             <form class="mt-3 form-inline justify-content-center">
-              <div class="form-group mb-2 pr-3">
+              <div class="mb-2 pr-3">
                 <label for="" class="sr-only">CEP</label>
                 <input
+                [(ngModel)]="valFrete"
                   type="text"
                   class="form-control"
-                  id="inputPassword2"
+                  id="cep"
                   placeholder="Insira o CEP"
+                  (keyup) = "validaFrete()"
                 />
               </div>
               <button
                 type="submit"
-                class="btn btn-success text-white font-weight-bold mb-2"
+                class="btn btn-success text-white font-weight-bold mb-2" (click)='frete()' *ngIf="esconde()"
               >
                 Consultar
+
               </button>
+              <button
+              type="submit"
+              class="btn btn-success text-white font-weight-bold mb-2" (click)='frete()' disabled  *ngIf="mostra()"
+            >
+              Consultar
+
+            </button>
             </form>
           </div>
           <div class="col-md-4 ml-md-auto mb-4 mt-4 border-left border-dark">
             <h4 class="text-center mb-3">Total com frete</h4>
-            <h5 class="text-center mb-3">R$ 0,00</h5>
+            <h5 class="text-center mb-3">R$ {{valorFrete}}</h5>
           </div>
         </div>
       </div>
@@ -283,7 +289,7 @@
                 style="font-size: 13pt"
               >
                 <p>Produtos</p>
-                <p>R$ 0,00</p>
+                <p>R$ {{preco}}</p>
               </div>
 
               <div
@@ -291,20 +297,21 @@
                 style="font-size: 13pt"
               >
                 <p>Envio</p>
-                <p>R$ 0,00</p>
+                <p>R$ {{valorFrete}}</p>
               </div>
               <div
                 class="row mt-5 ml-1 mr-1 d-flex justify-content-around border-top border-dark"
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Pagará</p>
-                <p class="mt-2">R$ 0,00</p>
+                <p class="mt-2">R$ {{total()}}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
                   <button
                     type="button"
                     class="btn btn-success text-white font-weight-bold"
+                    data-toggle="modal" data-target="#modalExemplo"
                   >
                     Finalizar compra
                   </button>
@@ -482,7 +489,7 @@
                 style="font-size: 13pt"
               >
                 <p>Produtos</p>
-                <p>R$ 0,00</p>
+                <p>R$ {{preco}}</p>
               </div>
 
               <div
@@ -490,20 +497,21 @@
                 style="font-size: 13pt"
               >
                 <p>Envio</p>
-                <p>R$ 0,00</p>
+                <p>R$ {{valorFrete}}</p>
               </div>
               <div
                 class="row mt-5 ml-1 mr-1 d-flex justify-content-around border-top border-dark"
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Pagará</p>
-                <p class="mt-2">R$ 0,00</p>
+                <p class="mt-2">R$ {{total()}}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
                   <button
                     type="button"
                     class="btn btn-success text-white font-weight-bold"
+                    data-toggle="modal" data-target="#modalExemplo"
                   >
                     Finalizar compra
                   </button>
@@ -512,6 +520,25 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">PARABÉNS !!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Obrigado pela compra, o planeta agradece sua ajuda !
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" routerLink="/home">Fechar</button>
       </div>
     </div>
   </div>
