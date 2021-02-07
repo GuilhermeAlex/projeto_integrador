@@ -55,7 +55,6 @@ export class ProductPageComponent implements OnInit {
   findByIdCategoria(event: any) {
     this.categoriaService.getByIdCategoria(event.target.value).subscribe((resp: Categoria) => {
       this.categoria = resp
-      console.log(this.categoria);
       
       this.listaProdutos = this.categoria.produto
     })
@@ -77,9 +76,7 @@ export class ProductPageComponent implements OnInit {
     this.carrinho.quantidade = id
     
     this.carrinhoService.postCarrinho(this.carrinho).subscribe((resp: Carrinho) => {
-      this.carrinho = resp
-      console.log(this.carrinho);
-      
+      this.carrinho = resp      
     })
   }
   
