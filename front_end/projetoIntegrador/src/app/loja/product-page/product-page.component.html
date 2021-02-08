@@ -1,6 +1,6 @@
 <!--Imagem de background-->
 <div class="py-5 text-center bg-image" style="
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQchzT-ayrVejYZAj4AeNjedQ0huDWTwMZow&usqp=CAU');
+    background-image: url('https://i.imgur.com/uMpjoNU.jpg');
     background-size: 100% 100%;
   ">
   <!--container -->
@@ -16,12 +16,12 @@
           <h4 class="mt-3 my-1">Categoria</h4>
           <div class="row mr-3">
             <div class="row">
-              <div class="col-md-3">
-                <div class="row ml-2" *ngFor="let tipo of listaCategoria">
+              <div class="ml-4 mt-2 col-md-3">
+                <div class="ml-4 row ml-2" *ngFor="let tipo of listaCategoria">
                   <div class="form-check">
-                    <input (input)="findByIdCategoria($event)" class="form-check-input" name="papelao" type="radio"
-                      value="{{ tipo.id_categoria }}" id="papelao" />
-                    <label class="form-check-label" for="papelao">
+                    <input (input)="findByIdCategoria($event)" class="form-check-input" name="{{tipo.tipo}}" type="radio"
+                      value="{{ tipo.id_categoria }}" id="{{tipo.tipo}}" />
+                    <label class="form-check-label" for="{{tipo.tipo}}">
                         {{ tipo.tipo }}
                     </label>
                   </div>
@@ -33,7 +33,7 @@
 
 
         <div class="col-md-9 ml-3 d-flex flex-wrap d-flex justify-content-arround">
-          <div class="card mr-3 mb-2 mt-3 bg-transparent" style="width: 29%"  *ngFor="let produto of listaProdutos">
+          <div class="card mr-3 mb-2 mt-3 bg-transparent border-dark" style="width: 29%"  *ngFor="let produto of listaProdutos">
 
             <img class="card-img-top t-img cursor-pointer" src="{{ produto.foto }}" alt="Imagem de capa do card" width="100%" height="200px" data-toggle="modal" data-target="#comprar" (click)="findByIdProduto(produto.id_produto, produto.categoria.id_categoria)"/>
 
@@ -46,7 +46,7 @@
                   </p>
                 </div>
                 <div class="d-flex align-items-center ml-3">
-                  <span class="carrinho" style="color:white" (click)="addCarrinho(produto.id_produto)"> 
+                  <span class="carrinho" style="color:white" (click)="addCarrinho(produto.id_produto)">
                     <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
                   </span>
                   <button type="button" class="btn btn-warning btn-sm rounded ml-2 btn-comprar" routerLink="/carrinho">
@@ -88,16 +88,16 @@
                   Comprar
                 </button>
               </div>
-              <div class="ml-3">consulte o prazo de entrega</div>
+              <div class="ml-3 mt-4">Consulte o Prazo de Entrega</div>
               <form class="d-flex flex-row ">
                 <input class="form-control mr-sm-2 border-radius bg-transparent " type="search"
-                  placeholder="insira o cep" aria-label="Pesquisar" />
+                  placeholder="Insira o CEP" aria-label="Pesquisar" />
                 <button type="button" class="btn btn-primary btn-sm">Consultar</button>
               </form>
 
             </div>
           </div>
-          
+
           <h5 class="ml-2">Você também pode gostar</h5>
           <div class="row d-flex flex-row ml-4" >
 

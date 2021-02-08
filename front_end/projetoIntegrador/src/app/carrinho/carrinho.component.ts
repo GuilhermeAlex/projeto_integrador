@@ -14,10 +14,13 @@ export class CarrinhoComponent implements OnInit {
   cartao: boolean;
 
   valorFrete: number = 0.0;
-  preco: number = 299.0;
+  preco: number = 299.99;
 
-  valFrete: string;
-  confirmFrete: boolean = true
+  cep: string;
+  cepOK: boolean = false;
+  nomeOk: boolean;
+  nome: string;
+  alertaNome: string;
 
   listaCarrinho: Produto[] = [];
 
@@ -26,6 +29,9 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit() {
     window.scroll(0, 0);
 
+    this.quantidade(1);
+    this.mostraBoleto();
+    
     // var fetchedObject = localStorage.getItem('listaIdProdutos');
     // console.log('fetchedObject for local storage: ', JSON.parse(fetchedObject ));
 
@@ -57,34 +63,51 @@ export class CarrinhoComponent implements OnInit {
   }
 
   frete() {
-    this.valorFrete = 13.9;
+    this.valorFrete = 13.99;
   }
 
   validaFrete() {
-    if (this.valFrete.length < 7) {
-      this.confirmFrete = false;
+    if (this.cep.length < 7) {
+      this.cepOK = false;
     } else {
-      this.confirmFrete = true;
+      this.cepOK = true;
     }
-  }
-
-  mostra() {
-    let escondeB: boolean;
-    if (this.confirmFrete == true) {
-      escondeB = false;
-    } else {
-      escondeB = true;
-    }
-    return escondeB;
   }
 
   esconde() {
-    let mostraB: boolean;
-    if (this.confirmFrete == false) {
-      mostraB = false;
+    let botaoOf: boolean;
+    if (this.cepOK == false) {
+      botaoOf = true;
     } else {
-      mostraB = true;
+      botaoOf = false;
     }
-    return mostraB;
+    return botaoOf;
+  }
+
+  mostra() {
+    let botaoOn: boolean;
+    if (this.cepOK == true) {
+      botaoOn = true;
+    } else {
+      botaoOn = false;
+    }
+    return botaoOn;
+  }
+
+  validaNome() {
+    if (this.nome.length < 3) {
+      this.nomeOk = false;
+      this.alertaNome = 'Nome inválido';
+    } else {
+      this.nomeOk = true;
+      this.alertaNome = '';
+    }
+  }
+
+  quantidade(event: any) {
+    let precoInicio: number;
+    precoInicio = 299.99;
+    this.preco = precoInicio;
+    this.preco = this.preco * event.target.value;
   }
 }
