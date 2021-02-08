@@ -31,11 +31,8 @@ export class CarrinhoComponent implements OnInit {
 
     this.quantidade(1);
     this.mostraBoleto();
-    
-    // var fetchedObject = localStorage.getItem('listaIdProdutos');
-    // console.log('fetchedObject for local storage: ', JSON.parse(fetchedObject ));
+    this.frete()
 
-    // var listaCarrinho = JSON.parse( localStorage.getItem('listaIdProdutos') )
   }
 
   mostraBoleto() {
