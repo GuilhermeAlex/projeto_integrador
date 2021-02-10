@@ -18,16 +18,15 @@ export class CarrinhoComponent implements OnInit {
   sobrenome: string;
   cpf: string;
   rua: string;
-  bairro: string
-  cep: string
-  cidade: string
-  numCartao: string
-  nameFull: string
-  codSeg: string
-
+  bairro: string;
+  cep: string;
+  cidade: string;
+  numCartao: string;
+  nameFull: string;
+  codSeg: string;
 
   cepOKX: boolean = false;
-  nomeOk: boolean =  false;
+  nomeOk: boolean = false;
   sobrenomeOK: boolean = false;
   cpfOK: boolean = false;
   boleto: boolean = true;
@@ -37,20 +36,20 @@ export class CarrinhoComponent implements OnInit {
   cepOK: boolean = false;
   cidadeOK: boolean = false;
   estadoOK: boolean = false;
-  numCartaoOK: boolean = false
-  nameFullOK: boolean = false
-  codSegOK: boolean = false
+  numCartaoOK: boolean = false;
+  nameFullOK: boolean = false;
+  codSegOK: boolean = false;
 
-  alertaNameFull: string
-  alertaNumCartao: string
-  alertaCEP: string
-  alertaBairro: string
+  alertaNameFull: string;
+  alertaNumCartao: string;
+  alertaCEP: string;
+  alertaBairro: string;
   alertaNome: string;
   alertaSobrenome: string;
   alertaCpf: string;
   alertaRua: string;
   alertaCidade: string;
-  alertaEstado:string;
+  alertaEstado: string;
   alertaCodSeg: string;
 
   listaCarrinho: Produto[] = [];
@@ -59,11 +58,8 @@ export class CarrinhoComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
-
     // var fetchedObject = localStorage.getItem('listaIdProdutos');
     // console.log('fetchedObject for local storage: ', JSON.parse(fetchedObject ));
-
-    // var listaCarrinho = JSON.parse( localStorage.getItem('listaIdProdutos') )
   }
 
   mostraBoleto() {
@@ -161,7 +157,7 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  validaBairro(){
+  validaBairro() {
     if (this.bairro.length < 4) {
       this.bairroOK = false;
       this.alertaBairro = 'Bairro Inválido';
@@ -181,7 +177,7 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  validaCidade(){
+  validaCidade() {
     if (this.cidade.length < 3) {
       this.cidadeOK = false;
       this.alertaCidade = 'Cidade Inválida';
@@ -190,13 +186,13 @@ export class CarrinhoComponent implements OnInit {
       this.alertaCidade = '';
     }
   }
-  validaEstado(event: any){
+  validaEstado(event: any) {
     if (event.target.value == 'NADA') {
-      this.estadoOK = false
-      this.alertaEstado = 'Selecione um estado'
-    }else{
-      this.estadoOK= true;
-      this.alertaEstado = ''
+      this.estadoOK = false;
+      this.alertaEstado = 'Selecione um estado';
+    } else {
+      this.estadoOK = true;
+      this.alertaEstado = '';
     }
   }
 
@@ -210,7 +206,7 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  validaNameFull(){
+  validaNameFull() {
     if (this.nameFull.length < 6) {
       this.nameFullOK = false;
       this.alertaNameFull = 'Nome inválido';
@@ -220,7 +216,7 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  validaCodSeg(){
+  validaCodSeg() {
     if (this.codSeg.length < 3 || this.codSeg.length > 3) {
       this.codSegOK = false;
       this.alertaCodSeg = 'Cod. Segurança inválido';
@@ -239,14 +235,16 @@ export class CarrinhoComponent implements OnInit {
 
   escondeFinaliza() {
     let botaoOf: boolean;
-    if (this.nomeOk == false ||
+    if (
+      this.nomeOk == false ||
       this.sobrenomeOK == false ||
       this.cpfOK == false ||
       this.ruaOK == false ||
       this.bairroOK == false ||
       this.cepOK == false ||
       this.cidadeOK == false ||
-      this.estadoOK == false)  {
+      this.estadoOK == false
+    ) {
       botaoOf = true;
     } else {
       botaoOf = false;
@@ -256,14 +254,16 @@ export class CarrinhoComponent implements OnInit {
 
   mostraFinaliza() {
     let botaoOn: boolean;
-    if (this.nomeOk == true &&
+    if (
+      this.nomeOk == true &&
       this.sobrenomeOK == true &&
       this.cpfOK == true &&
       this.ruaOK == true &&
       this.bairroOK == true &&
       this.cepOK == true &&
       this.cidadeOK == true &&
-      this.estadoOK == true) {
+      this.estadoOK == true
+    ) {
       botaoOn = true;
     } else {
       botaoOn = false;
@@ -272,7 +272,8 @@ export class CarrinhoComponent implements OnInit {
   }
   escondeFinalizaX() {
     let botaoOf: boolean;
-    if (this.numCartaoOK == false ||
+    if (
+      this.numCartaoOK == false ||
       this.nameFullOK == false ||
       this.codSegOK == false ||
       this.cpfOK == false ||
@@ -280,7 +281,8 @@ export class CarrinhoComponent implements OnInit {
       this.bairroOK == false ||
       this.cepOK == false ||
       this.cidadeOK == false ||
-      this.estadoOK == false)  {
+      this.estadoOK == false
+    ) {
       botaoOf = true;
     } else {
       botaoOf = false;
@@ -290,7 +292,8 @@ export class CarrinhoComponent implements OnInit {
 
   mostraFinalizaX() {
     let botaoOn: boolean;
-    if (this.numCartaoOK == true &&
+    if (
+      this.numCartaoOK == true &&
       this.nameFullOK == true &&
       this.codSegOK == true &&
       this.cpfOK == true &&
@@ -298,7 +301,8 @@ export class CarrinhoComponent implements OnInit {
       this.bairroOK == true &&
       this.cepOK == true &&
       this.cidadeOK == true &&
-      this.estadoOK == true) {
+      this.estadoOK == true
+    ) {
       botaoOn = true;
     } else {
       botaoOn = false;

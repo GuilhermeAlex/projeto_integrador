@@ -19,9 +19,9 @@
               <div class="ml-4 mt-2 col-md-3">
                 <div class="ml-4 row ml-2" *ngFor="let tipo of listaCategoria">
                   <div class="form-check">
-                    <input (input)="findByIdCategoria($event)" class="form-check-input" name="{{tipo.tipo}}" type="radio"
-                      value="{{ tipo.id_categoria }}" id="{{tipo.tipo}}" />
-                    <label class="form-check-label" for="{{tipo.tipo}}">
+                    <input (input)="findByIdCategoria($event)" class="form-check-input" name="papelão" type="radio"
+                      value="{{ tipo.id_categoria }}" id="{{ tipo.tipo }}" />
+                    <label class="form-check-label" for="{{ tipo.tipo }}">
                         {{ tipo.tipo }}
                     </label>
                   </div>
