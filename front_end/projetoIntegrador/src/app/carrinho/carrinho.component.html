@@ -1,7 +1,7 @@
 <div
   class="p-5 text-center bg-image"
   style="
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQchzT-ayrVejYZAj4AeNjedQ0huDWTwMZow&usqp=CAU');
+    background-image: url('https://i.imgur.com/uMpjoNU.jpg');
     background-size: 100% 100%;
   "
 >
@@ -27,31 +27,38 @@
           alt="Imagem produto"
         />
       </div>
-      <div class="col-md-4 border-right border-dark">
-        <h3 class="mb-3 mt-2 ml-4 display 5">
-         Casa para Passarinho
-        </h3>
+      <div class="col-md-4 border-right border-dark flex-row">
+        <h3 class="mb-3 mt-2 display 5">Casa para Passarinho</h3>
+        <p>
+          Reunir a família ou amigos é sempre bom, um momento de
+          confraternização e alegria, e que tal reservar um espaço especial para
+          a atividade.
+        </p>
       </div>
       <div class="col-md-4">
         <h4 class="text-center mb-3">Quantidade</h4>
-        <h5 class="text-center mb-3">R$ {{preco}}</h5>
+        <h5 class="text-center mb-3">R$ {{ preco }}</h5>
         <form>
           <div class="form-row align-items-center justify-content-center">
             <div class="col-auto my-1">
               <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect"
                 >Preferência</label
               >
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select
+                (change)="quantidade($event)"
+                class="custom-select mr-sm-2"
+                id="inlineFormCustomSelect"
+              >
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="1">4</option>
-                <option value="2">5</option>
-                <option value="3">6</option>
-                <option value="1">7</option>
-                <option value="2">8</option>
-                <option value="3">9</option>
-                <option value="3">10</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
               </select>
             </div>
           </div>
@@ -66,41 +73,45 @@
             <h5 class="text-center">Consulte o prazo de entrega</h5>
             <form class="mt-3 form-inline justify-content-center">
               <div class="mb-2 pr-3">
-                <label for="" class="sr-only">CEP</label>
+                <label for="cep" class="sr-only">CEP</label>
                 <input
-                [(ngModel)]="valFrete"
+                  name="cep"
+                  [(ngModel)]="cepX"
                   type="text"
                   class="form-control"
                   id="cep"
                   placeholder="Insira o CEP"
-                  (keyup) = "validaFrete()"
+                  (keyup)="validaFrete()"
                 />
               </div>
               <button
                 type="submit"
-                class="btn btn-success text-white font-weight-bold mb-2" (click)='frete()' *ngIf="esconde()"
+                class="btn btn-success text-white font-weight-bold mb-2"
+                (click)="frete()"
+                *ngIf="mostra()"
               >
                 Consultar
-
               </button>
               <button
-              type="submit"
-              class="btn btn-success text-white font-weight-bold mb-2" (click)='frete()' disabled  *ngIf="mostra()"
-            >
-              Consultar
-
-            </button>
+                type="submit"
+                class="btn btn-success text-white font-weight-bold mb-2"
+                (click)="frete()"
+                disabled
+                *ngIf="esconde()"
+              >
+                Consultar
+              </button>
             </form>
           </div>
           <div class="col-md-4 ml-md-auto mb-4 mt-4 border-left border-dark">
-            <h4 class="text-center mb-3">Total com frete</h4>
-            <h5 class="text-center mb-3">R$ {{valorFrete}}</h5>
+            <h4 class="text-center mb-3">Frete</h4>
+            <h5 class="text-center mb-3">R$ {{ valorFrete }}</h5>
           </div>
         </div>
       </div>
     </div>
-    <div class="row align-self-center mb-3 mt-4 border-top border-dark">
-      <h3 class="font-weight-bold display-5 mt-3">Forma de Pagamento</h3>
+    <div class="row align-self-center mb-3 mt-4 border-top border-dark justify-content-center">
+      <h3 class="font-weight-bold display-5 mt-3 ">Forma de Pagamento</h3>
     </div>
 
     <div class="row mb-5 d-flex align-items-stretch border-top border-dark">
@@ -144,31 +155,43 @@
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Nome</label>
                 <input
+                  [(ngModel)]="nome"
+                  name="nome"
                   type="text"
                   class="form-control"
                   id="nome"
                   placeholder="Primeiro Nome"
+                  (keyup)="validaNome()"
                 />
+                <div class="text-danger">{{ alertaNome }}</div>
               </div>
-              <!-- <div class="text-danger">{{ alertaNome }}</div> -->
+
               <div class="form-group col-md-6">
                 <label for="inputPassword4">Sobrenome</label>
                 <input
+                  name="sobrenome"
+                  [(ngModel)]="sobrenome"
                   type="text"
                   class="form-control"
                   id="inputPassword4"
                   placeholder="Último Sobrenome"
                   id="sobrenome"
+                  (keyup)="validaSobrenome()"
                 />
+                <div class="text-danger">{{ alertaSobrenome }}</div>
               </div>
               <div class="form-group col-md-12">
                 <label for="inputAddress">CPF</label>
                 <input
+                  name="cpf"
+                  [(ngModel)]="cpf"
                   type="text"
                   class="form-control"
                   id="inputAddress"
                   placeholder="Nº CPF"
+                  (keyup)="validaCpf()"
                 />
+                <div class="text-danger">{{ alertaCpf }}</div>
               </div>
             </div>
 
@@ -177,20 +200,28 @@
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Rua ou Avenida</label>
                 <input
+                  name="rua"
+                  [(ngModel)]="rua"
                   type="text"
                   class="form-control"
                   id="inputEmail4"
                   placeholder="Nome da Rua ou Avenida"
+                  (keyup)="validaRua()"
                 />
+                <div class="text-danger">{{ alertaRua }}</div>
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword4">Bairro</label>
                 <input
+                  name="bairro"
+                  [(ngModel)]="bairro"
                   type="text"
                   class="form-control"
                   id="inputPassword4"
                   placeholder="Nome do Bairro"
+                  (keyup)="validaBairro()"
                 />
+                <div class="text-danger">{{ alertaBairro }}</div>
               </div>
             </div>
             <div class="form-row">
@@ -206,11 +237,15 @@
               <div class="form-group col-md-4">
                 <label for="inputPassword4">CEP</label>
                 <input
+                  name="cep"
+                  [(ngModel)]="cep"
                   type="text"
                   class="form-control"
                   id="inputPassword4"
                   placeholder="CEP da Residência"
+                  (keyup)="validaCep()"
                 />
+                <div class="text-danger">{{ alertaCEP }}</div>
               </div>
               <div class="form-group col-md-4">
                 <label for="inputPassword4">Complemento</label>
@@ -226,17 +261,20 @@
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Cidade</label>
                 <input
+                  name="cidade"
+                  [(ngModel)]="cidade"
                   type="text"
                   class="form-control"
                   id="inputEmail4"
                   placeholder="Cidade"
+                  (keyup)="validaCidade()"
                 />
+                <div class="text-danger">{{ alertaCidade }}</div>
               </div>
-
               <div class="form-group col-md-6">
                 <label for="inputEstado">Estado</label>
-                <select id="inputEstado" class="form-control">
-                  <option selected>Selecione o Estado</option>
+                <select id="inputEstado" class="form-control" (change)="validaEstado($event)">
+                  <option selected value="NADA">Selecione o Estado</option>
                   <option value="AC">Acre</option>
                   <option value="AL">Alagoas</option>
                   <option value="AP">Amapá</option>
@@ -266,6 +304,7 @@
                   <option value="TO">Tocantins</option>
                   <option value="EX">Estrangeiro</option>
                 </select>
+                <div class="text-danger">{{ alertaEstado }}</div>
               </div>
             </div>
 
@@ -289,7 +328,7 @@
                 style="font-size: 13pt"
               >
                 <p>Produtos</p>
-                <p>R$ {{preco}}</p>
+                <p>R$ {{ preco }}</p>
               </div>
 
               <div
@@ -297,21 +336,33 @@
                 style="font-size: 13pt"
               >
                 <p>Envio</p>
-                <p>R$ {{valorFrete}}</p>
+                <p>R$ {{ valorFrete }}</p>
               </div>
               <div
                 class="row mt-5 ml-1 mr-1 d-flex justify-content-around border-top border-dark"
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Pagará</p>
-                <p class="mt-2">R$ {{total()}}</p>
+                <p class="mt-2">R$ {{ total() }}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
                   <button
                     type="button"
                     class="btn btn-success text-white font-weight-bold"
-                    data-toggle="modal" data-target="#modalExemplo"
+                    data-toggle="modal"
+                    data-target="#modalExemplo"
+                    *ngIf="mostraFinaliza()"
+                  >
+                    Finalizar compra
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-success text-white font-weight-bold"
+                    data-toggle="modal"
+                    data-target="#modalExemplo"
+                    disabled
+                    *ngIf="escondeFinaliza()"
                   >
                     Finalizar compra
                   </button>
@@ -328,26 +379,34 @@
                 <div class="form-group">
                   <label for="inputAddress">Número do Cartão</label>
                   <input
+                  name="numCartao"
+                  [(ngModel)]='numCartao'
                     type="text"
                     class="form-control"
                     id="inputAddress"
                     placeholder="Digite o número do Cartão"
+                    (keyup)='validaNumCartao()'
                   />
+                  <div class="text-danger">{{alertaNumCartao}}</div>
                 </div>
                 <div class="form-group">
                   <label for="inputAddress2">Nome do Titular do Cartão</label>
                   <input
+                  name="nameFull"
+                  [(ngModel)]='nameFull'
                     type="text"
                     class="form-control"
                     id="inputAddress2"
                     placeholder="Nome Completo"
+                    (keyup)='validaNameFull()'
                   />
+                  <div class="text-danger">{{alertaNameFull}}</div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Data de vencimento</label>
                     <input
-                      type="email"
+                      type="text"
                       class="form-control"
                       id="inputEmail4"
                       placeholder="Vencimento do Cartão"
@@ -355,43 +414,58 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputPassword4">Código de Segurança</label>
-
                     <input
-                      type="password"
+                    name="codSeg"
+                    [(ngModel)]='codSeg'
+                      type="text"
                       class="form-control"
                       id="inputPassword4"
                       placeholder="Cod.Segurança"
+                      (keyup)='validaCodSeg()'
                     />
+                    <div class="text-danger">{{alertaCodSeg}}</div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputAddress">CPF</label>
                   <input
+                    name="cpf"
+                    [(ngModel)]="cpf"
                     type="text"
                     class="form-control"
                     id="inputAddress"
-                    placeholder="CPF do Titular"
+                    placeholder="Nº CPF"
+                    (keyup)="validaCpf()"
                   />
+                  <div class="text-danger">{{ alertaCpf }}</div>
                 </div>
                 <h5 class="border-bottom border-dark">Endereço</h5>
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Rua ou Avenida</label>
                     <input
+                      name="rua"
+                      [(ngModel)]="rua"
                       type="text"
                       class="form-control"
                       id="inputEmail4"
                       placeholder="Nome da Rua ou Avenida"
+                      (keyup)="validaRua()"
                     />
+                    <div class="text-danger">{{ alertaRua }}</div>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputPassword4">Bairro</label>
                     <input
+                      name="bairro"
+                      [(ngModel)]="bairro"
                       type="text"
                       class="form-control"
                       id="inputPassword4"
                       placeholder="Nome do Bairro"
+                      (keyup)="validaBairro()"
                     />
+                    <div class="text-danger">{{ alertaBairro }}</div>
                   </div>
                 </div>
                 <div class="form-row">
@@ -401,17 +475,21 @@
                       type="text"
                       class="form-control"
                       id="inputEmail4"
-                      placeholder="Número da Residência"
+                      placeholder="Nº Residência"
                     />
                   </div>
                   <div class="form-group col-md-4">
                     <label for="inputPassword4">CEP</label>
                     <input
+                      name="cep"
+                      [(ngModel)]="cep"
                       type="text"
                       class="form-control"
                       id="inputPassword4"
                       placeholder="CEP da Residência"
+                      (keyup)="validaCep()"
                     />
+                    <div class="text-danger">{{ alertaCEP }}</div>
                   </div>
                   <div class="form-group col-md-4">
                     <label for="inputPassword4">Complemento</label>
@@ -427,16 +505,20 @@
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Cidade</label>
                     <input
+                      name="cidade"
+                      [(ngModel)]="cidade"
                       type="text"
                       class="form-control"
                       id="inputEmail4"
                       placeholder="Cidade"
+                      (keyup)="validaCidade()"
                     />
+                    <div class="text-danger">{{ alertaCidade }}</div>
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputEstado">Estado</label>
-                    <select id="inputEstado" class="form-control">
-                      <option selected>Selecione o Estado</option>
+                    <select id="inputEstado" class="form-control" (change)="validaEstado($event)">
+                      <option selected value="NADA">Selecione o Estado</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
                       <option value="AP">Amapá</option>
@@ -466,6 +548,7 @@
                       <option value="TO">Tocantins</option>
                       <option value="EX">Estrangeiro</option>
                     </select>
+                    <div class="text-danger">{{ alertaEstado }}</div>
                   </div>
                 </div>
               </form>
@@ -489,7 +572,7 @@
                 style="font-size: 13pt"
               >
                 <p>Produtos</p>
-                <p>R$ {{preco}}</p>
+                <p>R$ {{ preco }}</p>
               </div>
 
               <div
@@ -497,24 +580,36 @@
                 style="font-size: 13pt"
               >
                 <p>Envio</p>
-                <p>R$ {{valorFrete}}</p>
+                <p>R$ {{ valorFrete }}</p>
               </div>
               <div
                 class="row mt-5 ml-1 mr-1 d-flex justify-content-around border-top border-dark"
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Pagará</p>
-                <p class="mt-2">R$ {{total()}}</p>
+                <p class="mt-2">R$ {{ total() }}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
                   <button
-                    type="button"
-                    class="btn btn-success text-white font-weight-bold"
-                    data-toggle="modal" data-target="#modalExemplo"
-                  >
-                    Finalizar compra
-                  </button>
+                  type="button"
+                  class="btn btn-success text-white font-weight-bold"
+                  data-toggle="modal"
+                  data-target="#modalExemplo"
+                  *ngIf="mostraFinalizaX()"
+                >
+                  Finalizar compra
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success text-white font-weight-bold"
+                  data-toggle="modal"
+                  data-target="#modalExemplo"
+                  disabled
+                  *ngIf="escondeFinalizaX()"
+                >
+                  Finalizar compra
+                </button>
                 </div>
               </div>
             </div>
@@ -525,12 +620,24 @@
   </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="modalExemplo"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">PARABÉNS !!</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -538,7 +645,14 @@
         Obrigado pela compra, o planeta agradece sua ajuda !
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" routerLink="/home">Fechar</button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-dismiss="modal"
+          routerLink="/home"
+        >
+          Fechar
+        </button>
       </div>
     </div>
   </div>
