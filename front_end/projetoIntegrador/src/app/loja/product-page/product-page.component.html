@@ -32,14 +32,14 @@
         </div>
 
 
-        <div class="col-md-9 ml-3 d-flex flex-wrap d-flex justify-content-arround">
+        <div class="col-md-9 ml-3 d-flex flex-wrap d-flex justify-content-around">
           <div class="card mr-3 mb-2 mt-3 bg-transparent border-dark" style="width: 29%"  *ngFor="let produto of listaProdutos">
 
             <img class="card-img-top t-img cursor-pointer" src="{{ produto.foto }}" alt="Imagem de capa do card" width="100%" height="200px" data-toggle="modal" data-target="#comprar" (click)="findByIdProduto(produto.id_produto, produto.categoria.id_categoria)"/>
 
-            <div class="card-body mx-2">
+            <div class="card-body mx-2 d-flex flex-column align-items-center">
               <h5 class="card-title cursor-pointer"  data-toggle="modal" data-target="#comprar" (click)="findByIdProduto(produto.id_produto, produto.categoria.id_categoria)">{{ produto.nome }}</h5>
-              <div class="row d-flex justify-content-between align-items-center">
+              <div class="row d-flex justify-content-between align-items-center mt-auto">
                 <div class="d-flex align-items-center">
                   <p class="m-0 font-weight-bold cursor-pointer"  data-toggle="modal" data-target="#comprar" (click)="findByIdProduto(produto.id_produto, produto.categoria.id_categoria)">
                     R$ {{ produto.preco }}
@@ -105,9 +105,9 @@
               data-target="#comprar" *ngFor="let produto of listaProdutosModal">
               <img class="card-img-top t-img" src="{{ produto.foto }}" alt="Imagem de capa do card" width="100%"
                 height="200px" />
-              <div class="card-body mx-2">
+              <div class="card-body mx-2 d-flex flex-column align-items-center">
                 <h5 class="card-title">{{ produto.nome }}</h5>
-                <div class="row d-flex justify-content-between align-items-center">
+                <div class="row d-flex justify-content-between align-items-center mt-auto">
                   <div class="d-flex align-items-center">
                     <p class="m-0 font-weight-bold">
                       R$ {{ produto.preco }}
