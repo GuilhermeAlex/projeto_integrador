@@ -1,49 +1,38 @@
-<div class="container back">
-  <div class="row d-flex justify-content-center align-items-center">
-    <h1 class="mr-2 mt-2">Contato</h1>
-    <i class="fa fa-phone fa-3x fa-flip-horizontal mt-2" aria-hidden="true"></i>
-  </div>
+<div class="container-fluid back">
+  
 
-  <div class="row d-flex justify-content-center">
-    <div class="col-md-7 mt-3 mb-5">
+  <div class="row d-flex justify-content-center conteudo">
+
+    <div class="col-md-5 mt-5 d-flex align-items-center p-0">
+      <div class="contato-animacao">
+        <img class="mt-2" src="https://i.imgur.com/3gG7GBN.png" alt="Animação de Contato" width="100%">
+      </div>
+    </div>
+
+    <div class="col-md-6 mt-3 mb-5 contact">
+      <div class="row d-flex justify-content-center align-items-center mb-2">
+        <h1 class="mr-2 mt-2">Contato</h1>
+        <i class="fa fa-phone fa-3x fa-flip-horizontal mt-2" aria-hidden="true"></i>
+      </div>
       <form>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputNome">Nome</label>
-            <input
-              type="text"
-              class="form-control"
-              id="inputNome"
-              placeholder="Primeiro nome"
-            />
+            <input type="text" class="form-control" id="inputNome" placeholder="Primeiro nome" />
           </div>
           <div class="form-group col-md-6">
             <label for="inputSobrenome">Sobrenome</label>
-            <input
-              type="text"
-              class="form-control"
-              id="inputSobrenome"
-              placeholder="Último sobrenome"
-            />
+            <input type="text" class="form-control" id="inputSobrenome" placeholder="Último sobrenome" />
           </div>
         </div>
         <div class="form-group">
           <label for="inputEmail">Email</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputEmail"
-            placeholder="Digite seu Email"
-          />
+          <input type="text" class="form-control" id="inputEmail" placeholder="Digite seu Email" />
         </div>
         <div class="form-group">
           <label for="contatoTextarea">Assunto</label>
-          <textarea
-            class="form-control"
-            id="contatoTextarea"
-            rows="8"
-            placeholder="Como podemos te ajudar?"
-          ></textarea>
+          <textarea class="form-control" id="contatoTextarea" rows="6"
+            placeholder="Como podemos te ajudar?"></textarea>
         </div>
         <div class="d-flex justify-content-center">
           <button type="submit" class="btn btn-outline-secondary w-25">
@@ -52,5 +41,6 @@
         </div>
       </form>
     </div>
+
   </div>
 </div>
