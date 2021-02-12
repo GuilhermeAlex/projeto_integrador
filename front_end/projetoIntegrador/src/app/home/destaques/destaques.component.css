@@ -20,33 +20,19 @@
      width: 500px;
  }
 
- .size-logo{
-     height: 10%;
-     width: 10%;
- }
+ .tmodal{
+    width: 100%;
+}
 
  @media only screen and (max-width: 414px) {
-    .teste {
-     width: 15%;
-     height: 30px;
-    }
-
     .texto{
         display: none;
     }
-
-    .gpet{
-        margin-left: 5px;
+    .impacto, .titulo-impacto {
+        text-align: center;
+    }
+    .teste {
+        margin-right: 3%;
     }
 }
 
-    /* @media only screen and (max-width: 414px) {
-    .gpet{
-        margin-left: 5px;
-    }
-
-    } */
-
-.tmodal{
-    width: 100%;
-}
