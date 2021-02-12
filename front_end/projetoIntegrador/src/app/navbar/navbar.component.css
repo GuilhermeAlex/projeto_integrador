@@ -39,10 +39,15 @@
     width: 50px;
     height: 50px;
 }
-
-@media only screen and (max-width: 576px) {
+.carrinho{
+    display: none;
+}
+@media only screen and (max-width: 414px) {
     .sumiu{
         display: none;
         
+    }
+    .carrinho{
+        display: block;
     }
   }
