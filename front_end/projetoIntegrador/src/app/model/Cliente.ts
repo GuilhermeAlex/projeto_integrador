@@ -9,5 +9,4 @@ export class Cliente{
   public telefone: string;
   public email: string;
   public senha: string;
-  public carrinho: Carrinho;
 }

@@ -17,9 +17,7 @@
     </div>
   </div>
   <div class="container mb-3">
-    <div
-      class="row align-items-center justify-content-start mb-4 mt-4 border-top border-bottom border-dark"
-    >
+    <!-- <div class="row align-items-center justify-content-start mb-4 mt-4 border-top border-bottom border-dark">
       <div class="col-md-4 mt-4 mb-4">
         <img
           class="rounded mx-auto d-block img-aj"
@@ -60,6 +58,53 @@
                 <option value="9">9</option>
                 <option value="10">10</option>
               </select>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div> -->
+
+    <div class="row align-items-center justify-content-start mb-4 mt-4 border-top border-bottom border-dark" *ngFor="let produto of listaCarrinho">
+      <div class="col-md-4 mt-4 mb-4">
+        <img
+          class="rounded mx-auto d-block img-aj"
+          src="{{ produto.produto.foto }}"
+          alt="Imagem produto"
+        />
+      </div>
+      <div class="col-md-4 border-right border-dark flex-row">
+        <h3 class="mb-3 mt-2 display 5">{{ produto.produto.nome }}</h3>
+        <p>
+          {{ produto.produto.descricao }}
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h4 class="text-center mb-3">Quantidade</h4>
+        <h5 class="text-center mb-3">R$ {{ preco }}</h5>
+        <!-- <h5 class="text-center mb-3">R$ {{ produto.produto.preco }}</h5> -->
+        <form>
+          <div class="form-row align-items-center justify-content-center">
+            <div class="col-auto my-1">
+              <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect"
+                >Preferência</label
+              >
+              <select
+                (change)="quantidade($event)"
+                class="custom-select mr-sm-2"
+                id="inlineFormCustomSelect"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <!-- <button (click)="remover(produto.id_carrinho)">Deletar Item</button> -->
             </div>
           </div>
         </form>

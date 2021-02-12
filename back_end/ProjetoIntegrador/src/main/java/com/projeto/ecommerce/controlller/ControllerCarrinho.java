@@ -24,12 +24,6 @@ public class ControllerCarrinho {
 	@Autowired
 	private RepositoryCarrinho repository;
 	
-	@PostMapping
-	public Carrinho criar(@RequestBody Carrinho objetinho) {
-		repository.save(objetinho);
-		return objetinho;
-	}
-	
 	@GetMapping 
 	public ResponseEntity <List <Carrinho>> GetAll() {
 		return ResponseEntity.ok (repository.findAll());
@@ -42,9 +36,10 @@ public class ControllerCarrinho {
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/getByTipo/{quantidade}")
-	public ResponseEntity<List<Carrinho>> getByQuantidade ( @PathVariable int quantidade){
-		return ResponseEntity.ok(repository.findAllByQuantidade(quantidade));
+	@PostMapping
+	public Carrinho criar(@RequestBody Carrinho objetinho) {
+		repository.save(objetinho);
+		return objetinho;
 	}
 	
 	@PutMapping  ("/put/{id}")
@@ -56,12 +51,20 @@ public class ControllerCarrinho {
 	
 	@DeleteMapping ("/delete/{id}")
 	public String remover (@PathVariable Long id) {
-		try {
+
 			repository.deleteById(id);
 		return "Deletado com sucesso !";
-		} catch (Exception e) {
-			return "Erro: " + e.getLocalizedMessage();			
-		}
 	
+	}
+	
+	@DeleteMapping("/deleteAll")
+	public String deleteAll() {
+		try {
+			repository.deleteAll();
+			return "Deletado todo o carrinho";
+		} catch (Exception e) {
+			return "Erro: " + e.getLocalizedMessage();
+		}
+		
 	}
 }

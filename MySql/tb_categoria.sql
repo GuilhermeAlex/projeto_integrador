@@ -1,5 +1,4 @@
-insert into tb_categoria values (DEFAULT,'Papelão',null);
-insert into tb_categoria values (DEFAULT,'Madeira',null); 
-insert into tb_categoria values (DEFAULT,'PET',null); 
-insert into tb_categoria values (DEFAULT,'Pallet',null); 
-insert into tb_categoria values (DEFAULT,'Plastico',null);
+insert into tb_categoria values (DEFAULT,'Papelão',Papelão);
+insert into tb_categoria values (DEFAULT,'Madeira',Madeira); 
+insert into tb_categoria values (DEFAULT,'PET',PET); 
+insert into tb_categoria values (DEFAULT,'Pallet',Pallet); 

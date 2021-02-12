@@ -38,9 +38,6 @@ public class Cliente {
 	@Column
 	private String senha;
 	
-	
-	@OneToOne
-	private Carrinho carrinho;
 
 	public long getId_cliente() {
 		return id_cliente;
@@ -80,14 +77,6 @@ public class Cliente {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-
-	public Carrinho getCarrinho() {
-		return carrinho;
-	}
-
-	public void setCarrinho(Carrinho carrinho) {
-		this.carrinho = carrinho;
 	}
 
 	public String getSobrenome() {

@@ -19,10 +19,6 @@ export class CarrinhoService {
     return this.http.get<Carrinho[]>('http://localhost:8080/carrinho',this.token)
   }
 
-  getByTipo(quantidade: number): Observable<Carrinho[]> {
-    return this.http.get<Carrinho[]>(`http://localhost:8080/carrinho/getByTipo/${quantidade}`, this.token)
-  }
-
   postCarrinho(carrinho: Carrinho): Observable<Carrinho>{
     return this.http.post<Carrinho>('http://localhost:8080/carrinho', carrinho, this.token)
   }

@@ -1,8 +1,6 @@
-import { Cliente } from './Cliente';
+import { Produto } from './Produto';
 
 export class Carrinho{
   public id_carrinho: number;
-  public valor_total: number;
-  public quantidade: number;
-  public cliente: Cliente;
+  public produto: Produto;
 }

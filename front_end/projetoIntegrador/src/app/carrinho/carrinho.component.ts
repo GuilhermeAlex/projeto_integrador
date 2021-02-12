@@ -1,6 +1,8 @@
 import { Produto } from './../model/Produto';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
+import { Carrinho } from '../model/Carrinho';
+import { CarrinhoService } from '../service/carrinho.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -9,6 +11,9 @@ import { AuthService } from '../service/auth.service';
 })
 export class CarrinhoComponent implements OnInit {
   produto: Produto = new Produto();
+  carrinho: Carrinho = new Carrinho();
+
+  listaCarrinho: Carrinho[];
 
   valorFrete: number = 0.0;
   preco: number = 299.99;
@@ -52,14 +57,16 @@ export class CarrinhoComponent implements OnInit {
   alertaEstado: string;
   alertaCodSeg: string;
 
-  listaCarrinho: Produto[] = [];
-
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private carrinhoService: CarrinhoService
+    ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
-    // var fetchedObject = localStorage.getItem('listaIdProdutos');
-    // console.log('fetchedObject for local storage: ', JSON.parse(fetchedObject ));
+
+    this.findAllCarrinho();
+
   }
 
   mostraBoleto() {
@@ -308,5 +315,21 @@ export class CarrinhoComponent implements OnInit {
       botaoOn = false;
     }
     return botaoOn;
+  }
+
+  findAllCarrinho(){
+    this.carrinhoService.getAllCarrinho().subscribe((resp: Carrinho[]) => {
+      this.listaCarrinho = resp
+      console.log(this.listaCarrinho)
+    })
+  }
+
+  // Deletar apenas 1 item do carrinho
+  remover(id: number){
+    console.log(id)
+    this.carrinhoService.deleteIdCarrinho(id).subscribe(() =>{})
+    console.log("chegay")
+    alert("Removido do carrinho com sucesso!")
+    this.findAllCarrinho()
   }
 }

@@ -72,13 +72,18 @@ export class ProductPageComponent implements OnInit {
     })
   }
 
+  
   addCarrinho(id: number){
-    this.carrinho.quantidade = id
-
-    this.carrinhoService.postCarrinho(this.carrinho).subscribe((resp: Carrinho) => {
-      this.carrinho = resp
+    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
+      this.carrinho = new Carrinho()
+      this.carrinho.produto = resp
+      this.postCarrinho(this.carrinho)
     })
   }
 
-
+  postCarrinho(carrinho: Carrinho){
+    this.carrinhoService.postCarrinho(carrinho).subscribe((resp: Carrinho) => {
+      this.carrinho = resp
+    })
+  }
 }
