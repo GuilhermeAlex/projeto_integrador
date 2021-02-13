@@ -1,7 +1,7 @@
-import { Router } from '@angular/router';
-import { AuthService } from '../service/auth.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cliente } from '../model/Cliente';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-cadastrar',
@@ -49,7 +49,7 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar() {
     if (
-      this.cliente.senha != this.confirmSenha &&
+      this.cliente.senha != this.confirmSenha ||
       this.cliente.email != this.confirmEmail
     ) {
       alert('As senhas ou e-mail´s não coincidem');
@@ -136,7 +136,7 @@ export class CadastrarComponent implements OnInit {
       this.nome != true ||
       this.sobrenome != true ||
       this.cpf != true ||
-      this.rg != true
+      this.rg != true 
     ) {
       mostraB = false;
     } else {
@@ -145,3 +145,4 @@ export class CadastrarComponent implements OnInit {
     return mostraB;
   }
 }
+
