@@ -45,7 +45,12 @@
         Cadastre-se</a>
 
     </li>
-    <a routerLink="/carrinho">
+    <a routerLink="/carrinho" *ngIf='permiteLogin()'>
+      <li class="ponto mr-15 text-light ">
+        <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
+      </li>
+    </a>
+    <a routerLink="/entrar" *ngIf='verificaLogin()'>
       <li class="ponto mr-15 text-light ">
         <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
       </li>

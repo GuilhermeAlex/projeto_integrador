@@ -10,7 +10,6 @@ import { CarrinhoService } from '../service/carrinho.service';
   styleUrls: ['./carrinho.component.css'],
 })
 export class CarrinhoComponent implements OnInit {
-  produto: Produto = new Produto();
   carrinho: Carrinho = new Carrinho();
 
   listaCarrinho: Carrinho[];
@@ -18,6 +17,7 @@ export class CarrinhoComponent implements OnInit {
   valorFrete: number = 0.0;
   preco: number = 299.99;
 
+  totalValor: number;
   nome: string;
   cepX: string;
   sobrenome: string;
@@ -60,13 +60,12 @@ export class CarrinhoComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private carrinhoService: CarrinhoService
-    ) {}
+  ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
 
     this.findAllCarrinho();
-
   }
 
   mostraBoleto() {
@@ -86,12 +85,9 @@ export class CarrinhoComponent implements OnInit {
     return this.cartao;
   }
 
-  total() {
-    let total: number;
-    total = this.preco + this.valorFrete;
-
-    return total;
-  }
+  // total() {
+  //   this.listaCarrinho.map((prod) => prod.produto.preco).reduce((this.totalValor, this.) => this.totalValor + preco)
+  // }
 
   frete() {
     this.valorFrete = 13.99;
@@ -317,19 +313,19 @@ export class CarrinhoComponent implements OnInit {
     return botaoOn;
   }
 
-  findAllCarrinho(){
+  findAllCarrinho() {
     this.carrinhoService.getAllCarrinho().subscribe((resp: Carrinho[]) => {
-      this.listaCarrinho = resp
-      console.log(this.listaCarrinho)
-    })
+      this.listaCarrinho = resp;
+      console.log(this.listaCarrinho);
+    });
   }
 
   // Deletar apenas 1 item do carrinho
-  remover(id: number){
-    console.log(id)
-    this.carrinhoService.deleteIdCarrinho(id).subscribe(() =>{})
-    console.log("chegay")
-    alert("Removido do carrinho com sucesso!")
-    this.findAllCarrinho()
+  remover(id: number) {
+    console.log(id);
+    this.carrinhoService.deleteIdCarrinho(id).subscribe(() => {});
+    console.log('chegay');
+    alert('Removido do carrinho com sucesso!');
+    this.findAllCarrinho();
   }
 }

@@ -80,7 +80,7 @@
       </div>
       <div class="col-md-4">
         <h4 class="text-center mb-3">Quantidade</h4>
-        <h5 class="text-center mb-3">R$ {{ preco }}</h5>
+        <h5 class="text-center mb-2" >R$ {{ produto.produto.preco }}</h5>
         <!-- <h5 class="text-center mb-3">R$ {{ produto.produto.preco }}</h5> -->
         <form>
           <div class="form-row align-items-center justify-content-center">
@@ -90,7 +90,8 @@
               >
               <select
                 (change)="quantidade($event)"
-                class="custom-select mr-sm-2"
+                class="custom-select mr-sm-2 bg-secondary
+                text-white"
                 id="inlineFormCustomSelect"
               >
                 <option value="1">1</option>
@@ -106,7 +107,12 @@
               </select>
               <!-- <button (click)="remover(produto.id_carrinho)">Deletar Item</button> -->
             </div>
+
           </div>
+          <button type="button" class="btn btn-danger btn-sm mt-2" (click)="remover(produto.id_carrinho)">Remover Item</button>
+          <img class="ml-2 mt-1" src="https://i.imgur.com/NZ4Gxgw.png" alt=""
+          width="25px"
+          height="25px">
         </form>
       </div>
     </div>
@@ -388,7 +394,7 @@
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Pagará</p>
-                <p class="mt-2">R$ {{ total() }}</p>
+                <p class="mt-2">R$ {{ totalValor }}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
@@ -632,7 +638,7 @@
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Pagará</p>
-                <p class="mt-2">R$ {{ total() }}</p>
+                <p class="mt-2">R$ {{ totalValor }}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
