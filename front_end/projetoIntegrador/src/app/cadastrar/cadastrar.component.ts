@@ -24,7 +24,6 @@ export class CadastrarComponent implements OnInit {
   confirmSenha: string;
   confirmEmail: string;
 
-
   nome: boolean;
   sobrenome: boolean;
   cpf: boolean;
@@ -136,7 +135,7 @@ export class CadastrarComponent implements OnInit {
       this.nome != true ||
       this.sobrenome != true ||
       this.cpf != true ||
-      this.rg != true 
+      this.rg != true
     ) {
       mostraB = false;
     } else {
@@ -145,4 +144,3 @@ export class CadastrarComponent implements OnInit {
     return mostraB;
   }
 }
-
