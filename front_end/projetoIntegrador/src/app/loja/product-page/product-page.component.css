@@ -43,3 +43,56 @@ input:checked{
 .btn-comprar-modal {
   width: 60%;
 }
+@media only screen and (max-width:414px){
+  .bg-image{
+    margin: 0%;
+  }
+  .padding{
+    padding: 0%;
+
+    width: 100%!important;
+
+    align-items: center;
+    margin: 0!important;
+  }
+  .response{
+    margin-right: 0%;
+  }
+  .produtos{
+    display: flex;
+    flex-flow: column;
+
+    align-content: center;
+    justify-content: center;
+
+    width: 95%;
+  }
+  .card{
+    width: 100%!important;
+    margin: 0!important;
+
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    padding: 0%!important;
+    width: 100%!important;
+  }
+  .cardModal{
+   margin-right: 50px;
+   margin-bottom: 3%!important;
+  }
+  .titulo{
+    text-align: center;
+  }
+  .produtoMobile{
+    display: flex;
+    flex-flow:wrap;
+    margin-bottom: 10%!important;
+
+  }
+  .produtoMobile img{
+    width: 100%;
+  }
+     
+}

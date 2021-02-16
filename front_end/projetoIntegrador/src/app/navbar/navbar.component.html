@@ -46,17 +46,13 @@
         Cadastre-se</a>
 
     </li>
-<<<<<<< HEAD
-  
-    <a routerLink="/carrinho">
-=======
     <a routerLink="/carrinho" *ngIf='permiteLogin()'>
       <li class="ponto mr-15 text-light ">
         <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
       </li>
     </a>
     <a routerLink="/entrar" *ngIf='verificaLogin()'>
->>>>>>> origin
+
       <li class="ponto mr-15 text-light ">
         <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
       </li>
