@@ -36,16 +36,20 @@
     </form>
     
     <a routerLink="/entrar">
-      <li class="ponto text-light"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></li>
+      <li class="ponto text-light sumiu icEntrar"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></li>
     </a>
     <li class="nav-item ponto">
 
 
       <a class="nav-link" *ngIf='mostraNome()' [routerLink]="['/perfil', id]" style="color:white">{{nome}}</a>
-      <a class="nav-link text-light" *ngIf='escondeNome()' routerLink="/entrar" style="color:white ">Entre ou<br>
+      <a class="nav-link text-light marginl icEntrar" *ngIf='escondeNome()' routerLink="/entrar" style="color:white ">Entre ou<br>
         Cadastre-se</a>
 
     </li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8fe5cc6b0a4b02cabfd9d5ca5f5732c2008a1fd
     <a routerLink="/carrinho" *ngIf='permiteLogin()'>
       <li class="ponto mr-15 text-light ">
         <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
