@@ -1,5 +1,5 @@
 <div
-  class="p-5 text-center bg-image"
+  class="text-center bg-image"
   style="
     background-image: url('https://i.imgur.com/uMpjoNU.jpg');
     background-size: 100% 100%;
@@ -10,6 +10,7 @@
       <h1 class="font-weight-bold display-5">Carrinho</h1>
       <img
         src="https://i.imgur.com/8vy1Bm2.png"
+        class="img-fluid"
         alt="Foto carrinho"
         width="35px"
         height="35px"
@@ -69,6 +70,7 @@
         <img
           class="rounded mx-auto d-block img-aj"
           src="{{ produto.produto.foto }}"
+          class="img-fluid"
           alt="Imagem produto"
         />
       </div>
@@ -80,7 +82,7 @@
       </div>
       <div class="col-md-4">
         <h4 class="text-center mb-3">Quantidade</h4>
-        <h5 class="text-center mb-3">R$ {{ preco }}</h5>
+        <h5 class="text-center mb-2" >R$ {{ produto.produto.preco }}</h5>
         <!-- <h5 class="text-center mb-3">R$ {{ produto.produto.preco }}</h5> -->
         <form>
           <div class="form-row align-items-center justify-content-center">
@@ -90,7 +92,8 @@
               >
               <select
                 (change)="quantidade($event)"
-                class="custom-select mr-sm-2"
+                class="custom-select mr-sm-2 bg-secondary
+                text-white"
                 id="inlineFormCustomSelect"
               >
                 <option value="1">1</option>
@@ -106,7 +109,12 @@
               </select>
               <!-- <button (click)="remover(produto.id_carrinho)">Deletar Item</button> -->
             </div>
+
           </div>
+          <button type="button" class="btn btn-danger btn-sm mt-2" (click)="remover(produto.id_carrinho)">Remover Item</button>
+          <img class="ml-2 mt-1" src="https://i.imgur.com/NZ4Gxgw.png" alt=""
+          width="25px"
+          height="25px">
         </form>
       </div>
     </div>
@@ -159,7 +167,7 @@
       <h3 class="font-weight-bold display-5 mt-3 ">Forma de Pagamento</h3>
     </div>
 
-    <div class="row mb-5 d-flex align-items-stretch border-top border-dark">
+    <div class="row mb-5 d-flex align-items-stretch border-top border-dark justify-content-center">
       <div class="col-md-12 font-weight-bold">
         <div class="d-flex justify-contend-start">
           <button
@@ -171,6 +179,7 @@
             Boleto
             <img
               src="https://i.imgur.com/MSXmGq0.png"
+              class="img-fluid"
               alt="Imagem código de barras"
               width="30px"
               height="30px"
@@ -183,8 +192,9 @@
             (click)="this.boleto = false"
           >
             Cartão
-            <img
+            <img 
               src="https://i.imgur.com/kOcBMuL.png"
+              class="img-fluid"
               alt="Imagem cartão de crédito"
               width="30px"
               height="30px"
@@ -192,11 +202,11 @@
           </button>
         </div>
         <div class="d-flex flex-row mt-3" *ngIf="mostraBoleto()">
-          <div class="col-md-7">
+          <div class="col-md-8">
             <!-- <form [formGroup]="form"> -->
 
             <h5 class="border-bottom border-dark">Dados Pessoais</h5>
-            <div class="form-row">
+            <div class="form-row cdtr">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Nome</label>
                 <input
@@ -355,11 +365,12 @@
 
             <!-- </form> -->
           </div>
-          <div class="col-md-5 mt-4">
+          <div class="col-md-4 mt-4">
             <div class="border-left border-dark">
               <img
                 class="rounded mx-auto d-block"
                 src="https://i.imgur.com/MSXmGq0.png"
+                class="img-fluid"
                 alt=""
                 width="200px"
                 height="200px"
@@ -388,7 +399,7 @@
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Pagará</p>
-                <p class="mt-2">R$ {{ total() }}</p>
+                <p class="mt-2">R$ {{ totalValor }}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
@@ -604,6 +615,7 @@
               <img
                 class="rounded mx-auto d-block"
                 src="https://i.imgur.com/kOcBMuL.png"
+                class="img-fluid"
                 alt=""
                 width="200px"
                 height="200px"
@@ -632,7 +644,7 @@
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Pagará</p>
-                <p class="mt-2">R$ {{ total() }}</p>
+                <p class="mt-2">R$ {{ totalValor }}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">

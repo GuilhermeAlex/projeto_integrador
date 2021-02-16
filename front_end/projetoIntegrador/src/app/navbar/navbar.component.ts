@@ -38,6 +38,26 @@ export class NavbarComponent implements OnInit {
 
     return ok;
   }
+
+  verificaLogin(){
+    let verifica: boolean
+    if (environment.token == '') {
+      verifica = true
+    }else{
+      verifica = false
+    }
+    return verifica
+  }
+
+  permiteLogin(){
+    let verifica: boolean
+    if (environment.token != '') {
+      verifica = true
+    }else{
+      verifica = false
+    }
+    return verifica
+  }
 }
 
 

@@ -34,5 +34,15 @@
     .teste {
         margin-right: 3%;
     }
+    .jumbotron,.response,#inspire{
+        padding: 0%;
+    }
+    .card{
+        width: 100%;
+    }
+    .categori{
+        text-align:center;
+        align-items: center;
+    }
 }
 
