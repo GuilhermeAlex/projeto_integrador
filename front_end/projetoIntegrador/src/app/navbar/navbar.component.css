@@ -50,4 +50,12 @@
     .carrinho{
         display: block;
     }
+
+    .margenav{
+        margin-left: -19px;
+    }
+
+    .marginl{
+        margin-left: 20px;
+    }
   }
