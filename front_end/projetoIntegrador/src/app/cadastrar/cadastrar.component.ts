@@ -31,6 +31,7 @@ export class CadastrarComponent implements OnInit {
   telefone: boolean;
   email: boolean;
   senha: boolean;
+  box: boolean
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -85,7 +86,7 @@ export class CadastrarComponent implements OnInit {
   }
 
   validaCpf() {
-    if (this.cliente.cpf.length < 11) {
+    if (this.cliente.cpf.length < 11 || this.cliente.cpf.length > 11) {
       this.cpf = false;
       this.alertaCpf = 'CPF inválido';
     } else {
@@ -95,7 +96,7 @@ export class CadastrarComponent implements OnInit {
   }
 
   validaRg() {
-    if (this.cliente.rg.length < 9) {
+    if (this.cliente.rg.length < 9 || this.cliente.rg.length > 9) {
       this.rg = false;
       this.alertaRg = 'RG inválido';
     } else {
@@ -105,13 +106,14 @@ export class CadastrarComponent implements OnInit {
   }
 
   validaTel() {
-    if (this.cliente.telefone.length < 11) {
+    if (this.cliente.telefone.length < 11 || this.cliente.telefone.length > 11) {
       this.telefone = false;
       this.alertaTel = 'Telefone inválido';
     } else {
       this.telefone = true;
       this.alertaTel = '';
     }
+    console.log(this.box)
   }
 
   mostra() {
@@ -120,7 +122,8 @@ export class CadastrarComponent implements OnInit {
       this.nome == true &&
       this.sobrenome == true &&
       this.cpf == true &&
-      this.rg == true
+      this.rg == true &&
+      this.box == true
     ) {
       escondeB = false;
     } else {
@@ -135,7 +138,9 @@ export class CadastrarComponent implements OnInit {
       this.nome != true ||
       this.sobrenome != true ||
       this.cpf != true ||
-      this.rg != true
+      this.rg != true ||
+      this.box != true
+
     ) {
       mostraB = false;
     } else {
