@@ -50,4 +50,17 @@
     .carrinho{
         display: block;
     }
+
+    .margenav{
+        margin-left: -19px;
+    }
+
+    .marginl{
+        margin-left: 150px;
+        
+    }
+
+    .icEntrar{
+        margin-top: 30px;
+    }
   }

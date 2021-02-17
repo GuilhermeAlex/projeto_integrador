@@ -20,6 +20,10 @@
 
   <div class="collapse navbar-collapse ml-100" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto align-items-center">
+
+  <div class="collapse navbar-collapse ml-100 margenav " id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto align-items-center  ">
+
       <li>
         <a routerLink="/home">
           <img
@@ -59,7 +63,9 @@
         ><i class="fa fa-search b-search form-control" aria-hidden="true"></i
       ></a>
     </form>
+
     <a routerLink="/entrar">
+
       <li class="ponto text-light">
         <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
       </li>
@@ -88,6 +94,27 @@
     </a>
     <a routerLink="/entrar" *ngIf="verificaLogin()">
       <li class="ponto mr-15 text-light">
+
+      <li class="ponto text-light sumiu icEntrar"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></li>
+    </a>
+    <li class="nav-item ponto">
+
+
+      <a class="nav-link" *ngIf='mostraNome()' [routerLink]="['/perfil', id]" style="color:white">{{nome}}</a>
+      <a class="nav-link text-light marginl icEntrar" *ngIf='escondeNome()' routerLink="/entrar" style="color:white ">Entre ou<br>
+        Cadastre-se</a>
+
+    </li>
+
+    <a routerLink="/carrinho" *ngIf='permiteLogin()'>
+      <li class="ponto mr-15 text-light ">
+        <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
+      </li>
+    </a>
+    <a routerLink="/entrar" *ngIf='verificaLogin()'>
+
+      <li class="ponto mr-15 text-light ">
+
         <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
       </li>
     </a>

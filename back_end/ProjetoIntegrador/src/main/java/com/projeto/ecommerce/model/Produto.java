@@ -68,6 +68,18 @@ public class Produto {
 		@ManyToOne 
 		@JsonIgnoreProperties ("produto")
 		private Categoria categoria;
+		
+		@ManyToOne 
+		@JsonIgnoreProperties ("produto")
+		private Material material;
+
+		public Material getMaterial() {
+			return material;
+		}
+
+		public void setMaterial(Material material) {
+			this.material = material;
+		}
 
 		public long getId_produto() {
 			return id_produto;

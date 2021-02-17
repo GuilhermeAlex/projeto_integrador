@@ -14,38 +14,37 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table (name = "tb_categoria")
-public class Categoria {
+@Table (name = "tb_material")
+public class Material {
 
 		@Id
 		@Column
 		@GeneratedValue (strategy = GenerationType.IDENTITY)
-		private long id_categoria;
+		private long id_material;
 		
-		@Column
-		private String tipo;
 
-		@OneToMany (mappedBy = "categoria",cascade = CascadeType.ALL)
-		@JsonIgnoreProperties ("categoria")
+		@Column
+		private String material;
+
+		@OneToMany (mappedBy = "material",cascade = CascadeType.ALL)
+		@JsonIgnoreProperties ("material")
 		private List <Produto> produto;
 
-		public long getId_categoria() {
-			return id_categoria;
+		public long getId_material() {
+			return id_material;
 		}
 
-		public void setId_categoria(long id_categoria) {
-			this.id_categoria = id_categoria;
+		public void setId_material(long id_material) {
+			this.id_material = id_material;
 		}
 
-		public String getTipo() {
-			return tipo;
+		public String getMaterial() {
+			return material;
 		}
 
-		public void setTipo(String tipo) {
-			this.tipo = tipo;
+		public void setMaterial(String material) {
+			this.material = material;
 		}
-
-		
 
 		public List<Produto> getProduto() {
 			return produto;
@@ -54,6 +53,8 @@ public class Categoria {
 		public void setProduto(List<Produto> produto) {
 			this.produto = produto;
 		}
+
+		
 		
 		
 		

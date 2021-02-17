@@ -6,6 +6,8 @@ import { CategoriaService } from 'src/app/service/categoria.service';
 import { Carrinho } from 'src/app/model/Carrinho';
 import { CarrinhoService } from 'src/app/service/carrinho.service';
 import { environment } from 'src/environments/environment.prod';
+import { Material } from 'src/app/model/Material';
+import { MaterialService } from 'src/app/service/material.service';
 
 @Component({
   selector: 'app-product-page',
@@ -23,13 +25,16 @@ export class ProductPageComponent implements OnInit {
   carrinho: Carrinho = new Carrinho();
 
   listaCategoria: Categoria[];
+  listaMaterial: Material[];
   categoriaModal: Categoria = new Categoria();
   categoria: Categoria = new Categoria();
+  material: Material = new Material();
 
   constructor(
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
-    private carrinhoService: CarrinhoService
+    private carrinhoService: CarrinhoService,
+    private materialService: MaterialService
   ) {}
 
   ngOnInit() {
@@ -37,6 +42,7 @@ export class ProductPageComponent implements OnInit {
 
     this.findAllCategoria();
     this.findAllProdutos();
+    this.findAllMaterial();
   }
 
   findAllCategoria() {
@@ -45,11 +51,19 @@ export class ProductPageComponent implements OnInit {
     });
   }
 
+  findAllMaterial() {
+    this.materialService.getAllMaterial().subscribe((resp: Material[]) => {
+      this.listaMaterial = resp;
+      console.log(this.listaMaterial)
+    });
+  }
+
   findAllProdutos() {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
       this.listaProdutos = resp;
 
       this.findAllCategoria();
+      this.findAllMaterial();
     });
   }
 
@@ -60,6 +74,15 @@ export class ProductPageComponent implements OnInit {
         this.categoria = resp;
 
         this.listaProdutos = this.categoria.produto;
+      });
+  }
+  findByIdMaterial(event: any) {
+    this.materialService
+      .getByIdMaterial(event.target.value)
+      .subscribe((resp: Material) => {
+        this.material = resp;
+
+        this.listaProdutos = this.material.produto;
       });
   }
 

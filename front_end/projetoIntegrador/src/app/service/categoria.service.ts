@@ -28,7 +28,4 @@ export class CategoriaService {
     return this.http.get<Categoria>(`http://localhost:8080/categoria/tipo/${tipo}`,this.token)
   }
 
-  getByMaterialCategoria(material: string):Observable<Categoria>{
-    return this.http.get<Categoria>(`http://localhost:8080/categoria/material/${material}`,this.token)
-  }
 }
