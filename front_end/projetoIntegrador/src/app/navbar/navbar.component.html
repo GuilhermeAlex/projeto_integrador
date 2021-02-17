@@ -1,26 +1,45 @@
-<nav class="navbar navbar-expand-lg navbar-light fundo ">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+<nav class="navbar navbar-expand-lg navbar-light fundo">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#conteudoNavbarSuportado"
+    aria-controls="conteudoNavbarSuportado"
+    aria-expanded="false"
+    aria-label="Alterna navegação"
+  >
     <span class="navbar-toggler-icon"></span>
-
   </button>
   <a routerLink="/carrinho">
-    <i class="fa fa-shopping-cart fa-2x mr-2 carrinho" style="color:white;" aria-hidden="true"></i>
+    <i
+      class="fa fa-shopping-cart fa-2x mr-2 carrinho"
+      style="color: white"
+      aria-hidden="true"
+    ></i>
   </a>
 
-
-  <div class="collapse navbar-collapse ml-100 " id="conteudoNavbarSuportado">
-    <ul class="navbar-nav mr-auto align-items-center ">
+  <div class="collapse navbar-collapse ml-100" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto align-items-center">
       <li>
         <a routerLink="/home">
-          <img src="https://i.imgur.com/dI0Vph1.png" alt="logo" width="80px" height="80px" class="img-fluid" />
+          <img
+            src="https://i.imgur.com/dI0Vph1.png"
+            alt="logo"
+            width="80px"
+            height="80px"
+            class="img-fluid"
+          />
         </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-light" routerLink="/home"><i>Home</i> <span class="sr-only">(página atual)</span></a>
+        <a class="nav-link text-light" routerLink="/home"
+          ><i>Home</i> <span class="sr-only">(página atual)</span></a
+        >
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-light" routerLink="/produtos"><i>Produtos</i></a>
+        <a class="nav-link text-light" routerLink="/produtos"
+          ><i>Produtos</i></a
+        >
       </li>
       <li class="nav-item active">
         <a class="nav-link text-light" routerLink="/sobre"><i>Sobre</i></a>
@@ -29,32 +48,48 @@
         <a class="nav-link text-light" routerLink="/contato"><i>Contato</i></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0 mr-30 sumiu align-items-center ">
-      <input class="form-control mr-sm-1 border-radius " type="search" placeholder="Pesquisar" aria-label="Pesquisar" />
-      <a href=""><i class="fa fa-search b-search form-control" aria-hidden="true"></i></a>
-
+    <form class="form-inline my-2 my-lg-0 mr-30 sumiu align-items-center">
+      <input
+        class="form-control mr-sm-1 border-radius"
+        type="search"
+        placeholder="Pesquisar"
+        aria-label="Pesquisar"
+      />
+      <a href=""
+        ><i class="fa fa-search b-search form-control" aria-hidden="true"></i
+      ></a>
     </form>
     <a routerLink="/entrar">
-      <li class="ponto text-light"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></li>
+      <li class="ponto text-light">
+        <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+      </li>
     </a>
     <li class="nav-item ponto">
-
-
-      <a class="nav-link" *ngIf='mostraNome()' [routerLink]="['/perfil', id]" style="color:white">{{nome}}</a>
-      <a class="nav-link text-light" *ngIf='escondeNome()' routerLink="/entrar" style="color:white ">Entre ou<br>
-        Cadastre-se</a>
-
+      <a
+        class="nav-link"
+        *ngIf="mostraNome()"
+        [routerLink]="['/perfil', id]"
+        style="color: white"
+        >{{ nome }}</a
+      >
+      <a
+        class="nav-link text-light"
+        *ngIf="escondeNome()"
+        routerLink="/entrar"
+        style="color: white"
+        >Entre ou<br />
+        Cadastre-se</a
+      >
     </li>
-    <a routerLink="/carrinho" *ngIf='permiteLogin()'>
-      <li class="ponto mr-15 text-light ">
+    <a routerLink="/carrinho" *ngIf="permiteLogin()">
+      <li class="ponto mr-15 text-light">
         <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
       </li>
     </a>
-    <a routerLink="/entrar" *ngIf='verificaLogin()'>
-      <li class="ponto mr-15 text-light ">
+    <a routerLink="/entrar" *ngIf="verificaLogin()">
+      <li class="ponto mr-15 text-light">
         <i class="fa fa-shopping-cart fa-2x sumiu" aria-hidden="true"></i>
       </li>
     </a>
   </div>
-
 </nav>
