@@ -13,7 +13,7 @@
           <button class="btn btn-success btn-sm text-white mt-3" (click)="findAllProdutos()">
             Limpar Filtro
           </button>
-          <h4 class="mt-3 my-1">Material</h4>
+          <h4 class="mt-3 my-1">Categoria</h4>
 
 
           <div class="row response">
@@ -21,7 +21,7 @@
               <div class="ml-4 mt-2 col-md-3">
                 <div class="ml-4 row ml-2" *ngFor="let tipo of listaCategoria">
                   <div class="form-check">
-                    <input (input)="findByIdCategoria($event)" class="form-check-input" name="papelão" type="radio"
+                    <input (input)="findByIdCategoria($event)" class="form-check-input" name="papelão2" type="radio"
                       value="{{ tipo.id_categoria }}" id="{{ tipo.tipo }}" />
                     <label class="form-check-label" for="{{ tipo.tipo }}">
                       {{ tipo.tipo }}
@@ -31,42 +31,20 @@
               </div>
             </div>
           </div>
-          <h4 class="mt-3 my-1">Categoria</h4>
+          <h4 class="mt-3 my-1">Material</h4>
 
           <div class="row response">
             <div class="row">
-              <div class="ml-4 mt-2 ">
-                <div class="ml-4 columns ml-2 ">
-
+              <div class="ml-4 mt-2 col-md-3">
+                <div class="ml-4 row ml-2" *ngFor="let material of listaMaterial">
                   <div class="form-check">
-                    <input class="form-check-input" name="papelão" type="radio" value="" id="categoria" />
-                    <label class="form-check-label" for="">Objeto de Decocação
-
-                    </label>
-
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" name="papelão" type="radio" value="" id="categoria" />
-                    <label class="form-check-label" for="">Artigo de Artes
-
-                    </label>
-
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" name="papelão" type="radio" value="" id="categoria" />
-                    <label class="form-check-label" for="">Utensílios Domésticos
-
+                    <input (input)="findByIdMaterial($event)" class="form-check-input" name="papelão" type="radio"
+                      value="{{ material.id_material }}" id="{{ material.material}}" />
+                    <label class="form-check-label" for="{{ material.material }}">
+                      {{ material.material }}
                     </label>
                   </div>
-                  <div class="form-check ">
-                    <input class="form-check-input" name="papelão" type="radio" value="" id="categoria" />
-                    <label class="form-check-label" for="">Móveis 
-  
-                    </label>
-                  </div>
-
                 </div>
-               
               </div>
             </div>
           </div>
