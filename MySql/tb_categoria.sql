@@ -1,12 +1,7 @@
-insert into tb_categoria values (DEFAULT,'Papelão','Papelão');
-insert into tb_categoria values (DEFAULT,'Madeira','Madeira'); 
-insert into tb_categoria values (DEFAULT,'PET','PET'); 
-insert into tb_categoria values (DEFAULT,'Pallet','Pallet'); 
-
 use projetointegrador;
+use tb_categoria;
 
-show tables;
-
-select *from tb_produto;
-
-drop table tb_categoria
+insert into tb_categoria values (DEFAULT,'Objeto de Decocação');
+insert into tb_categoria values (DEFAULT,'Artigo de Artes');
+insert into tb_categoria values (DEFAULT,'Utensílios Domésticos');
+insert into tb_categoria values (DEFAULT,'Móveis');

@@ -14,44 +14,46 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projeto.ecommerce.model.Categoria;
-import com.projeto.ecommerce.repository.RepositoryCategoria;
+
+import com.projeto.ecommerce.model.Material;
+import com.projeto.ecommerce.repository.RepositoryMaterial;
+
 
 @RestController
-@RequestMapping ("/categoria")
+@RequestMapping ("/material")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-public class ControllerCategoria {
+public class ControllerMaterial {
 
 	@Autowired
-	private RepositoryCategoria repository;
+	private RepositoryMaterial repository;
 	
 	@PostMapping
-	public Categoria criar(@RequestBody Categoria objetinho) {
+	public Material criar(@RequestBody Material objetinho) {
 		repository.save(objetinho);
 		return objetinho;
 	}
 	
 	@GetMapping 
-	public ResponseEntity <List <Categoria>> GetAll() {
+	public ResponseEntity <List <Material>> GetAll() {
 		return ResponseEntity.ok (repository.findAll());
 	}
 	
 	@GetMapping ("/id/{id}")
-	public ResponseEntity <Categoria> GetById (@PathVariable Long id){	
+	public ResponseEntity <Material> GetById (@PathVariable Long id){	
 		return repository.findById(id)
 				.map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.notFound().build());
 	}
 	
-	@GetMapping("/tipo/{tipo}")
-	public ResponseEntity<List<Categoria>> getByTipo ( @PathVariable String tipo){
-		return ResponseEntity.ok(repository.findAllByTipoContainingIgnoreCase(tipo));
+	@GetMapping("/material/{material}")
+	public ResponseEntity<List<Material>> getByMaterial ( @PathVariable String material){
+		return ResponseEntity.ok(repository.findAllByMaterialContainingIgnoreCase(material));
 	}
 	
 	
 	@PutMapping  ("/put/{id}")
-	public Categoria atualizar (@PathVariable Long id, @RequestBody Categoria objetinho) {
-		objetinho.setId_categoria(id);
+	public Material atualizar (@PathVariable Long id, @RequestBody Material objetinho) {
+		objetinho.setId_material(id);
 		repository.save(objetinho);
 		return objetinho;
 	}
