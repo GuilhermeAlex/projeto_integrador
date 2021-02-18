@@ -52,33 +52,48 @@
     </ul>
     <form class="form-inline my-2 my-lg-0 mr-30 sumiu align-items-center">
       <input
-        class="form-control mr-sm-1 border-radius"
-        type="search"
-        placeholder="Pesquisar"
-        aria-label="Pesquisar"
-      />
+      class="form-control mr-sm-1 border-radius"
+      type="text"
+      name="pesquisa"
+      id="pesquisaTodos"
+      placeholder="Pesquisa"
+
+      
+    />
       <a href=""
         ><i class="fa fa-search b-search form-control" aria-hidden="true"></i
       ></a>
+      <!-- <ul *ngFor='let item of listaProdutos'>
+        <li>
+          {{item.nome}}
+        </li>
+      </ul> -->
     </form>
-    <a routerLink="/entrar">
+    <a>
       <li class="ponto text-light sumiu icEntrar">
         <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
       </li>
     </a>
     <li class="nav-item ponto">
-      <a
-        class="nav-link"
-        *ngIf="mostraNome()"
-        [routerLink]="['/perfil', id]"
-        style="color: white"
-        >{{ nome }}</a
-      >
+      <div class="d-flex flex-row align-items-center" *ngIf="mostraNome()">
+        <a
+          class="nav-link font-weight-bold"
+          [routerLink]="['/perfil', id]"
+          style="color: white"
+          >{{ nome }}</a
+        >
+        <a routerLink="/entrar" (click)='sair()'>
+          <i
+            style="color: white"
+            class="fa fa-sign-out fa-2x mr-2"
+            aria-hidden="true"
+          ></i
+        ></a>
+      </div>
       <a
         class="nav-link text-light marginl icEntrar"
         *ngIf="escondeNome()"
         routerLink="/entrar"
-        style="color: white"
         >Entre ou<br />
         Cadastre-se</a
       >
