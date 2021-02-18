@@ -15,9 +15,10 @@ export class CarrinhoComponent implements OnInit {
   listaCarrinho: Carrinho[];
 
   valorFrete: number = 0.0;
-  preco: number = 299.99;
+  preco: number = 0.0;
 
-  totalValor: number;
+  totalValor: number = 0.0;
+
   nome: string;
   cepX: string;
   sobrenome: string;
@@ -66,6 +67,7 @@ export class CarrinhoComponent implements OnInit {
     window.scroll(0, 0);
 
     this.findAllCarrinho();
+    this.total()
   }
 
   mostraBoleto() {
@@ -84,10 +86,6 @@ export class CarrinhoComponent implements OnInit {
     }
     return this.cartao;
   }
-
-  // total() {
-  //   this.listaCarrinho.map((prod) => prod.produto.preco).reduce((this.totalValor, this.) => this.totalValor + preco)
-  // }
 
   frete() {
     this.valorFrete = 13.99;
@@ -327,5 +325,12 @@ export class CarrinhoComponent implements OnInit {
     console.log('chegay');
     alert('Removido do carrinho com sucesso!');
     this.findAllCarrinho();
+  }
+
+  total() {
+    for (var produto of Object.entries(this.listaCarrinho)) {
+      // this.totalValor = this.totalValor + produto.produto.preco;
+      console.log("teste")
+    }
   }
 }
