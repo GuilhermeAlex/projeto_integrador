@@ -18,24 +18,24 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputNome">Nome</label>
-            <input type="text" class="form-control" id="inputNome" placeholder="Primeiro nome" />
+            <input [(ngModel)]='contato.nome' name="nome" type="text" class="form-control" id="inputNome" placeholder="Primeiro nome" />
           </div>
           <div class="form-group col-md-6">
             <label for="inputSobrenome">Sobrenome</label>
-            <input type="text" class="form-control" id="inputSobrenome" placeholder="Último sobrenome" />
+            <input [(ngModel)]='contato.sobrenome' name="sobrenome" type="text" class="form-control" id="inputSobrenome" placeholder="Último sobrenome" />
           </div>
         </div>
         <div class="form-group">
           <label for="inputEmail">Email</label>
-          <input type="text" class="form-control" id="inputEmail" placeholder="Digite seu Email" />
+          <input [(ngModel)]='contato.email' name="email" type="text" class="form-control" id="inputEmail" placeholder="Digite seu Email" />
         </div>
         <div class="form-group">
           <label for="contatoTextarea">Assunto</label>
-          <textarea class="form-control" id="contatoTextarea" rows="6"
+          <textarea [(ngModel)]='contato.assunto' name="assunto" class="form-control" id="contatoTextarea" rows="6"
             placeholder="Como podemos te ajudar?"></textarea>
         </div>
         <div class="d-flex justify-content-center">
-          <button type="submit" class="btn btn-outline-secondary w-25">
+          <button type="submit" class="btn btn-outline-secondary w-25" (click)='postContato()'>
             Entrar
           </button>
         </div>
