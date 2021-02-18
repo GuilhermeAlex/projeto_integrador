@@ -24,8 +24,8 @@ export class ProdutoService {
     return this.http.get<Produto>(`http://localhost:8080/produto/id/${id}`,this.token)
   }
 
-  getByNomeProduto(nome: string):Observable<Produto>{
-    return this.http.get<Produto>(`http://localhost:8080/produto/nome/${nome}`,this.token)
+  getByNomeProduto(nome: string):Observable<Produto[]>{
+    return this.http.get<Produto[]>(`http://localhost:8080/produto/nome/${nome}`,this.token)
   }
 
   getByPrecoProduto(preco: number):Observable<Produto>{

@@ -1,6 +1,9 @@
+import { Produto } from './../model/Produto';
+import { ProdutoService } from './../service/produto.service';
+
 import { environment } from 'src/environments/environment.prod';
 import { AuthService } from './../service/auth.service';
-
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,14 +12,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  nome: string
-  id: number
+  produto: Produto = new Produto();
+  listaProdutos: Produto[];
+  nome: string;
+  id: number;
+
+  pesquisa: string;
 
   constructor(
     private auth: AuthService,
+    private router: Router,
+    private produtoService: ProdutoService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    window.scroll(0, 0);
+  }
 
   mostraNome() {
     let ok: boolean = false;
@@ -39,25 +50,48 @@ export class NavbarComponent implements OnInit {
     return ok;
   }
 
-  verificaLogin(){
-    let verifica: boolean
+  verificaLogin() {
+    let verifica: boolean;
     if (environment.token == '') {
-      verifica = true
-    }else{
-      verifica = false
+      verifica = true;
+    } else {
+      verifica = false;
     }
-    return verifica
+    return verifica;
   }
 
-  permiteLogin(){
-    let verifica: boolean
+  permiteLogin() {
+    let verifica: boolean;
     if (environment.token != '') {
-      verifica = true
-    }else{
-      verifica = false
+      verifica = true;
+    } else {
+      verifica = false;
     }
-    return verifica
+    return verifica;
   }
+
+  sair() {
+    environment.token = '';
+    environment.nome = '';
+    environment.email = '';
+    environment.id = 0;
+  }
+
+  // getAllProdutos() {
+  //   this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+  //     this.listaProdutos = resp;
+  //   });
+  // }
+
+  // findByNomeProduto() {
+  //   if (this.pesquisa == '') {
+  //     this.getAllProdutos();
+  //   } else {
+  //     this.produtoService
+  //       .getByNomeProduto(this.pesquisa)
+  //       .subscribe((resp: Produto[]) => {
+  //         this.listaProdutos = resp;
+  //       });
+  //   }
+  // }
 }
-
-
