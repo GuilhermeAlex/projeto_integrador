@@ -104,6 +104,7 @@ export class ProductPageComponent implements OnInit {
       this.carrinho = new Carrinho();
       this.carrinho.produto = resp;
       this.postCarrinho(this.carrinho);
+      alert("Seu produto foi adicionado ao carrinho!")
     });
   }
 
