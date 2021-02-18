@@ -43,6 +43,8 @@ input:checked{
 .btn-comprar-modal {
   width: 60%;
 }
+
+
 @media only screen and (max-width:414px){
   .bg-image{
     margin: 0%;
@@ -94,5 +96,15 @@ input:checked{
   .produtoMobile img{
     width: 100%;
   }
+ .response{
+  margin-bottom: 8%;
+  justify-content: center;
+
+}
+.mati{
+ 
+  margin-left: 0px; 
+  margin-right: 57px;
+}
      
 }
