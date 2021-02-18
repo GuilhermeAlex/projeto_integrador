@@ -46,6 +46,7 @@
     transform:scale(1.1);
 }
 
+
 @media only screen and (max-width:414px){
     .objetivoOnu {
         width: 80%;
