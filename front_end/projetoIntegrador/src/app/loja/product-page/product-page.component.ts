@@ -8,6 +8,7 @@ import { CarrinhoService } from 'src/app/service/carrinho.service';
 import { environment } from 'src/environments/environment.prod';
 import { Material } from 'src/app/model/Material';
 import { MaterialService } from 'src/app/service/material.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-page',
@@ -34,7 +35,8 @@ export class ProductPageComponent implements OnInit {
     private produtoService: ProdutoService,
     private categoriaService: CategoriaService,
     private carrinhoService: CarrinhoService,
-    private materialService: MaterialService
+    private materialService: MaterialService,
+    private route: Router
   ) {}
 
   ngOnInit() {
@@ -107,6 +109,14 @@ export class ProductPageComponent implements OnInit {
       alert("Seu produto foi adicionado ao carrinho!")
     });
   }
+  compraProduto(id: number){
+    this.produtoService.getByIdProduto(id).subscribe((resp: Produto) => {
+      this.carrinho = new Carrinho();
+      this.carrinho.produto = resp;
+      this.postCarrinho(this.carrinho);
+      this.route.navigate(['/carrinho'])
+    })
+  }
 
   postCarrinho(carrinho: Carrinho) {
     this.carrinhoService.postCarrinho(carrinho).subscribe((resp: Carrinho) => {
@@ -133,4 +143,5 @@ export class ProductPageComponent implements OnInit {
     }
     return verifica
   }
+  
 }
