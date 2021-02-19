@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
 import { Carrinho } from '../model/Carrinho';
 import { CarrinhoService } from '../service/carrinho.service';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-carrinho',
@@ -58,7 +59,8 @@ export class CarrinhoComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private carrinhoService: CarrinhoService
+    private carrinhoService: CarrinhoService,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
@@ -308,23 +310,20 @@ export class CarrinhoComponent implements OnInit {
   findAllCarrinho() {
     this.carrinhoService.getAllCarrinho().subscribe((resp: Carrinho[]) => {
       this.listaCarrinho = resp;
-      console.log(this.listaCarrinho);
     });
   }
 
   // Deletar apenas 1 item do carrinho
   remover(id: number) {
-    console.log(id);
     this.carrinhoService.deleteIdCarrinho(id).subscribe(() => {});
-    alert('Removido do carrinho com sucesso!');
     this.findAllCarrinho();
+    this.alertas.showAlertInfo('Removido do carrinho com sucesso!');
   }
 
   produtos() {
     var totalValor = 0;
     for (let produto of this.listaCarrinho) {
       totalValor = totalValor + produto.produto.preco;
-      console.log(totalValor);
     }
     return totalValor;
   }

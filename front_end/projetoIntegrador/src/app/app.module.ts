@@ -10,15 +10,15 @@ import { EntrarComponent } from './entrar/entrar.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProductPageComponent } from './loja/product-page/product-page.component';
-import { ProductsComponent } from './loja/products/products.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 import { DestaquesComponent } from './home/destaques/destaques.component';
-import { CategoriasComponent } from './home/categorias/categorias.component';
 import { NewsletterComponent } from './home/newsletter/newsletter.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -29,20 +29,20 @@ import { ContatoComponent } from './contato/contato.component';
     NavbarComponent,
     FooterComponent,
     ProductPageComponent,
-    ProductsComponent,
     DestaquesComponent,
-    CategoriasComponent,
     NewsletterComponent,
     CarrinhoComponent,
     PerfilComponent,
     SobreComponent,
     ContatoComponent,
+    AlertasComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers: [{
     provide: LocationStrategy,

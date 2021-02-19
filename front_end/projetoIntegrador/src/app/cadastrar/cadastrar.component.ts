@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cliente } from '../model/Cliente';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -33,7 +34,11 @@ export class CadastrarComponent implements OnInit {
   senha: boolean;
   box: boolean
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private alertas: AlertasService
+    ) {}
 
   ngOnInit() {
     window.scroll(0, 0);
@@ -52,12 +57,12 @@ export class CadastrarComponent implements OnInit {
       this.cliente.senha != this.confirmSenha ||
       this.cliente.email != this.confirmEmail
     ) {
-      alert('As senhas ou e-mail´s não coincidem');
+      this.alertas.showAlertDanger('As senhas ou e-mail´s não coincidem');
     } else {
       this.authService.cadastrar(this.cliente).subscribe((resp: Cliente) => {
         this.cliente = resp;
         this.router.navigate(['/entrar']);
-        alert('Usuário cadastrado com sucesso!');
+        this.alertas.showAlertSuccess('Usuário cadastrado com sucesso!');
       });
     }
   }
@@ -113,7 +118,6 @@ export class CadastrarComponent implements OnInit {
       this.telefone = true;
       this.alertaTel = '';
     }
-    console.log(this.box)
   }
 
   mostra() {

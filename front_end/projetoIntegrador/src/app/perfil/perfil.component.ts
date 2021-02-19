@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Cliente } from '../model/Cliente';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -19,6 +20,7 @@ export class PerfilComponent implements OnInit {
     private authService: AuthService,
     private route: ActivatedRoute,
     private router: Router,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
@@ -44,12 +46,12 @@ export class PerfilComponent implements OnInit {
 
   atualizar() {
     if (this.cliente.senha != this.confirmarSenha) {
-      alert('Senhas não conferem');
+      this.alertas.showAlertDanger('Senhas não conferem');
     } else {
       this.authService.cadastrar(this.cliente).subscribe((resp: Cliente) => {
         this.cliente = resp;
         this.router.navigate(['/home']);
-        alert('Usuário atualizado com sucesso, faça o login novamente.');
+        this.alertas.showAlertSuccess('Usuário atualizado com sucesso, faça o login novamente.');
         environment.token = '';
         environment.nome = '';
         environment.email = '';

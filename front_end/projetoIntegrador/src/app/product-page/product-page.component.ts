@@ -1,6 +1,6 @@
-import { Categoria } from './../../model/Categoria';
-import { ProdutoService } from './../../service/produto.service';
-import { Produto } from './../../model/Produto';
+import { Categoria } from '../model/Categoria';
+import { ProdutoService } from '../service/produto.service';
+import { Produto } from '../model/Produto';
 import { Component, OnInit } from '@angular/core';
 import { CategoriaService } from 'src/app/service/categoria.service';
 import { Carrinho } from 'src/app/model/Carrinho';
@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment.prod';
 import { Material } from 'src/app/model/Material';
 import { MaterialService } from 'src/app/service/material.service';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/service/alertas.service';
 
 @Component({
   selector: 'app-product-page',
@@ -36,7 +37,8 @@ export class ProductPageComponent implements OnInit {
     private categoriaService: CategoriaService,
     private carrinhoService: CarrinhoService,
     private materialService: MaterialService,
-    private route: Router
+    private route: Router,
+    private alertas: AlertasService
   ) {}
 
   ngOnInit() {
@@ -56,7 +58,6 @@ export class ProductPageComponent implements OnInit {
   findAllMaterial() {
     this.materialService.getAllMaterial().subscribe((resp: Material[]) => {
       this.listaMaterial = resp;
-      console.log(this.listaMaterial)
     });
   }
 
@@ -106,7 +107,7 @@ export class ProductPageComponent implements OnInit {
       this.carrinho = new Carrinho();
       this.carrinho.produto = resp;
       this.postCarrinho(this.carrinho);
-      alert("Seu produto foi adicionado ao carrinho!")
+      this.alertas.showAlertInfo("Seu produto foi adicionado ao carrinho!")
     });
   }
   compraProduto(id: number){

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Contato } from '../model/Contato';
+import { AlertasService } from '../service/alertas.service';
 import { ContatoService } from '../service/contato.service';
 
 
@@ -14,8 +14,8 @@ export class ContatoComponent implements OnInit {
   contato: Contato = new Contato()
 
   constructor(
-    private router: Router,
-    private contatoService: ContatoService
+    private contatoService: ContatoService,
+    private alertas: AlertasService
   ) { }
 
   ngOnInit() {
@@ -24,7 +24,7 @@ export class ContatoComponent implements OnInit {
 
   postContato() {
     this.contatoService.postContato(this.contato).subscribe(() => {
-      alert("Mensagem enviada com sucesso!")
+      this.alertas.showAlertSuccess("Mensagem enviada com sucesso!")
     })
   }
 

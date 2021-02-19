@@ -6,7 +6,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { SobreComponent } from './sobre/sobre.component';
-import { ProductPageComponent } from './loja/product-page/product-page.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 const routes: Routes = [
