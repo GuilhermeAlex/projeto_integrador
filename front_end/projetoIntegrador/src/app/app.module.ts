@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import{HashLocationStrategy, LocationStrategy } from '@angular/common'
 import { FormsModule } from '@angular/forms';
+import { LOCALE_ID } from '@angular/core';//
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

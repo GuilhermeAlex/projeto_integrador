@@ -26,7 +26,7 @@
       </div>
       <div class="col-md-4 d-flex justify-content-end">
         <div class="mt-4 d-flex justify-content-end">
-          <button class="" type="button" class="btn btn-danger btn-sm" routerLink='/produtos'>
+          <button class="" type="button" class="btn btn-danger btn-sm">
             Limpar carrinho
           </button>
 
@@ -104,7 +104,7 @@
       </div>
       <div class="col-md-4">
         <h4 class="text-center mb-3">Valor</h4>
-        <h5 class="text-center mb-2">R$ {{ produto.produto.preco }}</h5>
+        <h5 class="text-center mb-2"> {{ produto.produto.preco | currency: 'BRL'}}</h5>
         <!-- <h5 class="text-center mb-3">R$ {{ produto.produto.preco }}</h5> -->
         <form>
           <div class="form-row align-items-center justify-content-center">
@@ -185,7 +185,7 @@
           </div>
           <div class="col-md-4 ml-md-auto mb-4 mt-4 border-left border-dark">
             <h4 class="text-center mb-3">Frete</h4>
-            <h5 class="text-center mb-3">R$ {{ valorFrete }}</h5>
+            <h5 class="text-center mb-3">{{ valorFrete | currency: 'BRL'}}</h5>
           </div>
         </div>
       </div>
@@ -419,7 +419,7 @@
                 style="font-size: 13pt"
               >
                 <p>Produtos</p>
-                <p>R$ {{ produtos() }}</p>
+                <p> {{ produtos() | currency: 'BRL' }}</p>
               </div>
 
               <div
@@ -427,14 +427,14 @@
                 style="font-size: 13pt"
               >
                 <p>Envio</p>
-                <p>R$ {{ valorFrete }}</p>
+                <p>{{ valorFrete | currency: 'BRL'}}</p>
               </div>
               <div
                 class="row mt-5 ml-1 mr-1 d-flex justify-content-around border-top border-dark"
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Total</p>
-                <p class="mt-2">R$ {{ total() }}</p>
+                <p class="mt-2"> {{ total() | currency: 'BRL'}}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
@@ -668,7 +668,7 @@
                 style="font-size: 13pt"
               >
                 <p>Produtos</p>
-                <p>R$ {{ produtos() }}</p>
+                <p> {{ produtos() | currency: 'BRL' }}</p>
               </div>
 
               <div
@@ -676,14 +676,14 @@
                 style="font-size: 13pt"
               >
                 <p>Envio</p>
-                <p>R$ {{ valorFrete }}</p>
+                <p> {{ valorFrete | currency: 'BRL' }}</p>
               </div>
               <div
                 class="row mt-5 ml-1 mr-1 d-flex justify-content-around border-top border-dark"
                 style="font-size: 13pt"
               >
                 <p class="mt-2">Total</p>
-                <p class="mt-2">R$ {{ total() }}</p>
+                <p class="mt-2"> {{ total() | currency: 'BRL'}}</p>
               </div>
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">

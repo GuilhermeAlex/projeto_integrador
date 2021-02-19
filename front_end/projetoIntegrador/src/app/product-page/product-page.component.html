@@ -126,7 +126,7 @@
                       )
                     "
                   >
-                    R$ {{ produto.preco }}
+                    {{ produto.preco | currency: 'BRL' }}
                   </p>
                 </div>
                 <div class="d-flex align-items-center ml-5">
@@ -231,7 +231,7 @@
           <div class="row d-flex flex-row ml-4 cardModal">
             <div
               class="card mr-3 mb-2 mt-3 bg-transparent cursor-pointer cardModal"
-              style="width: 30%"
+              style="width: 26%"
               data-toggle="modal"
               data-target="#comprar"
               *ngFor="let produto of listaProdutosModal"
@@ -249,7 +249,7 @@
                   class="row d-flex justify-content-between align-items-center mt-auto"
                 >
                   <div class="d-flex align-items-center">
-                    <p class="m-0 font-weight-bold">R$ {{ produto.preco }}</p>
+                    <p class="m-0 font-weight-bold">{{ produto.preco | currency: 'BRL' }}</p>
                   </div>
                   <div class="d-flex align-items-center ml-3">
                     <a href="" style="color: black">
