@@ -62,7 +62,8 @@ export class CarrinhoComponent implements OnInit {
     private authService: AuthService,
     private carrinhoService: CarrinhoService,
     private alertas: AlertasService,
-    private route: Router
+    private route: Router,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -320,7 +321,12 @@ export class CarrinhoComponent implements OnInit {
     this.carrinhoService.deleteIdCarrinho(id).subscribe(() => {});
     this.alertas.showAlertInfo('Removido do carrinho com sucesso!');
     this.findAllCarrinho();
-
+  }
+  // Deletar todos os itens do carrinho
+  deleteAllCarrinho() {
+    this.carrinhoService.deleteAll().subscribe(()=>{});
+    this.alertas.showAlertInfo("Todos os itens Foram removidos do Carrinho.")
+    this.router.navigate(['/produtos']);
   }
 
   produtos() {
