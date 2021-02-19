@@ -5,19 +5,36 @@
     background-size: 150% 150%;
   "
 >
-  <div class="container fluid">
-    <div class="row d-flex justify-content-center align-items-center">
-      <h1 class="font-weight-bold display-5 mt-4">Carrinho</h1>
-      <img
-        src="https://i.imgur.com/8vy1Bm2.png"
-        class="img-fluid mt-4"
-        alt="Foto carrinho"
-        width="35px"
-        height="35px"
-      />
-    </div>
-      <!-- <button type="button" class="btn btn-info btn-sm mt-2" (click)="deleteAllCarrinho()">Remover Todos os Itens</button> -->
-</div>
+  <div class="container ">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-4">
+        <div class="mt-4 d-flex justify-content-start">
+          <button class="" type="button" class="btn btn-danger btn-sm" routerLink='/produtos'>
+            Limpar carrinho
+          </button>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <h1 class="font-weight-bold display-5 mt-4 text-center">Carrinho</h1>
+        <img
+          src="https://i.imgur.com/8vy1Bm2.png"
+          class="img-fluid mt-4"
+          alt="Foto carrinho"
+          width="35px"
+          height="35px"
+        />
+      </div>
+      <div class="col-md-4 d-flex justify-content-end">
+        <div class="mt-4 d-flex justify-content-end">
+          <button class="" type="button" class="btn btn-success btn-sm" routerLink='/produtos'>
+            Continuar Comprando
+          </button>
+        </div>
+      </div>
+
+
+    <!-- <button type="button" class="btn btn-info btn-sm mt-2" (click)="deleteAllCarrinho()">Remover Todos os Itens</button> -->
+  </div>
   <div class="container">
     <!-- <div class="row align-items-center justify-content-start mb-4 mt-4 border-top border-bottom border-dark">
       <div class="col-md-4 mt-4 mb-4">
@@ -66,7 +83,10 @@
       </div>
     </div> -->
 
-    <div class="row align-items-center justify-content-start mb-4 mt-4 border-top border-bottom border-dark" *ngFor="let produto of listaCarrinho">
+    <div
+      class="row align-items-center justify-content-start mb-4 mt-4 border-top border-bottom border-dark"
+      *ngFor="let produto of listaCarrinho"
+    >
       <div class="col-md-4 mt-4 mb-4">
         <img
           class="rounded mx-auto d-block img-aj"
@@ -83,7 +103,7 @@
       </div>
       <div class="col-md-4">
         <h4 class="text-center mb-3">Valor</h4>
-        <h5 class="text-center mb-2" >R$ {{ produto.produto.preco }}</h5>
+        <h5 class="text-center mb-2">R$ {{ produto.produto.preco }}</h5>
         <!-- <h5 class="text-center mb-3">R$ {{ produto.produto.preco }}</h5> -->
         <form>
           <div class="form-row align-items-center justify-content-center">
@@ -110,9 +130,14 @@
               </select> -->
               <!-- <button (click)="remover(produto.id_carrinho)">Deletar Item</button> -->
             </div>
-
           </div>
-          <button type="button" class="btn btn-danger btn-sm mt-2" (click)="remover(produto.id_carrinho)">Remover Item</button>
+          <button
+            type="button"
+            class="btn btn-danger btn-sm mt-2"
+            (click)="remover(produto.id_carrinho)"
+          >
+            Remover Item
+          </button>
           <!-- <img class="ml-2 mt-1" src="https://i.imgur.com/NZ4Gxgw.png" alt=""
           width="25px"
           height="25px"> -->
@@ -164,11 +189,15 @@
         </div>
       </div>
     </div>
-    <div class="row align-self-center mb-3 mt-4 border-top border-dark justify-content-center">
-      <h3 class="font-weight-bold display-5 mt-3 ">Forma de Pagamento</h3>
+    <div
+      class="row align-self-center mb-3 mt-4 border-top border-dark justify-content-center"
+    >
+      <h3 class="font-weight-bold display-5 mt-3">Forma de Pagamento</h3>
     </div>
 
-    <div class="row d-flex align-items-stretch border-top border-dark justify-content-center">
+    <div
+      class="row d-flex align-items-stretch border-top border-dark justify-content-center"
+    >
       <div class="col-md-12 font-weight-bold mb-5">
         <div class="d-flex justify-contend-start">
           <button
@@ -329,7 +358,11 @@
               </div>
               <div class="form-group col-md-6">
                 <label for="inputEstado">Estado</label>
-                <select id="inputEstado" class="form-control" (change)="validaEstado($event)">
+                <select
+                  id="inputEstado"
+                  class="form-control"
+                  (change)="validaEstado($event)"
+                >
                   <option selected value="NADA">Selecione o Estado</option>
                   <option value="AC">Acre</option>
                   <option value="AL">Alagoas</option>
@@ -436,28 +469,28 @@
                 <div class="form-group">
                   <label for="inputAddress">Número do Cartão</label>
                   <input
-                  name="numCartao"
-                  [(ngModel)]='numCartao'
+                    name="numCartao"
+                    [(ngModel)]="numCartao"
                     type="text"
                     class="form-control"
                     id="inputAddress"
                     placeholder="Digite o número do Cartão"
-                    (keyup)='validaNumCartao()'
+                    (keyup)="validaNumCartao()"
                   />
-                  <div class="text-danger">{{alertaNumCartao}}</div>
+                  <div class="text-danger">{{ alertaNumCartao }}</div>
                 </div>
                 <div class="form-group">
                   <label for="inputAddress2">Nome do Titular do Cartão</label>
                   <input
-                  name="nameFull"
-                  [(ngModel)]='nameFull'
+                    name="nameFull"
+                    [(ngModel)]="nameFull"
                     type="text"
                     class="form-control"
                     id="inputAddress2"
                     placeholder="Nome Completo"
-                    (keyup)='validaNameFull()'
+                    (keyup)="validaNameFull()"
                   />
-                  <div class="text-danger">{{alertaNameFull}}</div>
+                  <div class="text-danger">{{ alertaNameFull }}</div>
                 </div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
@@ -472,15 +505,15 @@
                   <div class="form-group col-md-6">
                     <label for="inputPassword4">Código de Segurança</label>
                     <input
-                    name="codSeg"
-                    [(ngModel)]='codSeg'
+                      name="codSeg"
+                      [(ngModel)]="codSeg"
                       type="text"
                       class="form-control"
                       id="inputPassword4"
                       placeholder="Cod.Segurança"
-                      (keyup)='validaCodSeg()'
+                      (keyup)="validaCodSeg()"
                     />
-                    <div class="text-danger">{{alertaCodSeg}}</div>
+                    <div class="text-danger">{{ alertaCodSeg }}</div>
                   </div>
                 </div>
                 <div class="form-group">
@@ -574,7 +607,11 @@
                   </div>
                   <div class="form-group col-md-6">
                     <label for="inputEstado">Estado</label>
-                    <select id="inputEstado" class="form-control" (change)="validaEstado($event)">
+                    <select
+                      id="inputEstado"
+                      class="form-control"
+                      (change)="validaEstado($event)"
+                    >
                       <option selected value="NADA">Selecione o Estado</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
@@ -650,24 +687,24 @@
               <div class="row d-flex justify-content-center">
                 <div class="col-md-4 mt-5">
                   <button
-                  type="button"
-                  class="btn btn-success text-white font-weight-bold"
-                  data-toggle="modal"
-                  data-target="#modalExemplo"
-                  *ngIf="mostraFinalizaX()"
-                >
-                  Finalizar compra
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-success text-white font-weight-bold"
-                  data-toggle="modal"
-                  data-target="#modalExemplo"
-                  disabled
-                  *ngIf="escondeFinalizaX()"
-                >
-                  Finalizar compra
-                </button>
+                    type="button"
+                    class="btn btn-success text-white font-weight-bold"
+                    data-toggle="modal"
+                    data-target="#modalExemplo"
+                    *ngIf="mostraFinalizaX()"
+                  >
+                    Finalizar compra
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-success text-white font-weight-bold"
+                    data-toggle="modal"
+                    data-target="#modalExemplo"
+                    disabled
+                    *ngIf="escondeFinalizaX()"
+                  >
+                    Finalizar compra
+                  </button>
                 </div>
               </div>
             </div>
