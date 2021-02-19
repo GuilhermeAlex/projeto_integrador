@@ -35,40 +35,38 @@
       </li>
       <li class="nav-item active">
         <a class="nav-link text-light" routerLink="/home"
-          ><i>Home</i> <span class="sr-only">(página atual)</span></a
+          >
+          <i class="font-weight-bold">Home</i> <span class="sr-only">(página atual)</span></a
         >
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active font-weight-bold">
         <a class="nav-link text-light" routerLink="/produtos"
           ><i>Produtos</i></a
         >
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active font-weight-bold">
         <a class="nav-link text-light" routerLink="/sobre"><i>Sobre</i></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item active font-weight-bold">
         <a class="nav-link text-light" routerLink="/contato"><i>Contato</i></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0 mr-30 sumiu align-items-center">
+    <!-- <form class="form-inline my-2 my-lg-0 mr-30 sumiu align-items-center">
       <input
-      class="form-control mr-sm-1 border-radius"
-      type="text"
-      name="pesquisa"
-      id="pesquisaTodos"
-      placeholder="Pesquisa"
+        class="form-control mr-sm-1 border-radius"
+        type="text"
+        name="pesquisa"
+        id="pesquisaTodos"
+        placeholder="Pesquisa"
+      />
 
-      
-    />
-      <a href=""
-        ><i class="fa fa-search b-search form-control" aria-hidden="true"></i
-      ></a>
-      <!-- <ul *ngFor='let item of listaProdutos'>
+      ><i class="fa fa-search b-search form-control" aria-hidden="true"></i>
+      <ul *ngFor='let item of listaProdutos'>
         <li>
           {{item.nome}}
         </li>
-      </ul> -->
-    </form>
+      </ul>
+    </form> -->
     <a>
       <li class="ponto text-light sumiu icEntrar">
         <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
@@ -82,7 +80,7 @@
           style="color: white"
           >{{ nome }}</a
         >
-        <a routerLink="/entrar" (click)='sair()'>
+        <a routerLink="/entrar" (click)="sair()">
           <i
             style="color: white"
             class="fa fa-sign-out fa-2x mr-2"
@@ -91,10 +89,10 @@
         ></a>
       </div>
       <a
-        class="nav-link text-light marginl icEntrar"
+        class="nav-link text-light marginl icEntrar font-weight-bold"
         *ngIf="escondeNome()"
         routerLink="/entrar"
-        >Entre ou<br />
+        >Entre ou
         Cadastre-se</a
       >
     </li>

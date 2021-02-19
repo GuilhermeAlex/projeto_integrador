@@ -77,21 +77,21 @@ export class NavbarComponent implements OnInit {
     environment.id = 0;
   }
 
-  // getAllProdutos() {
-  //   this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
-  //     this.listaProdutos = resp;
-  //   });
-  // }
+  getAllProdutos() {
+    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp;
+    });
+  }
 
-  // findByNomeProduto() {
-  //   if (this.pesquisa == '') {
-  //     this.getAllProdutos();
-  //   } else {
-  //     this.produtoService
-  //       .getByNomeProduto(this.pesquisa)
-  //       .subscribe((resp: Produto[]) => {
-  //         this.listaProdutos = resp;
-  //       });
-  //   }
-  // }
+  findByNomeProduto() {
+    if (this.pesquisa == '') {
+      this.getAllProdutos();
+    } else {
+      this.produtoService
+        .getByNomeProduto(this.pesquisa)
+        .subscribe((resp: Produto[]) => {
+          this.listaProdutos = resp;
+        });
+    }
+  }
 }
