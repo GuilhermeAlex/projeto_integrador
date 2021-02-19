@@ -1,6 +1,7 @@
 import { Produto } from './../model/Produto';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../service/auth.service';
+import { Router } from '@angular/router';
 import { Carrinho } from '../model/Carrinho';
 import { CarrinhoService } from '../service/carrinho.service';
 
@@ -60,8 +61,8 @@ export class CarrinhoComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private carrinhoService: CarrinhoService
-  ) {}
+    private carrinhoService: CarrinhoService,
+    private router: Router) {}
 
   ngOnInit() {
     window.scroll(0, 0);
@@ -325,6 +326,12 @@ export class CarrinhoComponent implements OnInit {
     console.log('chegay');
     alert('Removido do carrinho com sucesso!');
     this.findAllCarrinho();
+  }
+
+  deleteAllCarrinho() {
+    this.carrinhoService.deleteAll().subscribe(()=>{});
+    alert('Todos os itens Foram removidos do Carrinho.');
+    this.router.navigate(['/produtos']);
   }
 
   total() {
