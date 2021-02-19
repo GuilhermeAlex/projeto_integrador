@@ -143,5 +143,5 @@ export class ProductPageComponent implements OnInit {
     }
     return verifica
   }
-  
+
 }

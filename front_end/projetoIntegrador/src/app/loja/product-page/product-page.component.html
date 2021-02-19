@@ -1,28 +1,39 @@
 <!--Imagem de background-->
-<div class="py-5 text-center bg-image" style="
+<div
+  class="py-5 text-center bg-image"
+  style="
     background-image: url('https://i.imgur.com/uMpjoNU.jpg');
     background-size: 100% 100%;
-  ">
+  "
+>
   <!--container -->
-  <div class="container">
+  <div class="container-fluid col-md-10">
     <div class="row padding">
       <!--Filtro-->
 
       <div class="row padding">
-        <div class="col-md-3 bg-image padding">
-          <button class="btn btn-warning btn-sm text-dark mt-3" (click)="findAllProdutos()">
+        <div class="col-md-2 bg-image padding">
+          <button
+            class="btn btn-warning btn-sm text-dark mt-3"
+            (click)="findAllProdutos()"
+          >
             Limpar Filtro
           </button>
           <h4 class="mt-3 my-1">Categoria</h4>
 
-
           <div class="row response">
-            <div class="row ">
-              <div class="ml-4 mt-2 ">
+            <div class="row">
+              <div class="ml-4 mt-2">
                 <div class="ml-4 row ml-2" *ngFor="let tipo of listaCategoria">
                   <div class="form-check">
-                    <input (input)="findByIdCategoria($event)" class="form-check-input" name="papelão2" type="radio"
-                      value="{{ tipo.id_categoria }}" id="{{ tipo.tipo }}" />
+                    <input
+                      (input)="findByIdCategoria($event)"
+                      class="form-check-input"
+                      name="papelão2"
+                      type="radio"
+                      value="{{ tipo.id_categoria }}"
+                      id="{{ tipo.tipo }}"
+                    />
                     <label class="form-check-label" for="{{ tipo.tipo }}">
                       {{ tipo.tipo }}
                     </label>
@@ -33,14 +44,26 @@
           </div>
           <h4 class="mt-3 my-1">Material</h4>
 
-          <div class="row response mati ">
-            <div class="row mati ">
-              <div class="ml-4 mt-2 ">
-                <div class="ml-4 row ml-2" *ngFor="let material of listaMaterial" >
+          <div class="row response mati">
+            <div class="row mati">
+              <div class="ml-4 mt-2">
+                <div
+                  class="ml-4 row ml-2"
+                  *ngFor="let material of listaMaterial"
+                >
                   <div class="form-check">
-                    <input (input)="findByIdMaterial($event)" class="form-check-input" name="papelão" type="radio"
-                      value="{{ material.id_material }}" id="{{ material.material}}" />
-                    <label class="form-check-label" for="{{ material.material }}">
+                    <input
+                      (input)="findByIdMaterial($event)"
+                      class="form-check-input"
+                      name="papelão"
+                      type="radio"
+                      value="{{ material.id_material }}"
+                      id="{{ material.material }}"
+                    />
+                    <label
+                      class="form-check-label"
+                      for="{{ material.material }}"
+                    >
                       {{ material.material }}
                     </label>
                   </div>
@@ -50,48 +73,83 @@
           </div>
         </div>
 
-
-        <div class="col-md-8 ml-3  d-flex flex-wrap d-flex justify-content-around padding produtos">
-          <div class="card mr-3 mb-2 mt-3 bg-transparent border-dark" style="width: 29%"
-            *ngFor="let produto of listaProdutos">
-            <img class="card-img-top t-img cursor-pointer" src="{{ produto.foto }}" alt="Imagem de capa do card"
-              width="100%" height="200px" data-toggle="modal" data-target="#comprar" (click)="
+        <div
+          class="col-md-9 ml-3 d-flex flex-wrap d-flex justify-content-around padding produtos"
+        >
+          <div
+            class="card mr-3 mb-2 mt-3 bg-transparent border-dark"
+            style="width: 23%"
+            *ngFor="let produto of listaProdutos"
+          >
+            <img
+              class="card-img-top t-img cursor-pointer"
+              src="{{ produto.foto }}"
+              alt="Imagem de capa do card"
+              width="100%"
+              height="200px"
+              data-toggle="modal"
+              data-target="#comprar"
+              (click)="
                 findByIdProduto(
                   produto.id_produto,
                   produto.categoria.id_categoria
                 )
-              " />
+              "
+            />
 
             <div class="card-body mx-2 d-flex flex-column align-items-center">
-              <h5 class="card-title cursor-pointer" data-toggle="modal" data-target="#comprar" (click)="
+              <h5
+                class="card-title cursor-pointer"
+                data-toggle="modal"
+                data-target="#comprar"
+                (click)="
                   findByIdProduto(
                     produto.id_produto,
                     produto.categoria.id_categoria
                   )
-                ">
+                "
+              >
                 {{ produto.nome }}
               </h5>
-              <div class="row d-flex justify-content-between align-items-center mt-auto">
+              <div
+                class="row d-flex justify-content-between align-items-center mt-auto"
+              >
                 <div class="d-flex align-items-center">
-                  <p class="m-0 font-weight-bold cursor-pointer" data-toggle="modal" data-target="#comprar" (click)="
+                  <p
+                    class="m-0 font-weight-bold cursor-pointer"
+                    data-toggle="modal"
+                    data-target="#comprar"
+                    (click)="
                       findByIdProduto(
                         produto.id_produto,
                         produto.categoria.id_categoria
                       )
-                    ">
+                    "
+                  >
                     R$ {{ produto.preco }}
                   </p>
                 </div>
-                <div class="d-flex align-items-center ml-3">
-                  <span class="carrinho" style="color: white" (click)="addCarrinho(produto.id_produto)">
+                <div class="d-flex align-items-center ml-5">
+                  <span
+                    class="carrinho"
+                    (click)="addCarrinho(produto.id_produto)"
+                  >
                     <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
                   </span>
-                  <button *ngIf='permiteLogin()' type="button" class="btn btn-warning btn-sm rounded ml-2 btn-comprar"
-                     (click)='compraProduto(produto.id_produto)'>
+                  <button
+                    *ngIf="permiteLogin()"
+                    type="button"
+                    class="btn btn-warning btn-sm rounded ml-2 btn-comprar"
+                    (click)="compraProduto(produto.id_produto)"
+                  >
                     Comprar
                   </button>
-                  <button *ngIf='verificaLogin()' type="button" class="btn btn-warning btn-sm rounded ml-2 btn-comprar"
-                    routerLink="/entrar">
+                  <button
+                    *ngIf="verificaLogin()"
+                    type="button"
+                    class="btn btn-warning btn-sm rounded ml-2 btn-comprar"
+                    routerLink="/entrar"
+                  >
                     Comprar
                   </button>
                 </div>
@@ -105,35 +163,63 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="comprar" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
-  aria-hidden="true">
+<div
+  class="modal fade"
+  id="comprar"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="TituloModalCentralizado"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Fechar"
+          >
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="row mx-2">
-          <div class="card w-100 bg-transparent d-flex flex-row m-3 produtoMobile">
-            <img class="t-img200" src="{{ produtoModal.foto }}" alt="" width="45%" />
+          <div
+            class="card w-100 bg-transparent d-flex flex-row m-3 produtoMobile"
+          >
+            <img
+              class="t-img200"
+              src="{{ produtoModal.foto }}"
+              alt=""
+              width="45%"
+            />
             <div class="card-body">
               <div class="row d-flex justify-content-center mx-2">
                 {{ produtoModal.descricao }}
               </div>
-              <div class="row d-flex justify-content-around align-items-center mr-1 my-2">
+              <div
+                class="row d-flex justify-content-around align-items-center mr-1 my-2"
+              >
                 <a class="hover" href="" style="color: rgb(0, 0, 0)">
                   <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
                 </a>
-                <button type="button" class="btn btn-warning rounded ml-2 btn-comprar-modal" routerLink="/carrinho">
+                <button
+                  type="button"
+                  class="btn btn-warning rounded ml-2 btn-comprar-modal"
+                  routerLink="/carrinho"
+                >
                   Comprar
                 </button>
               </div>
               <div class="ml-3 mt-4">Consulte o Prazo de Entrega</div>
               <form class="d-flex flex-row">
-                <input class="form-control mr-sm-2 border-radius bg-transparent" type="search"
-                  placeholder="Insira o CEP" aria-label="Pesquisar" />
+                <input
+                  class="form-control mr-sm-2 border-radius bg-transparent"
+                  type="search"
+                  placeholder="Insira o CEP"
+                  aria-label="Pesquisar"
+                />
                 <button type="button" class="btn btn-primary btn-sm">
                   Consultar
                 </button>
@@ -143,26 +229,49 @@
 
           <h5 class="ml-5">Você também pode gostar</h5>
           <div class="row d-flex flex-row ml-4 cardModal">
-            <div class="card mr-3 mb-2 mt-3 bg-transparent cursor-pointer cardModal" style="width: 30%"
-              data-toggle="modal" data-target="#comprar" *ngFor="let produto of listaProdutosModal">
-              <img class="card-img-top t-img" src="{{ produto.foto }}" alt="Imagem de capa do card" width="100%"
-                height="200px" />
+            <div
+              class="card mr-3 mb-2 mt-3 bg-transparent cursor-pointer cardModal"
+              style="width: 30%"
+              data-toggle="modal"
+              data-target="#comprar"
+              *ngFor="let produto of listaProdutosModal"
+            >
+              <img
+                class="card-img-top t-img"
+                src="{{ produto.foto }}"
+                alt="Imagem de capa do card"
+                width="100%"
+                height="200px"
+              />
               <div class="card-body mx-2 d-flex flex-column align-items-center">
                 <h5 class="card-title">{{ produto.nome }}</h5>
-                <div class="row d-flex justify-content-between align-items-center mt-auto">
+                <div
+                  class="row d-flex justify-content-between align-items-center mt-auto"
+                >
                   <div class="d-flex align-items-center">
                     <p class="m-0 font-weight-bold">R$ {{ produto.preco }}</p>
                   </div>
                   <div class="d-flex align-items-center ml-3">
                     <a href="" style="color: black">
-                      <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                      <i
+                        class="fa fa-shopping-cart fa-lg"
+                        aria-hidden="true"
+                      ></i>
                     </a>
-                    <button *ngIf='permiteLogin()' type="button" class="btn btn-warning btn-sm rounded ml-2 btn-comprar"
-                      routerLink="/carrinho">
+                    <button
+                      *ngIf="permiteLogin()"
+                      type="button"
+                      class="btn btn-warning btn-sm rounded ml-2 btn-comprar"
+                      routerLink="/carrinho"
+                    >
                       Comprar
                     </button>
-                    <button *ngIf='verificaLogin()' type="button"
-                      class="btn btn-warning btn-sm rounded ml-2 btn-comprar" routerLink="/entrar">
+                    <button
+                      *ngIf="verificaLogin()"
+                      type="button"
+                      class="btn btn-warning btn-sm rounded ml-2 btn-comprar"
+                      routerLink="/entrar"
+                    >
                       Comprar
                     </button>
                   </div>

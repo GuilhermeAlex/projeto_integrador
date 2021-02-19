@@ -17,8 +17,6 @@ export class CarrinhoComponent implements OnInit {
   valorFrete: number = 0.0;
   preco: number = 0.0;
 
-  totalValor: number = 0.0;
-
   nome: string;
   cepX: string;
   sobrenome: string;
@@ -67,7 +65,6 @@ export class CarrinhoComponent implements OnInit {
     window.scroll(0, 0);
 
     this.findAllCarrinho();
-    this.total()
   }
 
   mostraBoleto() {
@@ -227,13 +224,6 @@ export class CarrinhoComponent implements OnInit {
     }
   }
 
-  quantidade(event: any) {
-    let precoInicio: number;
-    precoInicio = 299.99;
-    this.preco = precoInicio;
-    this.preco = this.preco * event.target.value;
-  }
-
   escondeFinaliza() {
     let botaoOf: boolean;
     if (
@@ -244,7 +234,8 @@ export class CarrinhoComponent implements OnInit {
       this.bairroOK == false ||
       this.cepOK == false ||
       this.cidadeOK == false ||
-      this.estadoOK == false
+      this.estadoOK == false ||
+      this.cepOKX == false
     ) {
       botaoOf = true;
     } else {
@@ -263,7 +254,8 @@ export class CarrinhoComponent implements OnInit {
       this.bairroOK == true &&
       this.cepOK == true &&
       this.cidadeOK == true &&
-      this.estadoOK == true
+      this.estadoOK == true &&
+      this.cepOKX == true
     ) {
       botaoOn = true;
     } else {
@@ -282,7 +274,8 @@ export class CarrinhoComponent implements OnInit {
       this.bairroOK == false ||
       this.cepOK == false ||
       this.cidadeOK == false ||
-      this.estadoOK == false
+      this.estadoOK == false ||
+      this.cepOKX == false
     ) {
       botaoOf = true;
     } else {
@@ -302,7 +295,8 @@ export class CarrinhoComponent implements OnInit {
       this.bairroOK == true &&
       this.cepOK == true &&
       this.cidadeOK == true &&
-      this.estadoOK == true
+      this.estadoOK == true &&
+      this.cepOKX == true
     ) {
       botaoOn = true;
     } else {
@@ -322,15 +316,32 @@ export class CarrinhoComponent implements OnInit {
   remover(id: number) {
     console.log(id);
     this.carrinhoService.deleteIdCarrinho(id).subscribe(() => {});
-    console.log('chegay');
     alert('Removido do carrinho com sucesso!');
     this.findAllCarrinho();
   }
 
-  total() {
-    for (var produto of Object.entries(this.listaCarrinho)) {
-      // this.totalValor = this.totalValor + produto.produto.preco;
-      console.log("teste")
+  produtos() {
+    var totalValor = 0;
+    for (let produto of this.listaCarrinho) {
+      totalValor = totalValor + produto.produto.preco;
+      console.log(totalValor);
     }
+    return totalValor;
+  }
+
+  total() {
+    var totalValor = 0;
+    for (let produto of this.listaCarrinho) {
+      totalValor = totalValor + produto.produto.preco;
+    }
+    totalValor = totalValor + this.valorFrete;
+    return totalValor;
+  }
+
+  quantidade(event: any) {
+    let precoInicio: number;
+    precoInicio = 299.99;
+    this.preco = precoInicio;
+    this.preco = this.preco * event.target.value;
   }
 }
