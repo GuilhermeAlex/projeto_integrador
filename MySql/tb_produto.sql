@@ -1,12 +1,19 @@
 SELECT * FROM projetointegrador.tb_produto;
 use projetointegrador;
-DELETE from tb_produto;
 
 -- Decoração / Papelão
 
 -- Decoração / madeira
 
--- Decoração / pet
+-- Decoração / pet 1,3
+insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita com tampinha de Garrafa. O abajur foi feito apenas usando as tampinhas das garrafas pet e pode ser usado como destaque da sua sala de estar, do quarto ou de qualquer outro ambiente. Uma peça totalmente exclusiva e super moderna.', 10, 'https://i.imgur.com/ZqqRFQz.jpg','Luminária com tampinhas de garrafa', 99.99,'grande',null,1, 3);
+insert into tb_produto values (DEFAULT,'Numa onda completamente sustentável, pense em enfeites que não usem só garrafas pet, mas também outro itens, como essas cápsulas famosas de café, que são descartados após o uso e que podem ganhar outra forma com um pouco de criatividade.', 10, 'https://i.imgur.com/vS3gytA.jpg','Guirlanda com garrafas pet, fitas e cápsulas de café.', 20.00,'pequeno',null,1, 3);
+insert into tb_produto values (DEFAULT,'Esses aqui são super divertidos e ainda brincam com a nossa tendência a adotar elementos decorativos dos natais gelados do hemisfério norte. o algodão na garrafa dá a textura certa e a tampinha faz um gorro perfeito!', 10, 'https://i.imgur.com/3xIN4cy.jpg','Boneco de neve que não derrete no Natal brasileiro!', 6.99,'pequeno',null,1, 3);
+insert into tb_produto values (DEFAULT,'Decore um cantinho especial da casa com um lindo jardim suspenso feito de garrafas PET.', 10, 'https://i.imgur.com/DDwEqeN.jpg','Jardim suspenso de garrafa PET', 30.00,'pequeno',null,1, 3);
+insert into tb_produto values (DEFAULT,'Xícara de garrafa pet – Use como lembrancinha, decoração. Reciclagem de garrafa pet.', 10, 'https://i.imgur.com/sVWxW7L.jpg','xícara de garrafa pet', 5.00,'pequeno',null,1, 3);
+insert into tb_produto values (DEFAULT,'Vasos feitos de garrafa para decorar mesa.', 10, 'https://i.imgur.com/TlOI1wZ.jpg','vaso de garrafa pet', 3.00,'pequeno',null,1, 3);
+insert into tb_produto values (DEFAULT,'pinguins feitos com garrafas pet decoração de natal', 10, 'https://i.imgur.com/Mjp72M1.jpg','pinguins feitos com garrafas pet', 29.99,'pequeno',null,1, 3);
+insert into tb_produto values (DEFAULT,'Natal sustentável: Papai noél feito de garrafa pet uma ótima decoração de natal para o seu jardim', 10, 'https://i.imgur.com/59cDgBR.jpg','Papai Noél feito de garrafa pet', 150.00,'grande',null,1, 3);
 
 -- Decoração / pallet
 
@@ -28,11 +35,21 @@ DELETE from tb_produto;
 
 -- moveis/ Papelão
 
--- moveis/ madeira
+-- moveis/ madeira 4,2
+insert into tb_produto values (DEFAULT,'Mesa em Madeira de Eucalipto com cantos arredondados para áreas internas poid não tem tratamento com Impregnante Stain.', 20, 'https://i.imgur.com/fOUaQYi.jpg','Mesa Sala de Jantar em Madeira Angra', 1500,00,'Profundidade: 160 cm Largura: 90 cm Altura: 79 cm',null,4,2);
+insert into tb_produto values (DEFAULT,'O estilo de mesa perfeito para um diretor! Uma mesa em L para escritório proporciona mais comodidade no momento de sua utilização. Conta com 02 gavetas que auxiliam na organização de seu espaço, e junto com seu design traz mais modernidade ao ambiente. Garanta já a sua!', 20, 'https://i.imgur.com/ZboUGZ2.jpg','Mesa Para Escritório Home Office em L de madeira', 710,00,'180 x 75 x 70 cm',null,4,2);
+insert into tb_produto values (DEFAULT,'Este banco foi elaborado em madeira de demolição com tratamento anti-cupins, ou seja, retirada de casarões e fazendas demolidas e transformado num artigo exclusivo! ', 20, 'https://i.imgur.com/93n6IDs.jpg','Banco Mineiro Tuna Em Madeira De Demolição', 517,00,'Dimensões: Comprimento = 1,80m Altura = 0,45m',null,4,2);
+insert into tb_produto values (DEFAULT,'A Cama Tarumã é um modelo baixo e possui um designe oriental. Ela permite muitas possibilidades, você pode escolher diferentes tipos de colchões para compor sua cama (Casal ou Queen), devido a estrutura privilegiada desse móvel. Também é indicada para quem tem dificuldade de mobilidade e/ou não se adapta a camas muito altas. Pintura ultra violeta com impressão amadeirada.', 20, 'https://i.imgur.com/ksJiUcU.jpg','Cama Casal/Queen Tarumã MadeiraMadeira Carvalho ', 599.99,'160 X 200 CM',null,4,2);
+insert into tb_produto values (DEFAULT,'Banco de Jardim Rústico de Madeira 2 Lugares com Encosto Móveis Meneghetti Envelhecido', 20, 'https://i.imgur.com/sTDTYyB.jpg','Bamco de madeira para jardim', 299.99,'Grande',null,4,2);
+insert into tb_produto values (DEFAULT,'Painel para TV FEITO EM MADEIRA REFLORESTADA DE PINUS.', 20, 'https://i.imgur.com/ZboUGZ2.jpg','Painel Para Tv De Madeira Demolição', 299.99,'1.20 X 1.00 CM',null,4,2);
+insert into tb_produto values (DEFAULT,'estante de madeira para televisão. Os espaços vazados podem ser usados como compartimentos para outros acessórios e aparelhos eletrônicos que acompanham a tv.', 20, 'https://i.imgur.com/HGmJ1Ng.jpg','Estante de Madeira', 499.99,'grande',null,4,2);
+insert into tb_produto values (DEFAULT,'Ideal para sua sala de jantar, toda em madeira maciça os "rios" de resina passam por toda sua superfície preenchendo todas as rachaduras, ressaltando ainda mais a beleza da madeira que fica com aspecto vidrificado.', 20, 'https://i.imgur.com/YWGdR2T.jpg','Mesa de Madeira Reciclavel', 999.99,'grande',null,4,2);
 
 -- moveis/ pet
 
 -- moveis/ pallet
+
+
 
 
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita com Garrafa Pets O modelo é customizável, ou seja, ele pode ser adaptado para qualquer tipo de sala.', 4, 'https://i.imgur.com/mwBl1K3.jpg','Sofá feito de Garrafa Pets', 299.99,'1,80 x 0,90 cm',null, 4,3);
@@ -41,13 +58,9 @@ insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita com rol
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita de Pallet. Cama de casal Padrão feita de Pallets com tratamento anti cupim! Super resistente !! Madeira sustentável!', 10, 'https://i.imgur.com/xFaXAb0.jpg','Cama feita de Pallets', 1200.00,'1,60 X 2,40 cm',null,4, 4);
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com pallets.  Assento feito de pallets madeira reflorestada (Pínus), produzido com madeira seca e aparelhada. o banco de pallet duplo acomoda duas pessoas e no centro é possível observar a presença de uma mesa de madeira embutida na sua estrutura. Esse móvel além de servir como assento pode ser utilizado como apoio de objetos decorativos.', 30, 'https://i.imgur.com/uAo5AK3.jpg','Banco feito de Pallets', 189.99,'0,80 x 0,60 cm',null,2, 4);
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com ripas de pallet reaproveitados para colocação de vasinhos de planta.', 30, 'https://i.imgur.com/YVdJqvx.jpg','Painel Pallet decorativo', 139.99,'1,20 x 1,00 cm',null,1, 4);
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita com tampinha de Garrafa. O abajur foi feito apenas usando as tampinhas das garrafas pet e pode ser usado como destaque da sua sala de estar, do quarto ou de qualquer outro ambiente. Uma peça totalmente exclusiva e super moderna.', 10, 'https://i.imgur.com/ZqqRFQz.jpg','Luminária com tampinhas de garrafa', 99.99,'grande',null,1, 3);
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feito com garrafas Pets.  A casinha proporciona uma sensação de conforto e segurança, acalmando o sistema nervoso, reduzindo o estresse e relaxando os pets.', 10, 'https://i.imgur.com/zwbjoDh.jpg','Casinha de Cachorro feito de Garrafa pets', 129.99,'1,00 x 0,80 cm',null,2 ,3);
 insert into tb_produto values (DEFAULT,'Casinha Tratador para pássaros feito de madeira de reflorestamento Legal, resistente ao sol e a chuva. Decore seu jardim, sacada, varanda ou outros ambiente, e receba lindas visitas todos os dias!', 10, 'https://i.imgur.com/ME48BqO.jpg','Casinha Para Passarinho', 149.99,'0,32 x 0,33 cm',null,2, 2);
-insert into tb_produto values (DEFAULT,'Ideal para sua sala de jantar, toda em madeira maciça os "rios" de resina passam por toda sua superfície preenchendo todas as rachaduras, ressaltando ainda mais a beleza da madeira que fica com aspecto vidrificado.', 20, 'https://i.imgur.com/YWGdR2T.jpg','Mesa de Madeira Reciclavel', 999.99,'grande',null,4,2);
 insert into tb_produto values (DEFAULT,'A cama feita de palete também é perfeita para ambientes decorados com o estilo boho. Isso porque, a simplicidade da madeira completa a decoração casual do boho, que integra características de diferentes épocas e culturas, como as estampas e o ar místico do estilo hippie e as cores neutras do ambiente vintage.', 20, 'https://i.imgur.com/5Wp6I47.jpg','Cama no estilo boho', 1999.99,'1,60 X 2,40 cm',null,4,4);
-insert into tb_produto values (DEFAULT,'Os pallets podem, ainda, se transformar numa útil e econômica estante para televisão. Os espaços vazados podem ser usados como compartimentos para outros acessórios e aparelhos eletrônicos que acompanham a tv.', 20, 'https://i.imgur.com/HGmJ1Ng.jpg','Estante de Madeira', 499.99,'grande',null,4,2);
-insert into tb_produto values (DEFAULT,' Peça feita artesanalmente com Pallet reciclavel. Painel para TV FEITO EM MADEIRA REFLORESTADA DE PINUS.', 20, 'https://i.imgur.com/ZboUGZ2.jpg','Painel Para Tv De Madeira Reciclada De Pallet', 299.99,'1.20 X 1.00 CM',null,4,4);
 insert into tb_produto values (DEFAULT,' Modelo de sofá em (L) acompanha mesa rustica de centro/ canto. A mesa possui um grande é espaçoso compartimento secreto para armazenar diversos objetos pessoais.
 Pode ser decorado com qualquer tipo de almofadas, ou colorir os pallets aplicando tinta diretamente na madeira.', 20, 'https://i.imgur.com/mlwHauC.jpg','Sofá rustico 100% pallet de madeira maciça.', 999.99,'1.00 x 0.60 cm',null,4,4);
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com Pallet reciclavel. Mesa rústica feita toda de paletes para quem gosta de criatividade', 20, 'https://i.imgur.com/V8Nmsiq.jpg','Mesa de Pallet', 2999.00,'2,30m x 99cm',null,4,4);
