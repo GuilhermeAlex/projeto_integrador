@@ -152,20 +152,41 @@
     .texto{
         display: none;
     }
-    .impacto, .titulo-impacto {
+    .impacto {
         text-align: center;
     }
-    .teste {
-        margin-right: 3%;
+    .tamanho-tela {
+        width: 100vw
+    }
+    .materiais {
+        margin-left: 13%;
+    }
+    .materiais img {
+        width: 70%;
     }
     .jumbotron,.response,#inspire{
         padding: 0%;
     }
-    .card{
-        width: 100%;
+    .card-deck {
+        align-items: center;
     }
-    .categori{
+    .card{
+        width: 80%;
+        margin-right: 0!important;
+    }
+    .centralizar{
         text-align:center;
+    }
+    .jumbotron h1 {
+        padding-top: 50px;
+        font-size: 15pt;
+    }
+    .tamanho-titulo {
+        font-size: 15pt;
+    }
+    .paragrafo {
+        margin: 0 5%;
+        font-size: 12pt;
         align-items: center;
     }
   
