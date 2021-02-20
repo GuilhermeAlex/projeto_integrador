@@ -1,6 +1,40 @@
 SELECT * FROM projetointegrador.tb_produto;
 use projetointegrador;
 DELETE from tb_produto;
+
+-- Decoração / Papelão
+
+-- Decoração / madeira
+
+-- Decoração / pet
+
+-- Decoração / pallet
+
+-- artigos/ Papelão
+
+-- artigos/ madeira
+
+-- artigos/ pet
+
+-- artigos/ pallet
+
+-- utensilios/ Papelão
+
+-- utensilios/ madeira
+
+-- utensilios/ pet
+
+-- utensilios/ pallet
+
+-- moveis/ Papelão
+
+-- moveis/ madeira
+
+-- moveis/ pet
+
+-- moveis/ pallet
+
+
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita com Garrafa Pets O modelo é customizável, ou seja, ele pode ser adaptado para qualquer tipo de sala.', 4, 'https://i.imgur.com/mwBl1K3.jpg','Sofá feito de Garrafa Pets', 299.99,'1,80 x 0,90 cm',null, 4,3);
 insert into tb_produto values (DEFAULT,'Reunir a família ou amigos é sempre bom, um momento de confraternização e alegria, e que tal reservar um espaço especial para a atividade.', 10, 'https://i.imgur.com/aPu6CnF.jpg','Mesa com acento de papelão', 169.99,'1,00 x 0,60 cn',null,4, 1);
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita com rolo de Papel. Lustre Rolo de papel- unidade Nosso lustre de rolo é produzido de forma artesanal, com material todo sustentável, o que nos permite agregar qualidade à durabilidade, sem perder a beleza da peça.  Os nossos lustres podem ser utilizados em ambientes internos e externos, porém, no caso de serem instalados em ambiente externos, há necessidade de que sejam instalados em lugares cobertos, protegidos de chuva ou líquidos de qualquer espécie.', 20, 'https://i.imgur.com/Lm5EEey.jpg','Lustre Rolo de papel', 299.99,'médio',null,1, 1);
