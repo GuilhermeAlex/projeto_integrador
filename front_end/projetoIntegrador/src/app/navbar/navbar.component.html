@@ -17,41 +17,41 @@
       aria-hidden="true"
     ></i>
   </a>
+
   <div
     class="collapse navbar-collapse ml-100 margenav"
     id="conteudoNavbarSuportado"
   >
-    <ul class="navbar-nav mr-auto align-items-center">
-      <li>
-        <a routerLink="/home">
-          <img
-            src="https://i.imgur.com/dI0Vph1.png"
-            alt="logo"
-            width="80px"
-            height="80px"
-            class="img-fluid"
-          />
-        </a>
-      </li>
+    <a routerLink="/home">
+      <img
+        src="https://i.imgur.com/dI0Vph1.png"
+        alt="logo"
+        width="80px"
+        height="80px"
+        class="img-fluid"
+      />
+    </a>
+    <ul class="navbar-nav align-items-center text" style="margin: auto">
+
       <li class="nav-item active">
-        <a class="nav-link text-light" routerLink="/home"
+        <a class="nav-link text-light py-0 nav-border" routerLink="/home"
           >
           <i class="font-weight-bold">Home</i> <span class="sr-only">(página atual)</span></a
         >
       </li>
       <li class="nav-item active font-weight-bold">
-        <a class="nav-link text-light" routerLink="/produtos"
+        <a class="nav-link text-light py-0" routerLink="/produtos"
           ><i>Produtos</i></a
         >
       </li>
       <li class="nav-item active font-weight-bold">
-        <a class="nav-link text-light" routerLink="/sobre"><i>Sobre</i></a>
+        <a class="nav-link text-light py-0" routerLink="/sobre"><i>Sobre</i></a>
       </li>
-      <li class="nav-item active font-weight-bold">
-        <a class="nav-link text-light" routerLink="/contato"><i>Contato</i></a>
+      <li class="nav-item active font-weight-bold response">
+        <a class="nav-link text-light py-0" routerLink="/contato"><i>Contato</i></a>
       </li>
     </ul>
-    <!-- <form class="form-inline my-2 my-lg-0 mr-30 sumiu align-items-center">
+    <form class="form-inline my-2 my-lg-0 mr-3 sumiu align-items-center">
       <input
         class="form-control mr-sm-1 border-radius"
         type="text"
@@ -60,15 +60,10 @@
         placeholder="Pesquisa"
       />
 
-      ><i class="fa fa-search b-search form-control" aria-hidden="true"></i>
-      <ul *ngFor='let item of listaProdutos'>
-        <li>
-          {{item.nome}}
-        </li>
-      </ul>
-    </form> -->
+      <i class="fa fa-search b-search form-control" aria-hidden="true"></i>
+    </form>
     <a>
-      <li class="ponto text-light sumiu icEntrar">
+      <li class="ponto text-light mr-15 sumiu icEntrar">
         <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
       </li>
     </a>
@@ -89,10 +84,10 @@
         ></a>
       </div>
       <a
-        class="nav-link text-light marginl icEntrar font-weight-bold"
+        class="text-light marginl icEntrar font-weight-bold"
         *ngIf="escondeNome()"
         routerLink="/entrar"
-        >Entre ou
+        >Entre ou<br>
         Cadastre-se</a
       >
     </li>
