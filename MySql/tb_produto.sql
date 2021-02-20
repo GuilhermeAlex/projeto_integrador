@@ -15,7 +15,16 @@ insert into tb_produto values (DEFAULT,'Vasos feitos de garrafa para decorar mes
 insert into tb_produto values (DEFAULT,'pinguins feitos com garrafas pet decoração de natal', 10, 'https://i.imgur.com/Mjp72M1.jpg','pinguins feitos com garrafas pet', 29.99,'pequeno',null,1, 3);
 insert into tb_produto values (DEFAULT,'Natal sustentável: Papai noél feito de garrafa pet uma ótima decoração de natal para o seu jardim', 10, 'https://i.imgur.com/59cDgBR.jpg','Papai Noél feito de garrafa pet', 150.00,'grande',null,1, 3);
 
--- Decoração / pallet
+-- Decoração / pallet 1,4
+insert into tb_produto values (DEFAULT,'Rack de Pallet envernizado para televisão', 10, 'https://i.imgur.com/Vdbr5U9.jpg','Rack de Pallet', 150.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Estante para livros envernizado', 10, 'https://i.imgur.com/TYPZWxq.jpg','Estante para Livros', 120.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Caixa de decoração para botijão de gás, feito de pallet', 10, 'https://i.imgur.com/ltQTWgF.jpg','Caixa para Botijão', 80.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Pallet porta copos e xicaras. Decoração para cozinha alta durabilidade', 10, 'https://i.imgur.com/0L8V868.jpg','Porta Copos e xicaras', 150.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Adega aberta para 8 garrafas, rustica e envernizada', 10, 'https://i.imgur.com/NoXY30g.jpg','Adega aberta para 8 garrafas', 120.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Mesa decorativa para separação de espaços', 10, 'https://i.imgur.com/YRtCOz1.jpg','Copa divisora de espaço', 100.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Estante suspensa por cordas, feita com pallets envernizados', 10, 'https://i.imgur.com/2thPMC8.jpg','Estante Suspensa', 170.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Adega feita de pallet pintado, com porta. Material rustico e envernizado', 10, 'https://i.imgur.com/f3su37w.jpg','Adega de Pallet Fechada', 170.00,'grande',null,1, 4);
+
 
 -- artigos/ Papelão
 
