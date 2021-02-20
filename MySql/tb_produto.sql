@@ -15,7 +15,16 @@ insert into tb_produto values (DEFAULT,'Vasos feitos de garrafa para decorar mes
 insert into tb_produto values (DEFAULT,'pinguins feitos com garrafas pet decoração de natal', 10, 'https://i.imgur.com/Mjp72M1.jpg','pinguins feitos com garrafas pet', 29.99,'pequeno',null,1, 3);
 insert into tb_produto values (DEFAULT,'Natal sustentável: Papai noél feito de garrafa pet uma ótima decoração de natal para o seu jardim', 10, 'https://i.imgur.com/59cDgBR.jpg','Papai Noél feito de garrafa pet', 150.00,'grande',null,1, 3);
 
--- Decoração / pallet
+-- Decoração / pallet 1,4
+insert into tb_produto values (DEFAULT,'Rack de Pallet envernizado para televisão', 10, 'https://i.imgur.com/Vdbr5U9.jpg','Rack de Pallet', 150.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Estante para livros envernizado', 10, 'https://i.imgur.com/TYPZWxq.jpg','Estante para Livros', 120.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Caixa de decoração para botijão de gás, feito de pallet', 10, 'https://i.imgur.com/ltQTWgF.jpg','Caixa para Botijão', 80.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Pallet porta copos e xicaras. Decoração para cozinha alta durabilidade', 10, 'https://i.imgur.com/0L8V868.jpg','Porta Copos e xicaras', 150.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Adega aberta para 8 garrafas, rustica e envernizada', 10, 'https://i.imgur.com/NoXY30g.jpg','Adega aberta para 8 garrafas', 120.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Mesa decorativa para separação de espaços', 10, 'https://i.imgur.com/YRtCOz1.jpg','Copa divisora de espaço', 100.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Estante suspensa por cordas, feita com pallets envernizados', 10, 'https://i.imgur.com/2thPMC8.jpg','Estante Suspensa', 170.00,'grande',null,1, 4);
+insert into tb_produto values (DEFAULT,'Adega feita de pallet pintado, com porta. Material rustico e envernizado', 10, 'https://i.imgur.com/f3su37w.jpg','Adega de Pallet Fechada', 170.00,'grande',null,1, 4);
+
 
 -- artigos/ Papelão
 
@@ -33,7 +42,16 @@ insert into tb_produto values (DEFAULT,'Natal sustentável: Papai noél feito de
 
 -- utensilios/ pallet
 
--- moveis/ Papelão
+-- moveis/ Papelão 4,1
+insert into tb_produto values (DEFAULT,'Poltrona de Papelão grande, feita com papelão reforçado', 20, 'https://i.imgur.com/ICFYe1c.jpg','Poltrona Adulto de Papelão', 150.00,'Largura: 90 cm Altura: 79 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Estante para livros com 8 prateleiras', 20, 'https://i.imgur.com/pvdRuf4.jpg','Estante para livros', 200.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Sapateira com 8 slots para sapatos. Cabe 8 pares de sapatos.', 20, 'https://i.imgur.com/6vfEiXr.jpg','Sapateira de Papelão ', 90.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Sapateira com 3 prateleiras, cabem 12 pares de sapatos.', 20, 'https://i.imgur.com/RAh0gLN.jpg','Sapateira de Papelão 10 slots ', 120.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Poltrona Rustica com apoios para braço.', 20, 'https://i.imgur.com/f6l0Kft.jpg.jpg','Poltrona Rustica', 300.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Caixa para armazenar roupas sujas para lavar.', 20, 'https://i.imgur.com/avSaz4r.jpg','Caixa de Roupas pra Lavar', 70.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Mesa de Cantoneira: Serve para colocar objetos e decorações.', 20, 'https://i.imgur.com/hsWXmi1.jpg','Mesa de Canto', 80.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Guarda-Roupa pequeno, com prateleiras, gavetas e cabideiro feito de papelão.', 20, 'https://i.imgur.com/zgMO9rE.jpg','Guarda-Roupas Pequeno', 120.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+
 
 -- moveis/ madeira 4,2
 insert into tb_produto values (DEFAULT,'Mesa em Madeira de Eucalipto com cantos arredondados para áreas internas poid não tem tratamento com Impregnante Stain.', 20, 'https://i.imgur.com/fOUaQYi.jpg','Mesa Sala de Jantar em Madeira Angra', 1500.00,'Profundidade: 160 cm Largura: 90 cm Altura: 79 cm',null,4,2);

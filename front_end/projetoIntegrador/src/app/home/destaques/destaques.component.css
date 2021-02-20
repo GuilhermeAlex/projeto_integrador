@@ -24,6 +24,130 @@
     width: 100%;
 }
 
+.categoria .catego-content, .inspire .inspe-content {
+    
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: colors 4s ease infinite;
+}
+.categoria .catego-content .card .box, .inspire .inspe-content  {
+    transition: all 0.3s ease;
+
+}
+.categoria .catego-content .card:hover .box {
+    transform: scale(1.05);
+    background:linear-gradient(45deg, #6ddccf) no-repeat center;
+    
+
+}
+
+.categoria .catego-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    color: #111;
+  
+}
+
+#loading{
+    
+    position: relative;
+    overflow: hidden;
+    background:linear-gradient(45deg,#cceb85, #eed4a3,#a7da9d, 	#ffefa1);
+    background-size: 300% 300%;
+    animation: colors 8s ease infinite;
+   
+    
+  }
+  
+.text{
+    padding: 100px 20px 0 ;
+    margin: 0 auto;
+    
+
+}
+  
+  .digitar {
+    
+    white-space: nowrap;
+    overflow: hidden;
+  
+}
+
+.typing-animation-impacto {
+    left: 4em;
+    text-align: center;
+    animation: blinkCursor steps(40) 700ms infinite normal,
+     typing 2s steps(40) 2s normal both;
+}
+.typing-animation-text2 {
+    left: 4em;
+    
+    animation: blinkCursor steps(40) 700ms infinite normal,
+     typing 2s steps(1000) 2s normal both;
+}
+  
+/*Animação */
+  
+  @keyframes fadeInText{
+      from{
+          opacity: 0;
+      }
+      to{
+          opacity: 1;
+      }
+  }
+@keyframes revealBlock{
+  from{
+      transform: translateX(0);
+  }
+  to{
+      transform: translateX(100%);
+  }
+
+}
+@keyframes enlargeBlock{
+  from{
+      width: 0%;
+  }
+  to{
+      width: 100%;
+  }
+}
+
+@keyframes colors{
+    8%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20em;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: black;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/*Responsividade */
+ 
  @media only screen and (max-width: 414px) {
     .texto{
         display: none;
@@ -45,4 +169,5 @@
         align-items: center;
     }
 }
+
 
