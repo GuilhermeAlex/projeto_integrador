@@ -168,6 +168,12 @@
         text-align:center;
         align-items: center;
     }
+  
 }
 
-
+ @media only screen and (max-width: 1177px) {
+    .fi{
+        font-size: 100%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+ }
