@@ -33,7 +33,16 @@ insert into tb_produto values (DEFAULT,'Natal sustentável: Papai noél feito de
 
 -- utensilios/ pallet
 
--- moveis/ Papelão
+-- moveis/ Papelão 4,1
+insert into tb_produto values (DEFAULT,'Poltrona de Papelão grande, feita com papelão reforçado', 20, 'https://i.imgur.com/ICFYe1c.jpg','Poltrona Adulto de Papelão', 150.00,'Largura: 90 cm Altura: 79 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Estante para livros com 8 prateleiras', 20, 'https://i.imgur.com/pvdRuf4.jpg','Estante para livros', 200.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Sapateira com 8 slots para sapatos. Cabe 8 pares de sapatos.', 20, 'https://i.imgur.com/6vfEiXr.jpg','Sapateira de Papelão ', 90.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Sapateira com 3 prateleiras, cabem 12 pares de sapatos.', 20, 'https://i.imgur.com/RAh0gLN.jpg','Sapateira de Papelão 10 slots ', 120.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Poltrona Rustica com apoios para braço.', 20, 'https://i.imgur.com/f6l0Kft.jpg.jpg','Poltrona Rustica', 300.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Caixa para armazenar roupas sujas para lavar.', 20, 'https://i.imgur.com/avSaz4r.jpg','Caixa de Roupas pra Lavar', 70.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Mesa de Cantoneira: Serve para colocar objetos e decorações.', 20, 'https://i.imgur.com/hsWXmi1.jpg','Mesa de Canto', 80.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+insert into tb_produto values (DEFAULT,'Guarda-Roupa pequeno, com prateleiras, gavetas e cabideiro feito de papelão.', 20, 'https://i.imgur.com/zgMO9rE.jpg','Guarda-Roupas Pequeno', 120.00,'Largura: 90 cm Altura: 1,50 cm',null,4,1);
+
 
 -- moveis/ madeira 4,2
 insert into tb_produto values (DEFAULT,'Mesa em Madeira de Eucalipto com cantos arredondados para áreas internas poid não tem tratamento com Impregnante Stain.', 20, 'https://i.imgur.com/fOUaQYi.jpg','Mesa Sala de Jantar em Madeira Angra', 1500,00,'Profundidade: 160 cm Largura: 90 cm Altura: 79 cm',null,4,2);
