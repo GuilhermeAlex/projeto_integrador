@@ -1,7 +1,15 @@
 SELECT * FROM projetointegrador.tb_produto;
 use projetointegrador;
 
--- Decoração / Papelão
+-- Decoração / Papelão 1,1
+insert into tb_produto values (DEFAULT,'Perfeita para despertar a criatividade nas brincadeiras infantis esse item fabricado 100% de papelão traz um ar mais descontraído para suas casa.',10, 'https://i.imgur.com/JOWy00P.jpg','Casa De Esqimó de Papelão', 189.00,'Largura: 120 cm Altura: 130 cm',null,1,1);
+insert into tb_produto values (DEFAULT,'Essas simpáticas corujinhas fazem qualquer ambiente ter uma ar mais leve e podem ser fabricadas sem dificuldade por você.',10,'https://i.imgur.com/OM8o65d.jpg','Enfeites Corujas de Papelão', 57.00,'Largura: 25 cm Altura: 59 cm',null,1,1);
+insert into tb_produto values (DEFAULT,'Sua sala Ficará muito mais elegante com um painel desses em uma de suas paredes, você terá um resultado excelente gastando muito pouco.',10, 'https://i.imgur.com/EfxiMmn.jpg','Painel de Parede Artístico vermelho', 125.00,'Largura: 220 cm Altura: 145 cm',null,1,1);
+insert into tb_produto values (DEFAULT,'Sua sala Ficará muito mais elegante com um painel desses em uma de suas paredes, você terá um resultado excelente gastando muito pouco.',10, 'https://i.imgur.com/fwKjgLS.jpeg','Painel de Parede Artístico ', 125.00,'Largura: 220 cm Altura: 145 cm',null,1,1);
+insert into tb_produto values (DEFAULT,'Uma casinha de passarinhos ficaria linda em seu jardim por exemplo, adquira já a sua.',10, 'https://i.imgur.com/eU9sEsp.jpg','Casa de Passarinho de Papelão', 48.00,'Largura: 27 cm Altura: 45 cm',null,1,1);
+insert into tb_produto values (DEFAULT,'Uma excelente opção para quem quer fazer bonito gastando pouco e ainda contribuir para redução na produção de lixo.',10, 'https://i.imgur.com/aSOvFzV.jpg','Kit de papelão para Aniversário Infantil', 380.00,'Largura: 275 cm Altura: 205 cm',null,1,1);
+insert into tb_produto values (DEFAULT,'Dê outra cara para o quarto de seu filho com esse kit de decoração',10, 'https://i.imgur.com/DmpeYYT.jpg','Kit de Decoração Quarto Infantil', 75.00,'Largura: 120 cm Altura: 95 cm',null,1,1);
+insert into tb_produto values (DEFAULT,'Esse item é adequado para você que tem vários objetos de decoração e quer colocá-los em um lugar com mais visibilidade',10, 'https://i.imgur.com/nBbd5Oo.png','cachorro de papelão porta objetos', 78.00,'Largura: 80 cm Altura: 35 cm',null,1,1);
 
 -- Decoração / madeira
 
@@ -38,7 +46,15 @@ insert into tb_produto values (DEFAULT,'Adega feita de pallet pintado, com porta
 
 -- utensilios/ madeira
 
--- utensilios/ pet
+-- utensilios/ pet  3,3
+insert into tb_produto values (DEFAULT,'Vaso decorado para ambientes internos fsbricado com garrafa pet.',10, 'https://i.imgur.com/N8qEr4u.jpg','Vaso Decorado',12.00,'Largura: 25 cm Altura: 29 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'prateleiras para usos diversos com estrutura baseada em material reciclavel.',10, 'https://i.imgur.com/ffVoVn4.jpg','Prateleira Sustentável', 57.00,'Largura: 75 cm Altura: 28 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Cortina decorativa para ambientes internos fabricada em plastico.',10, 'https://i.imgur.com/zgjEsSW.jpg','Cortina Decorativa', 96.00,'Largura: 75 cm Altura: 229 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Ninho para passarinhos ideal para atraí-los para o seu jardim.',10, 'https://i.imgur.com/tAd8coX.jpg','Ninho de passarinho', 38.00,'Largura: 22 cm Altura: 27 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Porta Objetos de parede indicado para ambientes internos para facilitar a organização do ambiente.',10, 'https://i.imgur.com/egbn0Xy.jpg','Porta Objetos de Parede', 17.00,'Largura: 18 cm Altura: 22 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Porta Objetos de mesa indicado para facilitar a organização do ambiente de estudos.',10, 'https://i.imgur.com/89TEshu.jpg','Porta Objetos de Mesa', 23.00,'Largura: 25 cm Altura: 29 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Puxa-sacos simples e de facil produção indicado para você que preza pela praticidade.',10, 'https://i.imgur.com/besCtZA.jpg','Puxa-Sacos', 17.00,'Largura: 25 cm Altura: 38 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Porta mantimentos de baixo custo e grande durabilidade fabricado em garrafa pet.',10, 'https://i.imgur.com/OnCeAL9.jpg','Porta mantimentos', 8.00,'Largura: 25 cm Altura: 29 cm',null,4,3);
 
 -- utensilios/ pallet
 
@@ -63,7 +79,16 @@ insert into tb_produto values (DEFAULT,'Painel para TV FEITO EM MADEIRA REFLORES
 insert into tb_produto values (DEFAULT,'estante de madeira para televisão. Os espaços vazados podem ser usados como compartimentos para outros acessórios e aparelhos eletrônicos que acompanham a tv.', 20, 'https://i.imgur.com/HGmJ1Ng.jpg','Estante de Madeira', 499.99,'grande',null,4,2);
 insert into tb_produto values (DEFAULT,'Ideal para sua sala de jantar, toda em madeira maciça os "rios" de resina passam por toda sua superfície preenchendo todas as rachaduras, ressaltando ainda mais a beleza da madeira que fica com aspecto vidrificado.', 20, 'https://i.imgur.com/YWGdR2T.jpg','Mesa de Madeira Reciclavel', 999.99,'grande',null,4,2);
 
--- moveis/ pet
+-- moveis/ pet 4,3
+insert into tb_produto values (DEFAULT,'Banco com assento e encostos fabricados em garrafa Pet que fica bem em ambientes externos e de lazer..',10, 'https://i.imgur.com/BrUoigo.jpg','Banco de Pets', 138.00,'Largura: 120 cm Altura: 55 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Lixeira fabricada 100% com tanpinhas de Garrafas Pet que pode ser usada inclusive para separar os diferentes tipos de lixo.',10, 'https://i.imgur.com/V8pTANb.jpg','Lixeira de Tampinhas', 47.00,'Largura: 45 cm Altura: 75 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Cadeira Fabricada com assento e encosto em tampinhas de pets muito confortável e ecologicamente correta.',10, 'https://i.imgur.com/PhqoO37.jpg','Cadeira de Tampinhas', 88.00,'Largura: 50 cm Altura: 75 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Sofá e Puff Com estruturas em garrafas pets economize ao mesmo tempo que contribui com o meio ambiente sem perder o conforto. ',10, 'https://i.imgur.com/3Cl73KE.jpg','Sofá e Puff', 135.00,'Largura: 140 cm Altura: 85 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Vasos para plantas confeccionados em pet pode ser colocado em diversos tipos de ambiente',10, 'https://i.imgur.com/V0VAukI.jpg','Vaso em Pet', 7.00,'Largura: 25 cm Altura: 29 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Puffs estruturado em garrafas pets, perfeito para incluir um item com matéria prima reciclada e ecologicamento correto em sua casa.',10, 'https://i.imgur.com/9OVpx95.jpg','Puffs Sustentáveis', 33.00,'Largura: 55 cm Altura: 55 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Essa casa fabricada com garrafas pet em sua estrutura fará toda diferença nas brincadeiras das crianças e já introduz nelas a ideia de sustentabilidade',10, 'https://i.imgur.com/ztK7pvk.jpg','Casinha Infantil', 115.00,'Largura: 125 cm Altura: 35 cm',null,4,3);
+insert into tb_produto values (DEFAULT,'Estante para sala de estar estruturada 100% em material reciclado excelente para trazer um ar de consumo sustentável para o seu lar.',10, 'https://i.imgur.com/JvNfNJp.png','Estante Reciclável', 255.00,'Largura: 120 cm Altura: 65 cm',null,4,3);
+
 
 -- moveis/ pallet
 
