@@ -1,5 +1,5 @@
 use projetointegrador;
-use tb_categoria;
+select *from tb_categoria;
 
 insert into tb_categoria values (DEFAULT,'Objeto de Decocação');
 insert into tb_categoria values (DEFAULT,'Artigo de Artes');
