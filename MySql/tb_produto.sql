@@ -45,20 +45,18 @@ insert into tb_produto values (DEFAULT,'Casa para passarinho decorada com flores
 insert into tb_produto values (DEFAULT,'Decoração de natal para enfeite em mesa', 20, 'https://i.imgur.com/vwO4Xq1.jpg','Decoração arvoré de natal', 19.99,'15cm x 9cm',null,2, 1);
 
 
--- artigos/ madeira
+-- artigos/ madeira 2,2
+insert into tb_produto values (DEFAULT,'Mimos para a sua casa ficar ainda mais linda com a boneca de madeira da Frida Kahlo',30, 'https://i.imgur.com/48YNbPr.jpg','Frida Boneca de Madeira', 63.00,'Altura: 12 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Decoração de passarinho feito em madeira com uma simplicidade',15, 'https://i.imgur.com/WMuS67f.jpg','Pássaro em madeira', 65.00,'Largura: 3.30 cm Altura: 13 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Plaquinha em cerâmica plástica com código spotify esculpido e, pulseira vem com fecho de regulagem',50, 'https://i.imgur.com/lwtZu4a.jpg','Pulseira Spotify', 30.00,'Largura: 1 cm Comprimento: 4 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Anel de madeira reciclada, com pequenos detalhes perfeitos e madeira tratada para não penetrar água.',10, 'https://i.imgur.com/CTLkWoe.jpg','Anel de madeira', 31.69,'Numeração 17',null,2,2);
+insert into tb_produto values (DEFAULT,'Abridor de garrafa fabricado em Madeira maciça personalizado com logo ou brasão',100, 'https://i.imgur.com/9lN9dvW.jpg','Abridor de garrafa em madeira', 19.50,'Largura: 3.50 cm Altura: 2 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'O Calendário de Mesa é produzido em madeira, contendo a caixa e números na cor preta, seu formato é no estilo dados, seu modelo é montável, é utilizado para decoração de ambientes como escritórios, quarto de estudos e salas.',50, 'https://i.imgur.com/klSwgnc.jpg','Calendário de Madeira', 88.00,'Largura: 6.4 cm Altura: 8.5 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Nuvem para decoração quarto de bebe e porta de maternidade, fabricado na cor da madeira pinus com fundo em MDF',20, 'https://i.imgur.com/uZJoMGn.jpg','Nuvem de madeira com plaquinha e nome do bebe', 73.90,'Comprimento: 30 cm Altura: 21 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Kit montanhas recortado em pinus, na qual irár acompanhado de 2 montanhas maiores, 3 montanhas méidas e 1 montanha pequena',40, 'https://i.imgur.com/rsXjkhm.jpg','Nuvem de madeira com plaquinha e nome do bebe', 37.80,'Largura: 10 cm Altura: 20 cm',null,2,2);
 
 -- artigos/ pet
-insert into tb_produto values(DEFAULT,'descrição',estoque 10,'foto','nome do produto','preço','tamanho','null', 2, 3);
-
-insert into tb_produto values(DEFAULT,'Casa de passarinhos feitos de carrafa pet decorada',10,'https://i.imgur.com/bSS3lZ6.jpg','Casa de Passarinhos','29.99','25mc x 20cm',null, 2, 3);
-insert into tb_produto values(DEFAULT,'Luminaria feita de garrafa pet, ideial para sala de jantar, sala de visitas e corredores',10,'https://i.imgur.com/KriBj6Z.jpg','Luminaria Rústica','39.99','50cm x 30mc',null, 2, 3);
-insert into tb_produto values(DEFAULT,'Suporte de organização, ideal para escritórios e bancadas de estudos',10,'https://i.imgur.com/UfgxQXM.jpg','Kit Organizador','69.99','30 cm x 15cm',null, 2, 3);
-insert into tb_produto values(DEFAULT,'Lustres feitos de garrafa pet ideial para sala de jantar e cozinha',10,'https://i.imgur.com/uQd7N20.jpg','Lustre Pet','119.99','60cm x 30cm',null, 2, 3);
-insert into tb_produto values(DEFAULT);
-insert into tb_produto values(DEFAULT);
-insert into tb_produto values(DEFAULT);
-insert into tb_produto values(DEFAULT);
-insert into tb_produto values(DEFAULT);
+insert into tb_produto values(DEFAULT,'descrição',estoque 10,'foto','nome do produto','preço','tamanho','null', 2, 4);
 
 -- artigos/ pallet
 insert into tb_produto values (DEFAULT,'Porta Papéis feito de pallet especialmente para colocar no banheiro',10,'https://i.imgur.com/C59kXJ5.jpg','Porta Papéis de pallet com suporte de corda','119.99','1m x 60 cm',null, 2, 4);
@@ -76,7 +74,16 @@ insert into tb_produto values (DEFAULT,'Lanterna decorativa móvel revestida em 
 insert into tb_produto values (DEFAULT,'Arandela com viés com tiras em papelão, ideal para iluminar espaços neutros', 20, 'https://i.imgur.com/Th29gI5.jpg','Arandela com viés', 240.99,'60cm x 50cm',null,3, 1);
 insert into tb_produto values (DEFAULT,'Nichos para organização em formato de coração moldado todo em papelão', 20, 'https://i.imgur.com/2rUuTVp.jpg','Nichos em papelão', 200.00,'Grande',null,3, 1);
 
--- utensilios/ madeira
+-- utensilios/ madeira 3,2
+insert into tb_produto values (DEFAULT,'Suporte de madeira para usar de apoio para o papel higiênico no banheiro',10, 'https://i.imgur.com/XLYa7Ih.jpg','Suporte de Madeira Para Banheiro', 55.00,'Largura: 17 cm Altura: 40 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Porta tempero feito de madeira na qual é possível colocar 12 potes de vidro de tamanho médio e, com separação em prateleiras removíveis',25, 'https://i.imgur.com/dln5q2D.jpg','porta tempero de madeira', 139.80,'Largura: 33 cm Altura: 44 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Paneleiro rústico feito em ferro e madeira tratada, possuindo 6 gancho removíveis. Ideal para cozinha ou áre externa',50, 'https://i.imgur.com/93CKmGp.jpg','Paneleiro Rústico Em Ferro E Madeira', 139.09,'Largura: 50 cm Altura: 37 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Suporte feito de madeira de pinus para suporte de planta, possuindo dois nível para apoio das plantas',50, 'https://i.imgur.com/rgtBM0G.jpg','Suporte para plantas', 265.00,'Largura: 45 cm Altura: 55 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Estante de madeira de pinus e aço, cor e textura da madeira pode sofrer variações.',50, 'https://i.imgur.com/3n6aGUl.jpg','Estante de madeira de pinus', 225.00,'Largura: 30 cm Altura: 80 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'A madeira é o suprassumo do decor, e combina com qualquer outro material e tonalidade.
+Vale a pena investir em uma peça dessa, pois com certeza vai encher sua casa de estilo e você terá ela por muitos e muitos anos.',70, 'https://i.imgur.com/SAkSBXC.jpg','Nicho Rustico de Madeira', 71.00,'Largura: 18 cm Altura: 12 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Caneca em madeira de reflorestamento, para líquidos frios (cerveja, vinho,suco,água , etc.) Estilo rústico,impermeabilizada com resina e com capacidade para 420.ml.',100, 'https://i.imgur.com/eopMPBy.jpg','Caneca em madeira', 74.20,'Altura: 11 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Porta guardanapo de madeira com suporte de pino de madeira junsto com uma peça de metal para poder segurar o papel.',60, 'https://i.imgur.com/rYgEW0A.jpg','Porta Guardanapo Madeira de Mesa', 49.90,'Largura: 19 cm Altura: 19 cm',null,3,2);
 
 -- utensilios/ pet  3,3
 insert into tb_produto values (DEFAULT,'Vaso decorado para ambientes internos fsbricado com garrafa pet.',10, 'https://i.imgur.com/N8qEr4u.jpg','Vaso Decorado',12.00,'Largura: 25 cm Altura: 29 cm',null,4,3);
