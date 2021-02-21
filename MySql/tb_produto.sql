@@ -48,7 +48,17 @@ insert into tb_produto values (DEFAULT,'Decoração de natal para enfeite em mes
 -- artigos/ madeira
 
 -- artigos/ pet
-insert into tb_produto values(DEFAULT,'descrição',estoque 10,'foto','nome do produto','preço','tamanho','null', 2, 4);
+insert into tb_produto values(DEFAULT,'descrição',estoque 10,'foto','nome do produto','preço','tamanho','null', 2, 3);
+
+insert into tb_produto values(DEFAULT,'Casa de passarinhos feitos de carrafa pet decorada',10,'https://i.imgur.com/bSS3lZ6.jpg','Casa de Passarinhos','29.99','25mc x 20cm',null, 2, 3);
+insert into tb_produto values(DEFAULT,'Luminaria feita de garrafa pet, ideial para sala de jantar, sala de visitas e corredores',10,'https://i.imgur.com/KriBj6Z.jpg','Luminaria Rústica','39.99','50cm x 30mc',null, 2, 3);
+insert into tb_produto values(DEFAULT,'Suporte de organização, ideal para escritórios e bancadas de estudos',10,'https://i.imgur.com/UfgxQXM.jpg','Kit Organizador','69.99','30 cm x 15cm',null, 2, 3);
+insert into tb_produto values(DEFAULT,'Lustres feitos de garrafa pet ideial para sala de jantar e cozinha',10,'https://i.imgur.com/uQd7N20.jpg','Lustre Pet','119.99','60cm x 30cm',null, 2, 3);
+insert into tb_produto values(DEFAULT);
+insert into tb_produto values(DEFAULT);
+insert into tb_produto values(DEFAULT);
+insert into tb_produto values(DEFAULT);
+insert into tb_produto values(DEFAULT);
 
 -- artigos/ pallet
 insert into tb_produto values (DEFAULT,'Porta Papéis feito de pallet especialmente para colocar no banheiro',10,'https://i.imgur.com/C59kXJ5.jpg','Porta Papéis de pallet com suporte de corda','119.99','1m x 60 cm',null, 2, 4);
