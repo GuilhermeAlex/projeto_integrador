@@ -60,14 +60,14 @@ insert into tb_produto values(DEFAULT,'Vaso de Flores de garrafa pet fino e sofi
 insert into tb_produto values(DEFAULT,'Vaso de Mini plantas, ideal para colocar em mesas e paineis de jardim horizontal',10,'https://i.imgur.com/uqgIyKS.jpg','Vaso Mini plantas','19.99','pequeno',null, 2 ,3);
 
 -- artigos/ pallet
-insert into tb_produto values (DEFAULT,'Porta Papéis feito de pallet especialmente para colocar no banheiro',10,'https://i.imgur.com/C59kXJ5.jpg','Porta Papéis de pallet com suporte de corda','119.99','1m x 60 cm',null, 2, 4);
-insert into tb_produto values(DEFAULT,'Suporte para colocar enfeites e plantas em lugares com pouco espaço',10,'https://i.imgur.com/BqMwpZN.jpg','Suporte para Enfeites de pallet','1m x 50 cm','null', 2, 4);
-insert into tb_produto values(DEFAULT,'Porta Toalhas de rosto para banheiro feito de pallet e cores rústicas',10,'https://i.imgur.com/1VDoLLu.jpg','Suporte de Toalhas e Itens de Higienie','130.00','45cm x 90 cm',null, 2, 4);
-insert into tb_produto values(DEFAULT,'Painel para Jardim Vertical feito de pallet e cor rústica levando mais tons de natureza','10','https://i.imgur.com/2fjbLbc.jpg','Painel Jardim Vertical','59.90','2m x 1m',null, 2, 4);
-insert into tb_produto values(DEFAULT,'Porta Chaves produzido com pallet e cor de madeira maciça',10,'https://i.imgur.com/Wm9FuuO.jpg','Porta Chaves Nature','49.99','80cm x 30cm',null, 2, 4);
-insert into tb_produto values(DEFAULT,'Adega feita com pallet especialmente para sala de jantar e salas de visitas',10,'https://i.imgur.com/jNJ9WO7.jpg','Adega Palleteira','800.00','2m x 1m',null, 2, 4);
-insert into tb_produto values(DEFAULT,'Tremzinho para jardins feito de pallet branco para dar destaque no seu jardim',10,'https://i.imgur.com/Pg2rPva.jpg','Tremzinho de Jardim','300.00','30 cm x 2m',null, 2 , 4);
-insert into tb_produto values(DEFAULT,'Painel para enfeites e plantas com suporte de cordas rústicas',10,'https://i.imgur.com/dIsR8ih.jpg','Painel para Enfeites e Plantas','250.00','2m x 1m', 2, 4);
+insert into tb_produto values (DEFAULT,'Porta Papéis feito de pallet especialmente para colocar no banheiro',10,'https://i.imgur.com/C59kXJ5.jpg','Porta Papéis de pallet com suporte de corda',119.99,'1m x 60 cm',null, 2, 4);
+insert into tb_produto values(DEFAULT,'Suporte para colocar enfeites e plantas em lugares com pouco espaço',10,'https://i.imgur.com/BqMwpZN.jpg','Suporte para Enfeites de pallet',149.99,'1m x 50 cm','null', 2, 4);
+insert into tb_produto values(DEFAULT,'Porta Toalhas de rosto para banheiro feito de pallet e cores rústicas',10,'https://i.imgur.com/1VDoLLu.jpg','Suporte de Toalhas e Itens de Higienie',130.00,'45cm x 90 cm',null, 2, 4);
+insert into tb_produto values(DEFAULT,'Painel para Jardim Vertical feito de pallet e cor rústica levando mais tons de natureza','10','https://i.imgur.com/2fjbLbc.jpg','Painel Jardim Vertical',59.90,'2m x 1m',null, 2, 4);
+insert into tb_produto values(DEFAULT,'Porta Chaves produzido com pallet e cor de madeira maciça',10,'https://i.imgur.com/Wm9FuuO.jpg','Porta Chaves Nature',49.99,'80cm x 30cm',null, 2, 4);
+insert into tb_produto values(DEFAULT,'Adega feita com pallet especialmente para sala de jantar e salas de visitas',10,'https://i.imgur.com/jNJ9WO7.jpg','Adega Palleteira',800.0','2m x 1m',null, 2, 4);
+insert into tb_produto values(DEFAULT,'Tremzinho para jardins feito de pallet branco para dar destaque no seu jardim',10,'https://i.imgur.com/Pg2rPva.jpg','Tremzinho de Jardim',300.00,'30 cm x 2m',null, 2 , 4);
+insert into tb_produto values(DEFAULT,'Painel para enfeites e plantas com suporte de cordas rústicas',10,'https://i.imgur.com/dIsR8ih.jpg','Painel para Enfeites e Plantas',250.00,'2m x 1m', 2, 4);
 
 -- utensilios/ Papelão
 insert into tb_produto values (DEFAULT,'Lustre decorativo suspenso feito em papelão, com suporte e fiação para luz', 20, 'https://i.imgur.com/ROhgB9W.jpg','Lustre decorativo', 179.99,'60cm x 30cm',null,3, 1);
