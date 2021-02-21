@@ -35,6 +35,15 @@ insert into tb_produto values (DEFAULT,'Adega feita de pallet pintado, com porta
 
 
 -- artigos/ Papelão
+insert into tb_produto values (DEFAULT,'Moldura para quadros em papelão, detalhada em cores vivas', 20, 'https://i.imgur.com/zfPZ4qF.jpg','Moldura para quadros em papelão', 39.99,'20cm x 10cm',null,2, 1);
+insert into tb_produto values (DEFAULT,'Casinnha para Gatos em forma de cacto, toda moldada em papelão, em formato ilustrativo de um cacto', 20, 'https://i.imgur.com/CsZFhMA.jpg','Casa para gato em forma de Cacto', 149.99,'Grande',null,2, 1);
+insert into tb_produto values (DEFAULT,'Porta canetas decorado em papelão, com espaços iguais para organização de objetos de estudo', 20, 'https://i.imgur.com/5dvvpMk.jpg','Porta canetas', 79.99,'40cm x 30cm',null,2, 1);
+insert into tb_produto values (DEFAULT,'Vaso para planta, decorado com formas de arte em papelão', 20, 'https://i.imgur.com/cODCwT8.jpg','Vaso para plantas', 99.99,'60cm x 60cm',null,2, 1);
+insert into tb_produto values (DEFAULT,'Casinha para PET toda construída em papelão, decorada', 20, 'https://i.imgur.com/2CfUPIB.jpg','Casinha para PET', 129.99,'Grande',null,2, 1);
+insert into tb_produto values (DEFAULT,'Quadro em caixa de pizza, ilustrado em artes desenhada pelo pintor Alexander Pilattes', 20, 'https://i.imgur.com/AE8AnZL.jpg','Quadro em caixa de pizza', 39.99,'médio',null,2, 1);
+insert into tb_produto values (DEFAULT,'Casa para passarinho decorada com flores pintada em azul, roxo e amarelo', 20, 'https://i.imgur.com/EnsQQPX.jpg','Casinha para passarinho', 139.99,'grande',null,2, 1);
+insert into tb_produto values (DEFAULT,'Decoração de natal para enfeite em mesa', 20, 'https://i.imgur.com/vwO4Xq1.jpg','Decoração arvoré de natal', 19.99,'15cm x 9cm',null,2, 1);
+
 
 -- artigos/ madeira
 
@@ -43,6 +52,10 @@ insert into tb_produto values (DEFAULT,'Adega feita de pallet pintado, com porta
 -- artigos/ pallet
 
 -- utensilios/ Papelão
+insert into tb_produto values (DEFAULT,'Lustre decorativo suspenso feito em papelão, com suporte e fiação para luz', 20, 'https://i.imgur.com/ROhgB9W.jpg','Lustre decorativo', 179.99,'60cm x 30cm',null,3, 1);
+insert into tb_produto values (DEFAULT,'Lanterna decorativa móvel revestida em paleção e com fiaçõa incuída', 20, 'https://i.imgur.com/wOaWqfH.jpg','Lanterna decorativa', 69.99,'30cm x 40cm',null,3, 1);
+insert into tb_produto values (DEFAULT,'Arandela com viés com tiras em papelão, ideal para iluminar espaços neutros', 20, 'https://i.imgur.com/Th29gI5.jpg','Arandela com viés', 240.99,'60cm x 50cm',null,3, 1);
+insert into tb_produto values (DEFAULT,'Nichos para organização em formato de coração moldado todo em papelão', 20, 'https://i.imgur.com/2rUuTVp.jpg','Nichos em papelão', 200.00,'Grande',null,3, 1);
 
 -- utensilios/ madeira
 
