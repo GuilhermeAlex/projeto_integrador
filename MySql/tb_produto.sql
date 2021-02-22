@@ -48,7 +48,6 @@ insert into tb_produto values (DEFAULT,'Decoração de natal para enfeite em mes
 -- artigos/ madeira
 
 -- artigos/ pet
-insert into tb_produto values(DEFAULT,'descrição',estoque 10,'foto','nome do produto','preço','tamanho','null', 2, 3);
 
 insert into tb_produto values(DEFAULT,'Casa de passarinhos feitos de carrafa pet decorada',10,'https://i.imgur.com/bSS3lZ6.jpg','Casa de Passarinhos','29.99','25mc x 20cm',null, 2, 3);
 insert into tb_produto values(DEFAULT,'Luminaria feita de garrafa pet, ideial para sala de jantar, sala de visitas e corredores',10,'https://i.imgur.com/KriBj6Z.jpg','Luminaria Rústica','39.99','50cm x 30mc',null, 2, 3);
@@ -65,7 +64,7 @@ insert into tb_produto values(DEFAULT,'Suporte para colocar enfeites e plantas e
 insert into tb_produto values(DEFAULT,'Porta Toalhas de rosto para banheiro feito de pallet e cores rústicas',10,'https://i.imgur.com/1VDoLLu.jpg','Suporte de Toalhas e Itens de Higienie',130.00,'45cm x 90 cm',null, 2, 4);
 insert into tb_produto values(DEFAULT,'Painel para Jardim Vertical feito de pallet e cor rústica levando mais tons de natureza','10','https://i.imgur.com/2fjbLbc.jpg','Painel Jardim Vertical',59.90,'2m x 1m',null, 2, 4);
 insert into tb_produto values(DEFAULT,'Porta Chaves produzido com pallet e cor de madeira maciça',10,'https://i.imgur.com/Wm9FuuO.jpg','Porta Chaves Nature',49.99,'80cm x 30cm',null, 2, 4);
-insert into tb_produto values(DEFAULT,'Adega feita com pallet especialmente para sala de jantar e salas de visitas',10,'https://i.imgur.com/jNJ9WO7.jpg','Adega Palleteira',800.0','2m x 1m',null, 2, 4);
+insert into tb_produto values(DEFAULT,'Adega feita com pallet especialmente para sala de jantar e salas de visitas',10,'https://i.imgur.com/jNJ9WO7.jpg','Adega Palleteira',800.0,'2m x 1m',null, 2, 4);
 insert into tb_produto values(DEFAULT,'Tremzinho para jardins feito de pallet branco para dar destaque no seu jardim',10,'https://i.imgur.com/Pg2rPva.jpg','Tremzinho de Jardim',300.00,'30 cm x 2m',null, 2 , 4);
 insert into tb_produto values(DEFAULT,'Painel para enfeites e plantas com suporte de cordas rústicas',10,'https://i.imgur.com/dIsR8ih.jpg','Painel para Enfeites e Plantas',250.00,'2m x 1m', 2, 4);
 
@@ -74,6 +73,10 @@ insert into tb_produto values (DEFAULT,'Lustre decorativo suspenso feito em pape
 insert into tb_produto values (DEFAULT,'Lanterna decorativa móvel revestida em paleção e com fiaçõa incuída', 20, 'https://i.imgur.com/wOaWqfH.jpg','Lanterna decorativa', 69.99,'30cm x 40cm',null,3, 1);
 insert into tb_produto values (DEFAULT,'Arandela com viés com tiras em papelão, ideal para iluminar espaços neutros', 20, 'https://i.imgur.com/Th29gI5.jpg','Arandela com viés', 240.99,'60cm x 50cm',null,3, 1);
 insert into tb_produto values (DEFAULT,'Nichos para organização em formato de coração moldado todo em papelão', 20, 'https://i.imgur.com/2rUuTVp.jpg','Nichos em papelão', 200.00,'Grande',null,3, 1);
+insert into tb_produto values (DEFAULT,'Lustre suspenso feito com papelão, com tubulares para lâmpadas', 20, 'https://i.imgur.com/ffvychQ.jpg','Lustre suspenso tubular', 399.99,'Grande',null,3, 1);
+insert into tb_produto values (DEFAULT,'Maletas porta coisas, todo feito em papelão, com alça ', 20, 'https://i.imgur.com/kKY6aCO.jpg','Maletas coloridas em papelão', 39.99,'Médio',null,3, 1);
+insert into tb_produto values (DEFAULT,'Cofrinhos de papelão em cores, ótimo para guardar economias', 20, 'https://i.imgur.com/Nsc4Qnq.jpg','Cofrinho de papelão', 9.99,'Pequeno',null,3, 1);
+
 
 -- utensilios/ madeira
 
@@ -122,22 +125,12 @@ insert into tb_produto values (DEFAULT,'Estante para sala de estar estruturada 1
 
 
 -- moveis/ pallet
-
-
-
-
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita com Garrafa Pets O modelo é customizável, ou seja, ele pode ser adaptado para qualquer tipo de sala.', 4, 'https://i.imgur.com/mwBl1K3.jpg','Sofá feito de Garrafa Pets', 299.99,'1,80 x 0,90 cm',null, 4,3);
-insert into tb_produto values (DEFAULT,'Reunir a família ou amigos é sempre bom, um momento de confraternização e alegria, e que tal reservar um espaço especial para a atividade.', 10, 'https://i.imgur.com/aPu6CnF.jpg','Mesa com acento de papelão', 169.99,'1,00 x 0,60 cn',null,4, 1);
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita com rolo de Papel. Lustre Rolo de papel- unidade Nosso lustre de rolo é produzido de forma artesanal, com material todo sustentável, o que nos permite agregar qualidade à durabilidade, sem perder a beleza da peça.  Os nossos lustres podem ser utilizados em ambientes internos e externos, porém, no caso de serem instalados em ambiente externos, há necessidade de que sejam instalados em lugares cobertos, protegidos de chuva ou líquidos de qualquer espécie.', 20, 'https://i.imgur.com/Lm5EEey.jpg','Lustre Rolo de papel', 299.99,'médio',null,1, 1);
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita de Pallet. Cama de casal Padrão feita de Pallets com tratamento anti cupim! Super resistente !! Madeira sustentável!', 10, 'https://i.imgur.com/xFaXAb0.jpg','Cama feita de Pallets', 1200.00,'1,60 X 2,40 cm',null,4, 4);
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com pallets.  Assento feito de pallets madeira reflorestada (Pínus), produzido com madeira seca e aparelhada. o banco de pallet duplo acomoda duas pessoas e no centro é possível observar a presença de uma mesa de madeira embutida na sua estrutura. Esse móvel além de servir como assento pode ser utilizado como apoio de objetos decorativos.', 30, 'https://i.imgur.com/uAo5AK3.jpg','Banco feito de Pallets', 189.99,'0,80 x 0,60 cm',null,2, 4);
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com ripas de pallet reaproveitados para colocação de vasinhos de planta.', 30, 'https://i.imgur.com/YVdJqvx.jpg','Painel Pallet decorativo', 139.99,'1,20 x 1,00 cm',null,1, 4);
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feito com garrafas Pets.  A casinha proporciona uma sensação de conforto e segurança, acalmando o sistema nervoso, reduzindo o estresse e relaxando os pets.', 10, 'https://i.imgur.com/zwbjoDh.jpg','Casinha de Cachorro feito de Garrafa pets', 129.99,'1,00 x 0,80 cm',null,2 ,3);
-insert into tb_produto values (DEFAULT,'Casinha Tratador para pássaros feito de madeira de reflorestamento Legal, resistente ao sol e a chuva. Decore seu jardim, sacada, varanda ou outros ambiente, e receba lindas visitas todos os dias!', 10, 'https://i.imgur.com/ME48BqO.jpg','Casinha Para Passarinho', 149.99,'0,32 x 0,33 cm',null,2, 2);
+insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita de Pallet. Cama de casal Padrão feita de Pallets com tratamento anti cupim! Super resistente !! Madeira sustentável!', 899.99, 'https://i.imgur.com/cizNLZN.jpg','Cama feita de Pallets', 1200.00,'1,60 X 2,40 cm',null,4, 4);
+insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com pallets.  Assento feito de pallets madeira reflorestada (Pínus), produzido com madeira seca e aparelhada. o banco de pallet duplo acomoda duas pessoas e no centro é possível observar a presença de uma mesa de madeira embutida na sua estrutura. Esse móvel além de servir como assento pode ser utilizado como apoio de objetos decorativos.', 999.99, 'https://i.imgur.com/uAo5AK3.jpg','Banco feito de Pallets', 189.99,'0,80 x 0,60 cm',null,2, 4);
+insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com ripas de pallet reaproveitados para colocação de vasinhos de planta.', 399.99, 'https://i.imgur.com/YVdJqvx.jpg','Painel Pallet decorativo', 139.99,'1,20 x 1,00 cm',null,1, 4);
 insert into tb_produto values (DEFAULT,'A cama feita de palete também é perfeita para ambientes decorados com o estilo boho. Isso porque, a simplicidade da madeira completa a decoração casual do boho, que integra características de diferentes épocas e culturas, como as estampas e o ar místico do estilo hippie e as cores neutras do ambiente vintage.', 20, 'https://i.imgur.com/5Wp6I47.jpg','Cama no estilo boho', 1999.99,'1,60 X 2,40 cm',null,4,4);
-insert into tb_produto values (DEFAULT,' Modelo de sofá em (L) acompanha mesa rustica de centro/ canto. A mesa possui um grande é espaçoso compartimento secreto para armazenar diversos objetos pessoais.
-Pode ser decorado com qualquer tipo de almofadas, ou colorir os pallets aplicando tinta diretamente na madeira.', 20, 'https://i.imgur.com/mlwHauC.jpg','Sofá rustico 100% pallet de madeira maciça.', 999.99,'1.00 x 0.60 cm',null,4,4);
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com Pallet reciclavel. Mesa rústica feita toda de paletes para quem gosta de criatividade', 20, 'https://i.imgur.com/V8Nmsiq.jpg','Mesa de Pallet', 2999.00,'2,30m x 99cm',null,4,4);
+insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com Pallet reciclavel. Mesa rústica feita toda de paletes para quem gosta de criatividade', 20, 'https://i.imgur.com/vw1U33Y.jpg', 1299.00,'Grande',null,4,4);
 insert into tb_produto values (DEFAULT,'Escrivaninha (mesa de computador, mesa de escritório) de pallet', 20, 'https://i.imgur.com/8im0rv1.jpg','Escrivaninha de Pallet', 699.99,'0,70 x 1,50 cm',null,2,4);
-insert into tb_produto values (DEFAULT,'Móvel rústico produzido na medida do seu colchão. Ideal para você que procura conforto, praticidade e resistencia, a cama é feita em 100% madeira maciça de Eucalipto.', 20, 'https://i.imgur.com/VmYGuSQ.jpg','Cama de solteiro em pallet', 499.99,'grande',null,4,4);
-insert into tb_produto values (DEFAULT,'Esta bolsa é 100% artesanal, toda confeccionada à mão, Feita com garrafas pet e crochê com linha de polipropileno, fechamento em zíper com um bolsinho por dentro,as alças também são feitas de pet . Uma bolsa ótima para o dia-a-dia e também para levar para praia. Feito na cor desejada.', 20, 'https://i.imgur.com/7nIkiOz.jpg','Bolsa de garrafa pet e crochê', 89.99,'250 g',null,3,3);
+insert into tb_produto values (DEFAULT,'Rack feito com pallets, ideal para organizar seu ambiente', 20, 'https://i.imgur.com/bEHTj8L.jpg','Rack em pallet', 399.99,'0,70 x 1,50 cm',null,2,4);
+
+
