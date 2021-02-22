@@ -16,19 +16,19 @@ export class ClienteService {
   }
 
   getByIdCliente(id: number):Observable<Cliente>{
-    return this.http.get<Cliente>(`http://localhost:8080/cliente/id/${id}`,this.token)
+    return this.http.get<Cliente>(`https://www.sustenart.com.br/cliente/id/${id}`,this.token)
   }
 
   getByEmailCliente(email: string):Observable<Cliente>{
-    return this.http.get<Cliente>(`http://localhost:8080/cliente/email/${email}`,this.token)
+    return this.http.get<Cliente>(`https://www.sustenart.com.br/cliente/email/${email}`,this.token)
   }
 
   putCliente(cliente: Cliente): Observable<Cliente>{
-    return this.http.put<Cliente>('http://localhost:8080/cliente', this.token)
+    return this.http.put<Cliente>('https://www.sustenart.com.br/cliente', this.token)
   }
 
   deleteIdCliente (id: number){
-  return this.http.delete(`http://localhost:8080/cliente/${id}`,this.token)
+  return this.http.delete(`https://www.sustenart.com.br/cliente/${id}`,this.token)
   }
 }
 

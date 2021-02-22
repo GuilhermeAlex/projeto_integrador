@@ -17,15 +17,15 @@ export class CategoriaService {
   }
 
   getAllCategoria(): Observable<Categoria[]>{
-    return this.http.get<Categoria[]>('http://localhost:8080/categoria',this.token)
+    return this.http.get<Categoria[]>('https://www.sustenart.com.br/categoria',this.token)
   }
 
   getByIdCategoria(id: number):Observable<Categoria>{
-    return this.http.get<Categoria>(`http://localhost:8080/categoria/id/${id}`,this.token)
+    return this.http.get<Categoria>(`https://www.sustenart.com.br/categoria/id/${id}`,this.token)
   }
 
   getByTipoCategoria(tipo: string):Observable<Categoria>{
-    return this.http.get<Categoria>(`http://localhost:8080/categoria/tipo/${tipo}`,this.token)
+    return this.http.get<Categoria>(`https://www.sustenart.com.br/categoria/tipo/${tipo}`,this.token)
   }
 
 }

@@ -13,14 +13,14 @@ export class AuthService {
 
   entrar(userLogin: UserLogin): Observable<UserLogin> {
     return this.http.post<UserLogin>(
-      'http://localhost:8080/cliente/logar',
+      'https://www.sustenart.com.br/cliente/logar',
       userLogin
     );
   }
 
   cadastrar(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(
-      'http://localhost:8080/cliente/cadastrar',
+      'https://www.sustenart.com.br/cliente/cadastrar',
       cliente
     );
   }
@@ -36,7 +36,7 @@ export class AuthService {
   }
 
   getByIdCliente(id: number): Observable<Cliente> {
-    return this.http.get<Cliente>(`http://localhost:8080/cliente/id/${id}`)
+    return this.http.get<Cliente>(`https://www.sustenart.com.br/cliente/id/${id}`)
   }
 
 }

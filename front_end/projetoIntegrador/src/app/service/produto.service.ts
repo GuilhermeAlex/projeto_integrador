@@ -17,19 +17,19 @@ export class ProdutoService {
   }
 
   getAllProdutos(): Observable<Produto[]>{
-    return this.http.get<Produto[]>('http://localhost:8080/produto',this.token)
+    return this.http.get<Produto[]>('https://www.sustenart.com.br/produto',this.token)
   }
 
   getByIdProduto(id: number):Observable<Produto>{
-    return this.http.get<Produto>(`http://localhost:8080/produto/id/${id}`,this.token)
+    return this.http.get<Produto>(`https://www.sustenart.com.br/produto/id/${id}`,this.token)
   }
 
   getByNomeProduto(nome: string):Observable<Produto[]>{
-    return this.http.get<Produto[]>(`http://localhost:8080/produto/nome/${nome}`,this.token)
+    return this.http.get<Produto[]>(`https://www.sustenart.com.br/produto/nome/${nome}`,this.token)
   }
 
   getByPrecoProduto(preco: number):Observable<Produto>{
-    return this.http.get<Produto>(`http://localhost:8080/produto/preco/${preco}`,this.token)
+    return this.http.get<Produto>(`https://www.sustenart.com.br/produto/preco/${preco}`,this.token)
   }
 
 }

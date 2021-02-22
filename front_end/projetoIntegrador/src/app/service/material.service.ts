@@ -17,14 +17,14 @@ export class MaterialService {
   }
 
   getAllMaterial(): Observable<Material[]>{
-    return this.http.get<Material[]>('http://localhost:8080/material',this.token)
+    return this.http.get<Material[]>('https://www.sustenart.com.br/material',this.token)
   }
 
   getByIdMaterial(id: number):Observable<Material>{
-    return this.http.get<Material>(`http://localhost:8080/material/id/${id}`,this.token)
+    return this.http.get<Material>(`https://www.sustenart.com.br/material/id/${id}`,this.token)
   }
 
   getByMaterial(material: string):Observable<Material>{
-    return this.http.get<Material>(`http://localhost:8080/material/material/${material}`,this.token)
+    return this.http.get<Material>(`https://www.sustenart.com.br/material/material/${material}`,this.token)
   }
 }
