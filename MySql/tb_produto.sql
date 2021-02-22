@@ -54,6 +54,15 @@ insert into tb_produto values (DEFAULT,'Decoração de natal para enfeite em mes
 
 
 -- artigos/ madeira
+insert into tb_produto values (DEFAULT,'Boneca de madeira da Frida Kahlo para podeixar decorar sua casa ou até mesmo dar de presente.',20, 'https://i.imgur.com/48YNbPr.jpg','Frida Boneca de Madeira', 63.10,'Altura: 12 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Pássaro feito de madeira com bico diferenciado com alta qualidade e capricho.',30, 'https://i.imgur.com/WMuS67f.jpg','Pássaro em madeira', 65.00,'Largura: 3.30 cm Altura: 13.50 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Plaquinha em cerâmica plástica com código spotify esculpido com o intuito de ser moderninha e artesanal.',70, 'https://i.imgur.com/lwtZu4a.jpg','Pulseira Spotify personalizada', 35.00,'Largura: 1 cm Comprimento: 4 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Anel de madeira reciclada, com pequenos detalhes perfeitos e madeira tratada para não penetrar água.',50, 'https://i.imgur.com/CTLkWoe.jpg','Anel de madeira', 31.69,'Numeração 17',null,2,2);
+insert into tb_produto values (DEFAULT,'Abridor de garrafa fabricado em Madeira maciça personalizado com logo ou brasão.',100, 'https://i.imgur.com/9lN9dvW.jpg','Abridor de garrafa em madeira', 25.00,'Largura: 3.50 cm Altura: 2 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'O Calendário Brinquedos é produzido em madeira, contendo a caixa e números na cor preta, seu formato é no estilo dados, seu modelo é montável, é utilizado para decoração de ambientes como escritórios, quarto de estudos, salas.',25, 'https://i.imgur.com/klSwgnc.jpg','Calendário de Madeira', 88.00,'Largura: 6.40 cm Altura: 8.50 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Nuvem para decoração quarto de bebe e porta de maternidade, fabricado e entregue na cor da madeira pinus com fundo em MDF pintado.',15, 'https://i.imgur.com/uZJoMGn.jpg','Nuvem de madeira com plaquinha', 73.90,'Comprimento: 30 cm Altura: 21 cm',null,2,2);
+insert into tb_produto values (DEFAULT,'Kit montanhas recortado em pinus, possuindo 2 montanhs grandes, 3 médias e 1 pequena',37, 'https://i.imgur.com/rsXjkhm.jpg','Kit montanhas de madeira', 37.80,'Largura: 10 cm Altura: 20 cm',null,2,2);
+
 
 -- artigos/ pet
 
@@ -87,6 +96,15 @@ insert into tb_produto values (DEFAULT,'Cofrinhos de papelão em cores, ótimo p
 
 
 -- utensilios/ madeira
+insert into tb_produto values (DEFAULT,'Paneleiro Rústico Em Ferro E Madeira Tratada possuindo 6 ganchos removíveis acomoda 5 pratos, seis copos e talhares.',30, 'https://i.imgur.com/93CKmGp.jpg','Paneleiro Rústico Em Ferro E Madeira', 139.09,'Largura: 30 cm Altura: 37 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Porta tempero de madeira com capacidade de 12 potes de vidro, e as prateleira são removíveis para maior conforto.',13, 'https://i.imgur.com/dln5q2D.jpg','Porta tempero de madeira',139.90,'Comprimento: 33 cm Altura: 44 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Plaquinha em cerâmica plástica com código spotify esculpido com o intuito de ser moderninha e artesanal.',70, 'https://i.imgur.com/lwtZu4a.jpg','Pulseira Spotify personalizada', 35.00,'Largura: 1 cm Comprimento: 4 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Suporte de madeira de pallet envernizado em mogno com capacidade de 3 rolos.',90, 'https://i.imgur.com/XLYa7Ih.jpg','Suporte de Madeira Para Banheiro', 55.00,'Largura: 17 cm Altura: 40 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Suporte feito de madeira de pinus, cores e textura da madeira pode sofrer variações e com 2 degraus para suporte de plantas',40, 'https://i.imgur.com/rgtBM0G.jpg','Suporte para plantas', 265.00,'Largura: 45 cm Altura: 55 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Estante de madeira de pinus e aço, cor e textura da madeira pode sofrer variações',25, 'https://i.imgur.com/3n6aGUl.jpg','Estante de madeira de pinus', 225.00,'Largura: 30 cm Altura: 80 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Nicho Rústico de Madeira, a madeira é o suprassumo do decor, e combina com qualquer outro material e tonalidade.',15, 'https://i.imgur.com/SAkSBXC.jpg','Nicho Rustico de Madeira', 71.00,'Largura: 12 cm Altura: 18 cm',null,3,2);
+insert into tb_produto values (DEFAULT,'Caneca em madeira de reflorestamento, para líquidos frios (cerveja, vinho,suco,água, etc.) estilo rústico,impermeabilizada com resina e com capacidade para 420.ml.',100, 'https://i.imgur.com/eopMPBy.jpg','Caneca em madeira', 74.20,'Altura: 11 cm',null,3,2);
+
 
 
 -- utensilios/ pet  4,3
