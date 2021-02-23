@@ -77,13 +77,13 @@ insert into tb_produto values(DEFAULT,'Vaso de Mini plantas, ideal para colocar 
 
 -- artigos/ pallet
 insert into tb_produto values (DEFAULT,'Porta Papéis feito de pallet especialmente para colocar no banheiro',10,'https://i.imgur.com/C59kXJ5.jpg','Porta Papéis de pallet com suporte de corda',119.99,'1m x 60 cm',null, 2, 4);
-insert into tb_produto values(DEFAULT,'Suporte para colocar enfeites e plantas em lugares com pouco espaço',10,'https://i.imgur.com/BqMwpZN.jpg','Suporte para Enfeites de pallet',149.99,'1m x 50 cm','null', 2, 4);
+insert into tb_produto values(DEFAULT,'Suporte para colocar enfeites e plantas em lugares com pouco espaço',10,'https://i.imgur.com/BqMwpZN.jpg','Suporte para Enfeites de pallet',149.99,'1m x 50 cm',null, 2, 4);
 insert into tb_produto values(DEFAULT,'Porta Toalhas de rosto para banheiro feito de pallet e cores rústicas',10,'https://i.imgur.com/1VDoLLu.jpg','Suporte de Toalhas e Itens de Higienie',130.00,'45cm x 90 cm',null, 2, 4);
 insert into tb_produto values(DEFAULT,'Painel para Jardim Vertical feito de pallet e cor rústica levando mais tons de natureza','10','https://i.imgur.com/2fjbLbc.jpg','Painel Jardim Vertical',59.90,'2m x 1m',null, 2, 4);
 insert into tb_produto values(DEFAULT,'Porta Chaves produzido com pallet e cor de madeira maciça',10,'https://i.imgur.com/Wm9FuuO.jpg','Porta Chaves Nature',49.99,'80cm x 30cm',null, 2, 4);
 insert into tb_produto values(DEFAULT,'Adega feita com pallet especialmente para sala de jantar e salas de visitas',10,'https://i.imgur.com/jNJ9WO7.jpg','Adega Palleteira',800.0,'2m x 1m',null, 2, 4);
 insert into tb_produto values(DEFAULT,'Tremzinho para jardins feito de pallet branco para dar destaque no seu jardim',10,'https://i.imgur.com/Pg2rPva.jpg','Tremzinho de Jardim',300.00,'30 cm x 2m',null, 2 , 4);
-insert into tb_produto values(DEFAULT,'Painel para enfeites e plantas com suporte de cordas rústicas',10,'https://i.imgur.com/dIsR8ih.jpg','Painel para Enfeites e Plantas',250.00,'2m x 1m', 2, 4);
+insert into tb_produto values(DEFAULT,'Painel para enfeites e plantas com suporte de cordas rústicas',10,'https://i.imgur.com/dIsR8ih.jpg','Painel para Enfeites e Plantas',250.00,'2m x 1m',null, 2, 4);
 
 -- utensilios/ Papelão
 insert into tb_produto values (DEFAULT,'Lustre decorativo suspenso feito em papelão, com suporte e fiação para luz', 20, 'https://i.imgur.com/ROhgB9W.jpg','Lustre decorativo', 179.99,'60cm x 30cm',null,3, 1);
@@ -164,8 +164,9 @@ insert into tb_produto values (DEFAULT,'Peça feita artesanalmente feita de Pall
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com pallets.  Assento feito de pallets madeira reflorestada (Pínus), produzido com madeira seca e aparelhada. o banco de pallet duplo acomoda duas pessoas e no centro é possível observar a presença de uma mesa de madeira embutida na sua estrutura. Esse móvel além de servir como assento pode ser utilizado como apoio de objetos decorativos.', 999.99, 'https://i.imgur.com/uAo5AK3.jpg','Banco feito de Pallets', 189.99,'0,80 x 0,60 cm',null,2, 4);
 insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com ripas de pallet reaproveitados para colocação de vasinhos de planta.', 399.99, 'https://i.imgur.com/YVdJqvx.jpg','Painel Pallet decorativo', 139.99,'1,20 x 1,00 cm',null,1, 4);
 insert into tb_produto values (DEFAULT,'A cama feita de palete também é perfeita para ambientes decorados com o estilo boho. Isso porque, a simplicidade da madeira completa a decoração casual do boho, que integra características de diferentes épocas e culturas, como as estampas e o ar místico do estilo hippie e as cores neutras do ambiente vintage.', 20, 'https://i.imgur.com/5Wp6I47.jpg','Cama no estilo boho', 1999.99,'1,60 X 2,40 cm',null,4,4);
-insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com Pallet reciclavel. Mesa rústica feita toda de paletes para quem gosta de criatividade', 20, 'https://i.imgur.com/vw1U33Y.jpg', 1299.00,'Grande',null,4,4);
+insert into tb_produto values (DEFAULT,'Peça feita artesanalmente com Pallet reciclavel. Mesa rústica feita toda de paletes para quem gosta de criatividade', 20, 'https://i.imgur.com/vw1U33Y.jpg','Mesa Rústica', 1299.00,'Grande',null,4,4);
 insert into tb_produto values (DEFAULT,'Escrivaninha (mesa de computador, mesa de escritório) de pallet', 20, 'https://i.imgur.com/8im0rv1.jpg','Escrivaninha de Pallet', 699.99,'0,70 x 1,50 cm',null,2,4);
 insert into tb_produto values (DEFAULT,'Rack feito com pallets, ideal para organizar seu ambiente', 20, 'https://i.imgur.com/bEHTj8L.jpg','Rack em pallet', 399.99,'0,70 x 1,50 cm',null,2,4);
+
 
 
