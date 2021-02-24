@@ -320,7 +320,7 @@ export class CarrinhoComponent implements OnInit {
   remover(id: number) {
     this.carrinhoService.deleteIdCarrinho(id).subscribe(() => {});
     this.alertas.showAlertInfo('Removido do carrinho com sucesso!');
-    this.router.navigate(['/produtos']);
+    this.router.navigate(['/carrinho']);
   }
   // Deletar todos os itens do carrinho
   deleteAllCarrinho() {
