@@ -16,17 +16,17 @@ export class CarrinhoService {
   }
 
   getAllCarrinho(): Observable<Carrinho[]>{
-    return this.http.get<Carrinho[]>('https://www.sustenart.com.br/carrinho',this.token)
+    return this.http.get<Carrinho[]>('http://localhost:8080/carrinho',this.token)
   }
 
   postCarrinho(carrinho: Carrinho): Observable<Carrinho>{
-    return this.http.post<Carrinho>('https://www.sustenart.com.br/carrinho', carrinho, this.token)
+    return this.http.post<Carrinho>('http://localhost:8080/carrinho', carrinho, this.token)
   }
 
   deleteIdCarrinho(id: number) {
-    return this.http.delete(`https://www.sustenart.com.br/carrinho/delete/${id}`, this.token)
+    return this.http.delete(`http://localhost:8080/carrinho/delete/${id}`, this.token)
   }
   deleteAll() {
-    return this.http.delete('https://www.sustenart.com.br/carrinho/deleteAll', this.token)
+    return this.http.delete('http://localhost:8080/carrinho/deleteAll', this.token)
   }
 }

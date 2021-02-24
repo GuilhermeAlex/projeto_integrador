@@ -322,6 +322,7 @@ export class CarrinhoComponent implements OnInit {
     this.alertas.showAlertInfo('Removido do carrinho com sucesso!');
     this.router.navigate(['/carrinho']);
   }
+  
   // Deletar todos os itens do carrinho
   deleteAllCarrinho() {
     this.carrinhoService.deleteAll().subscribe(()=>{});

@@ -16,7 +16,7 @@ export class ContatoService {
   }
 
   postContato(contato: Contato){
-    return this.http.post('https://www.sustenart.com.br/contato', contato)
+    return this.http.post('http://localhost:8080/contato', contato)
   }
 
 }

@@ -11,16 +11,18 @@ import { environment } from 'src/environments/environment.prod';
 export class AuthService {
   constructor(private http: HttpClient) { }
 
+  // https://api.sustenart.com.br
+
   entrar(userLogin: UserLogin): Observable<UserLogin> {
     return this.http.post<UserLogin>(
-      'https://www.sustenart.com.br/cliente/logar',
+      'http://localhost:8080/cliente/logar',
       userLogin
     );
   }
 
   cadastrar(cliente: Cliente): Observable<Cliente> {
     return this.http.post<Cliente>(
-      'https://www.sustenart.com.br/cliente/cadastrar',
+      'http://localhost:8080/cliente/cadastrar',
       cliente
     );
   }
@@ -36,7 +38,7 @@ export class AuthService {
   }
 
   getByIdCliente(id: number): Observable<Cliente> {
-    return this.http.get<Cliente>(`https://www.sustenart.com.br/cliente/id/${id}`)
+    return this.http.get<Cliente>(`http://localhost:8080/cliente/id/${id}`)
   }
 
 }

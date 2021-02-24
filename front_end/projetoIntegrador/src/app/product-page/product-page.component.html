@@ -195,35 +195,10 @@
               width="45%"
             />
             <div class="card-body">
-              <div class="row d-flex justify-content-center mx-2">
+              <p class="border-bottom border-black font-weight-bold" style="font-size: 16pt;">Descrição</p>
+              <div class="row d-flex justify-content-center mx-2" style="font-size: 14pt;">
                 {{ produtoModal.descricao }}
               </div>
-              <div
-                class="row d-flex justify-content-around align-items-center mr-1 my-2"
-              >
-                <a class="hover" href="" style="color: rgb(0, 0, 0)">
-                  <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
-                </a>
-                <button
-                  type="button"
-                  class="btn btn-warning rounded ml-2 btn-comprar-modal"
-                  routerLink="/carrinho"
-                >
-                  Comprar
-                </button>
-              </div>
-              <div class="ml-3 mt-4">Consulte o Prazo de Entrega</div>
-              <form class="d-flex flex-row">
-                <input
-                  class="form-control mr-sm-2 border-radius bg-transparent"
-                  type="search"
-                  placeholder="Insira o CEP"
-                  aria-label="Pesquisar"
-                />
-                <button type="button" class="btn btn-primary btn-sm">
-                  Consultar
-                </button>
-              </form>
             </div>
           </div>
 
